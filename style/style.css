@@ -27,7 +27,7 @@ main {
     padding: 20px;
     font-size: 20px;
 }
-.burguer {
+#burguer {
     display: none;
 }
 
@@ -49,7 +49,7 @@ section.section-home > div > img#foto-sobre {
 }
 section.section-home > div > img#foto-sobre:hover {
     transform: scale(1.05); 
-    box-shadow: 5px 5px 10px --cor-destaque;
+    box-shadow: 5px 5px 10px var(--cor-destaque);
 }
 #home {
     font-family: "Oswald", sans-serif;
@@ -68,8 +68,8 @@ section.section-home > div > img#foto-sobre:hover {
     bottom: 0;
     background-size: cover;
     background-position: top center;
-    background-image: linear-gradient(to top,#0C3756, #3A728E);
-    filter: blur(5px); 
+    /* LINHA CORRIGIDA: Usando as variáveis da sua paleta */
+    background-image: linear-gradient(to top, var(--cor-fundo-principal), var(--cor-fundo-secundario));
     z-index: -1; 
 }
 .section-home{
@@ -110,7 +110,7 @@ a.menu-link {
     content: '';
     width: 0;
     height: 3px;
-    background-color: #F0FCFE;
+    background-color: var(--cor-fundo-principal);
     display: flex;
     transition: width .3s ease;
 }
@@ -131,12 +131,12 @@ a.menu-link {
     height: 40px;
     overflow: hidden;
     cursor: pointer;
-    background-color: #5C93AA;
+    background-color: var(--cor-destaque);
     transition: background-color 0.8s;
 }
 .btn-download:hover{
-    background-color: #0C3756;
-    color: #F0FCFE;
+    background-color: var(--cor-fundo-secundario);
+    color: var(--cor-destaque);
 }
 .btn-text {
     position: absolute;
@@ -144,7 +144,7 @@ a.menu-link {
     left: 50%;
     transform: translate(-50%,-50%);
     transition: all 0.8s;
-    color: #F0FCFE;
+    color: var(--cor-texto-principal);
 }
 .btn-download i {
     position: absolute;
@@ -163,30 +163,30 @@ li {
     margin: 5px;
     padding: 2.5px;
     list-style: none;
-    color: #F0FCFE;
+    color: var(--cor-destaque);
     font-weight: bold;
 }
 li > a {
-    color: #F0FCFE;
+    color: var(--cor-destaque);
     text-decoration: none;
     font-weight: lighter;
 }
 li > a:hover {
-    color: #F0FCFE;
-    background-color: #3A728E;
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-destaque);
 }
 #saiba-mais {
     border-radius: 12px;
     padding: 7px 15px;
-    background-color: #5C93AA;
+    background-color: var(--cor-destaque);
 }
 #saiba-mais:hover {
-    background-color: #0C3756;
+    background-color: var(--cor-destaque);
 }
 .contato {
     margin: 10px;
     padding: 20px;
-    background-color: #1F5372;
+    background-color: var(--cor-fundo-secundario);
     display: flex;
     justify-content: space-evenly;
 }
@@ -194,7 +194,7 @@ li > a:hover {
     border-radius: 5px 20px;
 }
 .material-symbols-outlined {
-    color: #F0FCFE;
+    color: var(--cor-texto-secundario);
     height: 40px;
 }
 section.section-projects > ul.projetos {
@@ -202,14 +202,11 @@ section.section-projects > ul.projetos {
     justify-content: center;
     align-items: center;
 }
-section.section-habilidades > ul{
-    color: #F0FCFE;
+section.section-habilidades > .habilidades-container{
+    color: var(--cor-texto-secundario);
     display: flex;
     justify-content: space-evenly;
 }
-/* ===================================== */
-/* ESTILOS PARA A SEÇÃO DE PROJETOS DE DADOS */
-/* ===================================== */
 
 .projetos-container {
   display: flex;
@@ -220,8 +217,8 @@ section.section-habilidades > ul{
 }
 
 .projeto-card {
-  background-color: #F0FCFE; /* Cor clara para contraste */
-  color: #0C3756; /* Texto escuro */
+  background-color: var(--cor-texto-secundario); /* Cor clara para contraste */
+  color: var(--cor-fundo-principal); /* Texto escuro para contraste */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -268,8 +265,8 @@ section.section-habilidades > ul{
 
 .projeto-ferramentas span {
   display: inline-block;
-  background-color: #B7D9E2; 
-  color: #1F5372; 
+  background-color: var(--cor-texto-principal); 
+  color: var(--cor-fundo-principal); 
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.8rem;
@@ -284,8 +281,8 @@ section.section-habilidades > ul{
 
 .projeto-links a {
   display: inline-block;
-  background-color: #3A728E;
-  color: #F0FCFE;
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-principal);
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   text-decoration: none;
@@ -294,7 +291,7 @@ section.section-habilidades > ul{
 }
 
 .projeto-links a:hover {
-  background-color: #0C3756;
+  background-color: var(--cor-fundo-secundario);
 }
 
 /* Ajuste para a lista de "outros-projetos" */

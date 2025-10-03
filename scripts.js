@@ -1,35 +1,46 @@
-// fazer os botões rolarem até a parte desejada
-function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-}
-function clickMenu() {
-    if (items.style.display == 'block') {
-        items.style.display = 'none';
-    } else {
-        items.style.display = 'block';
-    }
-}
-// recursividade
-function mudouTamanho() {
-    if (window.innerWidth >= 768) {
-        items.style.display = 'block';
-    } else {
-        items.style.display = 'none';
-    }
-}
-// mudança de idioma
-const ptBtn = document.getElementById('ptBtn');
-const enBtn = document.getElementById('enBtn');
-const elements = document.querySelectorAll('.lang');
+// Adiciona um listener que espera o HTML carregar completamente
+document.addEventListener('DOMContentLoaded', function() {
 
-ptBtn.addEventListener('click', () => {
-  elements.forEach(el => {
-    el.textContent = el.getAttribute('data-pt');
-  });
-});
+    // Seleciona os elementos do DOM uma única vez
+    const items = document.getElementById('items');
+    const ptBtn = document.getElementById('ptBtn');
+    const enBtn = document.getElementById('enBtn');
+    const elements = document.querySelectorAll('.lang');
 
-enBtn.addEventListener('click', () => {
-  elements.forEach(el => {
-    el.textContent = el.getAttribute('data-en');
-  });
+    // Função para rolar até a seção desejada
+    window.scrollToSection = function(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Função do menu hambúrguer CORRIGIDA
+    window.clickMenu = function() {
+        // Alterna a classe 'menu-aberto' no elemento do menu
+        items.classList.toggle('menu-aberto');
+    }
+
+    // Função para ajustar o menu ao mudar o tamanho da tela
+    function mudouTamanho() {
+        // Se a tela for maior que 768px, remove a classe para garantir que o menu não fique "preso" no estado fechado
+        if (window.innerWidth >= 768) {
+            items.classList.remove('menu-aberto');
+        }
+    }
+
+    // Adiciona o evento de redimensionamento à janela
+    window.onresize = mudouTamanho;
+
+    // Funções de mudança de idioma
+    ptBtn.addEventListener('click', () => {
+      elements.forEach(el => {
+        const ptText = el.getAttribute('data-pt');
+        if (ptText) el.textContent = ptText;
+      });
+    });
+
+    enBtn.addEventListener('click', () => {
+      elements.forEach(el => {
+        const enText = el.getAttribute('data-en');
+        if (enText) el.textContent = enText;
+      });
+    });
 });
