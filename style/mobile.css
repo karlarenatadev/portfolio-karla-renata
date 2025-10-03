@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+@media screen and (max-width:768px){
+        main {
+            padding: 10px;
+        }
+        .burguer {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+       .menu {
+            display: none;
+        }
+        nav li.menu-list {
+            display: block;
+        }
+        section.section-home {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 150vh;
+            padding: 5px 0;
+        }
+        section.section-home > div.sobre {
+            margin-bottom: 10px;
+        }
+        section.section-home > div > img#foto-sobre {
+            width: 50vw;
+        }
+        section.section-projects > ul.projetos {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+        .imagem-responsiva {
+        content: url('../imagens/projeto-login-celular.png');
+    }
+        .contato {
+            text-align: justify;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+    }
+}
