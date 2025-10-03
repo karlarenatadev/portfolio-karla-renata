@@ -47,4 +47,15 @@
             justify-content: center;
             padding: 10px 0;
     }
+    .habilidades-container {
+        /* Muda para 2 colunas em telas de tablet/celular */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .habilidades-container {
+        /* Muda para 1 coluna em telas de celular pequenas */
+        grid-template-columns: 1fr;
+    }
 }

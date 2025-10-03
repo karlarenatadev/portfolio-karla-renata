@@ -202,10 +202,39 @@ section.section-projects > ul.projetos {
     justify-content: center;
     align-items: center;
 }
-section.section-habilidades > .habilidades-container{
+
+.habilidades-container {
+  display: grid; /* Ativa o layout de grade */
+  grid-template-columns: repeat(3, 1fr); /* Cria exatamente 3 colunas de largura igual */
+  gap: 2rem; /* Define o espaçamento entre os cards */
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.skill-category {
+    background-color: var(--cor-fundo-secundario);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    color: var(--cor-destaque);
+}
+
+.skill-category ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.skill-category li {
+    font-weight: normal;
     color: var(--cor-texto-secundario);
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .projetos-container {
