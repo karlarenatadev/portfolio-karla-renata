@@ -7,11 +7,14 @@
         #burguer {
             display: block;
             text-align: center;
-            padding: 10px;
+            padding: 5px;
             cursor: pointer;
         }
        .menu {
             display: none;
+        }
+        .menu.menu-aberto{
+            display: grid;
         }
         nav li.menu-list {
             display: block;
