@@ -54,6 +54,26 @@
         /* Muda para 2 colunas em telas de tablet/celular */
         grid-template-columns: repeat(2, 1fr);
     }
+
+  .timeline-container {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza os itens empilhados */
+  }
+
+  .timeline-item {
+    width: 90%; /* Ocupa a maior parte da largura no mobile */
+  }
+
+  .timeline-horizontal {
+    /* Remove o espaço extra no topo */
+    padding-top: 20px;
+  }
+
+  .timeline-horizontal::before,
+  .timeline-horizontal .timeline-item::before {
+    /* Esconde a linha e os círculos */
+    display: none;
+  }
 }
 
 @media screen and (max-width: 480px) {

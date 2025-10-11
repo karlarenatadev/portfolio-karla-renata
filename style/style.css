@@ -118,6 +118,18 @@ a.menu-link {
     width: 100%;
     left: 0;
 }
+.menu-link:before {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: var(--cor-fundo-principal);
+    display: flex;
+    transition: width .3s ease;
+}
+.menu-link:hover:before {
+    width: 100%;
+    left: 0;
+}
 .btn-download {
     position: relative;
     display: flex;
@@ -330,4 +342,92 @@ ul.outros-projetos {
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
+}
+
+/* --- Estilos da Linha do Tempo Horizontal (Flexbox) --- */
+.timeline-container {
+  display: flex; /* Ativa o Flexbox */
+  justify-content: center; /* Centraliza os itens */
+  gap: 2rem; /* Espaçamento entre os cards */
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.timeline-item {
+  width: 33.33%; /* Divide o espaço entre os 3 itens */
+  max-width: 350px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: var(--cor-fundo-secundario);
+  border-radius: 8px;
+  text-align: center;
+  height: 100%; /* Garante que todos os cards tenham a mesma altura */
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-content h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: var(--cor-destaque);
+}
+
+.timeline-content p {
+  font-size: 0.9em;
+  color: var(--cor-texto-secundario);
+}
+
+.timeline-content .material-symbols-outlined {
+    font-size: 40px;
+    color: var(--cor-destaque);
+}
+
+/* --- Estilos da Linha Cronológica Horizontal --- */
+
+/* 1. Prepara o contêiner e adiciona espaço para a linha acima */
+.timeline-horizontal {
+  position: relative;
+  /* Adiciona um espaço no topo para a linha e os marcadores */
+  padding-top: 60px; 
+}
+
+/* 2. Cria a linha cinza que conecta os pontos */
+.timeline-horizontal::before {
+  content: '';
+  position: absolute;
+  /* Posiciona a linha na área de padding que criamos */
+  top: 40px; 
+  /* Faz a linha se esticar entre o centro do primeiro e do último card */
+  left: 16.5%; 
+  right: 16.5%;
+  height: 4px;
+  background-color: var(--cor-fundo-secundario); /* Usa uma cor sutil do seu tema */
+  z-index: 0;
+}
+
+/* 3. Prepara cada item para ter seu marcador (o círculo) */
+.timeline-horizontal .timeline-item {
+  position: relative;
+}
+
+/* 4. Cria o círculo verde (marcador) para cada item */
+.timeline-horizontal .timeline-item::before {
+  content: '';
+  position: absolute;
+  /* Puxa o marcador para cima, sobre a linha */
+  top: -28px; 
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza o círculo perfeitamente */
+  width: 18px;
+  height: 18px;
+  background-color: var(--cor-destaque); /* Cor de destaque para o marcador */
+  border-radius: 50%;
+  border: 4px solid var(--cor-fundo-principal); /* Borda para destacar do fundo */
+  z-index: 1; /* Garante que o círculo fique por cima da linha */
 }
