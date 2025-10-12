@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const ptText = el.getAttribute('data-pt');
         if (ptText) el.textContent = ptText;
       });
+        ptBtn.classList.add('active');
+        enBtn.classList.remove('active');
     });
 
     enBtn.addEventListener('click', () => {
@@ -42,5 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const enText = el.getAttribute('data-en');
         if (enText) el.textContent = enText;
       });
+      enBtn.classList.add('active');
+      ptBtn.classList.remove('active');
     });
 });
+ptBtn.classList.add('active');
