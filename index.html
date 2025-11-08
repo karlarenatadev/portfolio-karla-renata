@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,40 @@
     <link rel="apple-touch-icon" sizes="180x180" href="imagens/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon_io/favicon-16x16.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/mobile.css">
 </head>
+
 <body>
     <header>
         <nav>
             <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
             <ul class="menu" id="items">
                 <li class="menu-list">
-                    <a class="menu-link lang" href="#" onclick="scrollToSection('home')" data-pt="Home" data-en="Home">Home</a>
+                    <a class="menu-link lang" href="#" onclick="scrollToSection('home')" data-pt="Home"
+                        data-en="Home">Home</a>
                 </li>
                 <li class="menu-list">
-                    <a class="menu-link lang" href="#" onclick="scrollToSection('sobre')" data-pt="Sobre mim" data-en="About me">Sobre mim</a>
+                    <a class="menu-link lang" href="#" onclick="scrollToSection('sobre')" data-pt="Sobre mim"
+                        data-en="About me">Sobre mim</a>
                 </li>
                 <li class="menu-list">
-                    <a class="menu-link lang" href="#" onclick="scrollToSection('projetos-dados')" data-pt="Projetos de Dados" data-en="Data Projects">Projetos de Dados</a>
+                    <a class="menu-link lang" href="#" onclick="scrollToSection('projetos-dados')"
+                        data-pt="Projetos de Dados" data-en="Data Projects">Projetos de Dados</a>
                 </li>
                 <li class="menu-list">
-                    <a class="menu-link lang" href="#" onclick="scrollToSection('outros-projetos')" data-pt="Outros Projetos" data-en="Other Projects">Outros projetos</a>
+                    <a class="menu-link lang" href="#" onclick="scrollToSection('outros-projetos')"
+                        data-pt="Outros Projetos" data-en="Other Projects">Outros projetos</a>
                 </li>
                 <li class="menu-list">
-                    <a class="menu-link lang" href="#" onclick="scrollToSection('habilidades')" data-pt="Habilidades" data-en="Skills">Habilidades</a>
+                    <a class="menu-link lang" href="#" onclick="scrollToSection('habilidades')" data-pt="Habilidades"
+                        data-en="Skills">Habilidades</a>
                 </li>
                 <li class="menu-list">
-                    <a class="menu-link lang" href="#" onclick="scrollToSection('contato')" data-pt="Contato" data-en="Contact">Contato</a>
+                    <a class="menu-link lang" href="#" onclick="scrollToSection('contato')" data-pt="Contato"
+                        data-en="Contact">Contato</a>
                 </li>
             </ul>
         </nav>
@@ -44,100 +53,130 @@
             </div>
             <div class="sobre">
                 <h1>Karla Renata</h1>
-                <p class="lang" data-pt="Desenvolvedora Web | Análise e Visualização de Dados" data-en="Web Developer | Data Analysis & Visualization">Desenvolvedora Web | Análise e Visualização de Dados</p>
-                <button onclick="scrollToSection('sobre')" id="saiba-mais" class="lang" data-pt="Saiba mais" data-en="Learn more">Saiba mais</button>
+                <p class="lang" data-pt="Desenvolvedora Web | Análise e Visualização de Dados"
+                    data-en="Web Developer | Data Analysis & Visualization">Desenvolvedora Web | Análise e Visualização
+                    de Dados</p>
+                <button onclick="scrollToSection('sobre')" id="saiba-mais" class="lang" data-pt="Saiba mais"
+                    data-en="Learn more">Saiba mais</button>
             </div>
             <div>
                 <button id="ptBtn" class="btn-cta">PT</button>
                 <button id="enBtn" class="btn-cta">EN</button>
-                <a href="arquivo/curriculo-karla-renata.pdf" download="curriculo-karla-renata.pdf" class="btn-download" aria-label="Baixar Currículo">
+                <a href="arquivo/curriculo-karla-renata.pdf" download="curriculo-karla-renata.pdf" class="btn-download"
+                    aria-label="Baixar Currículo">
                     <span class="btn-text lang" data-pt="Download CV" data-en="Download CV">Download CV</span>
                     <i class="bi bi-cloud-download">
-                    <span class="material-symbols-outlined">download</span>
+                        <span class="material-symbols-outlined">download</span>
                     </i>
                 </a>
             </div>
         </section>
         <section id="sobre" class="section-sobre">
-            <h2 class="lang" data-pt="Conheça mais sobre mim" data-en="A little more about me">Conheça mais sobre mim</h2>
+            <h2 class="lang" data-pt="Conheça mais sobre mim" data-en="A little more about me">Conheça mais sobre mim
+            </h2>
             <div class="timeline-container timeline-horizontal">
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <span class="material-symbols-outlined">trending_up</span>
                         <h3 class="lang" data-pt="Vendas & Negócios" data-en="Sales & Business">Vendas & Negócios</h3>
-                        <p class="lang" data-pt="Desenvolvi uma base sólida em comunicação, visão estratégica de negócios e foco em resultados através da experiência prática." data-en="Developed a strong foundation in communication, strategic business vision, and a results-oriented focus through hands-on experience.">Desenvolvi uma base sólida em comunicação, visão estratégica de negócios e foco em resultados através da experiência prática.</p>
-                    </div>
-                </div>
-                 <div class="timeline-item">
-                    <div class="timeline-content">
-                    <span class="material-symbols-outlined">terminal</span>
-                        <h3 class="lang" data-pt="Ciência da Computação" data-en="Computer Science">Ciência da Computação</h3>
-                        <p class="lang" data-pt="Construindo o alicerce técnico e o pensamento lógico essenciais para a resolução de problemas complexos na área de tecnologia." data-en="Building the technical foundation and logical thinking essential for solving complex problems in the technology field.">Construindo o alicerce técnico e o pensamento lógico essenciais para a resolução de problemas complexos na área de tecnologia.</p>
+                        <p class="lang"
+                            data-pt="Desenvolvi uma base sólida em comunicação, visão estratégica de negócios e foco em resultados através da experiência prática."
+                            data-en="Developed a strong foundation in communication, strategic business vision, and a results-oriented focus through hands-on experience.">
+                            Desenvolvi uma base sólida em comunicação, visão estratégica de negócios e foco em
+                            resultados através da experiência prática.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                     <span class="material-symbols-outlined">analytics</span>
+                        <span class="material-symbols-outlined">terminal</span>
+                        <h3 class="lang" data-pt="Ciência da Computação" data-en="Computer Science">Ciência da
+                            Computação</h3>
+                        <p class="lang"
+                            data-pt="Construindo o alicerce técnico e o pensamento lógico essenciais para a resolução de problemas complexos na área de tecnologia."
+                            data-en="Building the technical foundation and logical thinking essential for solving complex problems in the technology field.">
+                            Construindo o alicerce técnico e o pensamento lógico essenciais para a resolução de
+                            problemas complexos na área de tecnologia.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="material-symbols-outlined">analytics</span>
                         <h3 class="lang" data-pt="Análise de Dados" data-en="Data Analysis">Análise de Dados</h3>
-                        <p class="lang" data-pt="Unindo a visão de negócio com a proficiência técnica para transformar dados brutos em insights acionáveis e estratégicos." data-en="Combining business acumen with technical proficiency to transform raw data into actionable, strategic insights.">Unindo a visão de negócio com a proficiência técnica para transformar dados brutos em insights acionáveis e estratégicos.</p>
+                        <p class="lang"
+                            data-pt="Unindo a visão de negócio com a proficiência técnica para transformar dados brutos em insights acionáveis e estratégicos."
+                            data-en="Combining business acumen with technical proficiency to transform raw data into actionable, strategic insights.">
+                            Unindo a visão de negócio com a proficiência técnica para transformar dados brutos em
+                            insights acionáveis e estratégicos.</p>
                     </div>
                 </div>
             </div>
         </section>
         <section id="projetos-dados" class="section-projects">
-            <h2 class="lang" data-pt="Projetos de Análise de Dados" data-en="Data Analysis Projects">Projetos de Análise de Dados</h2>
-            
+            <h2 class="lang" data-pt="Projetos de Análise de Dados" data-en="Data Analysis Projects">Projetos de Análise
+                de Dados</h2>
+
             <div class="projetos-container">
-                <div class="projeto-card">    
-                        <div class="projeto-info">
-                            <img src="imagens/analise-de-vendas.png" alt="Imagem do Projeto Análise de vendas" class="projeto-img">
-                         <h3 class="lang" data-pt="Análise de Vendas com Python" data-en="Sales Analysis with Python">
+                <div class="projeto-card">
+                    <div class="projeto-info">
+                        <img src="imagens/analise-de-vendas.png" alt="Imagem do Projeto Análise de vendas"
+                            class="projeto-img">
+                        <h3 class="lang" data-pt="Análise de Vendas com Python" data-en="Sales Analysis with Python">
                             Análise de Vendas com Python</h3>
-        
-                            <p class="lang" data-pt="Análise exploratória de dados de vendas para identificar padrões 
+
+                        <p class="lang" data-pt="Análise exploratória de dados de vendas para identificar padrões 
                             de compra e extrair insights estratégicos para o negócio." data-en="Exploratory data analysis of a 
                             sales dataset to identify purchasing patterns and extract strategic business insights.">
-                                Análise exploratória de dados de vendas 
-                                para identificar padrões de compra e extrair insights estratégicos para o negócio.</p>
-                            <div class="projeto-ferramentas">
-                             <span>Python</span>
-                                <span>Pandas</span>
-                                <span>Matplotlib</span>
-                             <span>Seaborn</span>
-                         </div>
-                            <div class="projeto-links">
-                                <a href="https://github.com/karlarenatadev/projeto-analise-de-vendas" target="_blank" class="lang" data-pt="Ver no GitHub" data-en="View on GitHub">Ver no GitHub</a>
-                            </div>
+                            Análise exploratória de dados de vendas
+                            para identificar padrões de compra e extrair insights estratégicos para o negócio.</p>
+                        <div class="projeto-ferramentas">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                            <span>Seaborn</span>
+                        </div>
+                        <div class="projeto-links">
+                            <a href="https://github.com/karlarenatadev/projeto-analise-de-vendas" target="_blank"
+                                class="lang" data-pt="Ver no GitHub" data-en="View on GitHub">Ver no GitHub</a>
                         </div>
                     </div>
+                </div>
                 <div class="projeto-card">
-                    <img src="imagens/logistica-1.png" alt="Imagem do Projeto Dashboard de Logística" class="projeto-img">
-                    
+                    <img src="imagens/logistica-1.png" alt="Imagem do Projeto Dashboard de Logística"
+                        class="projeto-img">
+
                     <div class="projeto-info">
-                        <h3 class="lang" data-pt="Dashboard de Logística" data-en="Logistics Dashboard">Dashboard de Logística</h3>
-                        
-                        <p class="lang" data-pt="Análise de eficiência de entregas, custos e performance de rotas para otimização operacional." data-en="Analysis of delivery efficiency, costs, and route performance for operational optimization.">
-                            Análise de eficiência de entregas, custos e performance de rotas para otimização operacional.
+                        <h3 class="lang" data-pt="Dashboard de Logística" data-en="Logistics Dashboard">Dashboard de
+                            Logística</h3>
+
+                        <p class="lang"
+                            data-pt="Análise de eficiência de entregas, custos e performance de rotas para otimização operacional."
+                            data-en="Analysis of delivery efficiency, costs, and route performance for operational optimization.">
+                            Análise de eficiência de entregas, custos e performance de rotas para otimização
+                            operacional.
                         </p>
-                        
+
                         <div class="projeto-ferramentas">
                             <span>Power BI</span>
                             <span>DAX</span>
                             <span>Estudo de Caso</span>
                         </div>
                         <div class="projeto-links">
-                            <a href="https://github.com/karlarenatadev/dashboard-logistica" target="_blank" class="lang" data-pt="Ver Análise Completa" data-en="View Full Analysis">Ver Análise Completa</a>
+                            <a href="https://github.com/karlarenatadev/dashboard-logistica" target="_blank" class="lang"
+                                data-pt="Ver Análise Completa" data-en="View Full Analysis">Ver Análise Completa</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="projeto-card">
-                     <img src="imagens/projeto-fluxo-caixa.png" alt="Imagem do Projeto Fluxo de Caixa" class="projeto-img">
-                    
+                    <img src="imagens/fluxo-1.png" alt="Imagem do Projeto Fluxo de Caixa" class="projeto-img">
+
                     <div class="projeto-info">
-                        <h3 class="lang" data-pt="Dashboard de Fluxo de Caixa" data-en="Cash Flow Dashboard">Dashboard de Fluxo de Caixa</h3>
-                        
-                        <p class="lang" data-pt="Controle de entradas, saídas e saldo acumulado para análise de saúde financeira e projeções." data-en="Control of inflows, outflows, and accumulated balance for financial health analysis and projections.">
+                        <h3 class="lang" data-pt="Dashboard de Fluxo de Caixa" data-en="Cash Flow Dashboard">Dashboard
+                            de Fluxo de Caixa</h3>
+
+                        <p class="lang"
+                            data-pt="Controle de entradas, saídas e saldo acumulado para análise de saúde financeira e projeções."
+                            data-en="Control of inflows, outflows, and accumulated balance for financial health analysis and projections.">
                             Controle de entradas, saídas e saldo acumulado para análise de saúde financeira e projeções.
                         </p>
 
@@ -147,7 +186,9 @@
                             <span>Estudo de Caso</span>
                         </div>
                         <div class="projeto-links">
-                            <a href="https://github.com/karlarenatadev/dashboard-fluxo-de-caixa" target="_blank" class="lang" data-pt="Ver Análise Completa" data-en="View Full Analysis">Ver Análise Completa</a>
+                            <a href="https://github.com/karlarenatadev/dashboard-fluxo-de-caixa" target="_blank"
+                                class="lang" data-pt="Ver Análise Completa" data-en="View Full Analysis">Ver Análise
+                                Completa</a>
                         </div>
                     </div>
                 </div>
@@ -156,35 +197,43 @@
 
         <section id="outros-projetos" class="section-projects">
             <h2 class="lang" data-pt="Outros projetos" data-en="Other projects">Outros projetos</h2>
-    
+
             <div class="projetos-container">
 
                 <div class="projeto-card">
-                    <img src="imagens/projeto-minhas-redes.png" alt="Imagem do Projeto Minhas Redes Sociais" class="projeto-img">
+                    <img src="imagens/projeto-minhas-redes.png" alt="Imagem do Projeto Minhas Redes Sociais"
+                        class="projeto-img">
                     <div class="projeto-info">
-                        <h3 class="lang" data-pt="Minhas Redes Sociais" data-en="My Social Networks">Minhas Redes Sociais</h3>
-                        <p class="lang" data-pt="Uma página simples que agrega minhas redes sociais." data-en="A simple page for all my social media links.">Uma página simples que agrega minhas redes sociais.</p>
+                        <h3 class="lang" data-pt="Minhas Redes Sociais" data-en="My Social Networks">Minhas Redes
+                            Sociais</h3>
+                        <p class="lang" data-pt="Uma página simples que agrega minhas redes sociais."
+                            data-en="A simple page for all my social media links.">Uma página simples que agrega minhas
+                            redes sociais.</p>
                         <div class="projeto-ferramentas">
                             <span>HTML</span>
                             <span>CSS</span>
                         </div>
-                    <div class="projeto-links">
-                        <a href="https://karlarenatadev.github.io/minhas-redes/" target="_blank" rel="external">Ver Projeto</a>
+                        <div class="projeto-links">
+                            <a href="https://karlarenatadev.github.io/minhas-redes/" target="_blank" rel="external">Ver
+                                Projeto</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
                 <div class="projeto-card">
                     <img src="imagens/projeto-formulario.png" alt="Imagem do Projeto Formulário" class="projeto-img">
                     <div class="projeto-info">
                         <h3 class="lang" data-pt="Formulário Básico" data-en="Basic Form">Formulário Básico</h3>
-                        <p class="lang" data-pt="Um formulário de contato simples para praticar a estrutura de inputs." data-en="A simple contact form to practice the structure of inputs.">Um formulário de contato simples para praticar a estrutura de inputs.</p>
+                        <p class="lang" data-pt="Um formulário de contato simples para praticar a estrutura de inputs."
+                            data-en="A simple contact form to practice the structure of inputs.">Um formulário de
+                            contato simples para praticar a estrutura de inputs.</p>
                         <div class="projeto-ferramentas">
                             <span>HTML</span>
                             <span>CSS</span>
                         </div>
-                    <div class="projeto-links">
-                            <a href="https://karlarenatadev.github.io/formulario-basico/" target="_blank" rel="external">Ver Projeto</a>
+                        <div class="projeto-links">
+                            <a href="https://karlarenatadev.github.io/formulario-basico/" target="_blank"
+                                rel="external">Ver Projeto</a>
                         </div>
                     </div>
                 </div>
@@ -193,13 +242,16 @@
                     <img src="imagens/projeto-login.png" alt="Imagem do Projeto Tela de Login" class="projeto-img">
                     <div class="projeto-info">
                         <h3 class="lang" data-pt="Tela de Login" data-en="Login Screen">Tela de Login</h3>
-                        <p class="lang" data-pt="Layout de uma tela de login moderna e responsiva." data-en="Layout of a modern and responsive login screen.">Layout de uma tela de login moderna e responsiva.</p>
+                        <p class="lang" data-pt="Layout de uma tela de login moderna e responsiva."
+                            data-en="Layout of a modern and responsive login screen.">Layout de uma tela de login
+                            moderna e responsiva.</p>
                         <div class="projeto-ferramentas">
                             <span>HTML</span>
                             <span>CSS</span>
                         </div>
                         <div class="projeto-links">
-                            <a href="https://karlarenatadev.github.io/projeto-login/" target="_blank" rel="external">Ver Projeto</a>
+                            <a href="https://karlarenatadev.github.io/projeto-login/" target="_blank" rel="external">Ver
+                                Projeto</a>
                         </div>
                     </div>
                 </div>
@@ -210,12 +262,12 @@
             <h2 class="lang" data-pt="Habilidades" data-en="Skills">Habilidades</h2>
 
             <div class="habilidades-container">
-             <div class="skill-category">
-                 <h3 class="lang" data-pt="Linguagens" data-en="Languages">Linguagens</h3>
-                 <ul>
-                     <li><span class="material-symbols-outlined">data_object</span> Python</li>
-                     <li><span class="material-symbols-outlined">database</span> SQL</li>
-                 </ul>
+                <div class="skill-category">
+                    <h3 class="lang" data-pt="Linguagens" data-en="Languages">Linguagens</h3>
+                    <ul>
+                        <li><span class="material-symbols-outlined">data_object</span> Python</li>
+                        <li><span class="material-symbols-outlined">database</span> SQL</li>
+                    </ul>
                 </div>
                 <div class="skill-category">
                     <h3 class="lang" data-pt="Análise de Dados" data-en="Data Analysis">Análise de Dados</h3>
@@ -223,28 +275,30 @@
                         <li><span class="material-symbols-outlined">analytics</span> Pandas</li>
                         <li><span class="material-symbols-outlined">calculate</span> NumPy</li>
                     </ul>
-             </div>
+                </div>
                 <div class="skill-category">
-                 <h3 class="lang" data-pt="Visualização de Dados / BI" data-en="Data Visualization / BI">Visualização de Dados / BI</h3>
-                 <ul>
-                       <li><span class="material-symbols-outlined">show_chart</span> Matplotlib</li>
-                       <li><span class="material-symbols-outlined">monitoring</span> Power BI</li>
-                 </ul>
+                    <h3 class="lang" data-pt="Visualização de Dados / BI" data-en="Data Visualization / BI">Visualização
+                        de Dados / BI</h3>
+                    <ul>
+                        <li><span class="material-symbols-outlined">show_chart</span> Matplotlib</li>
+                        <li><span class="material-symbols-outlined">monitoring</span> Power BI</li>
+                    </ul>
                 </div>
                 <div class="skill-category">
                     <h3 class="lang" data-pt="Automação" data-en="Automation">Automação</h3>
                     <ul>
                         <li><span class="material-symbols-outlined">smart_toy</span> n8n</li>
                         <li><span class="material-symbols-outlined">mouse</span> PyAutoGUI</li>
-                     <li><span class="material-symbols-outlined">smart_display</span> Pytube</li>
+                        <li><span class="material-symbols-outlined">smart_display</span> Pytube</li>
                         <li><span class="material-symbols-outlined">web</span> Streamlit</li>
-                 </ul>
+                    </ul>
                 </div>
                 <div class="skill-category">
                     <h3 class="lang" data-pt="Ferramentas" data-en="Tools">Ferramentas</h3>
                     <ul>
-                     <li><span class="material-symbols-outlined">hub</span> Git & GitHub</li>
-                      <li><span class="material-symbols-outlined">integration_instructions</span> Jupyter Notebooks</li>
+                        <li><span class="material-symbols-outlined">hub</span> Git & GitHub</li>
+                        <li><span class="material-symbols-outlined">integration_instructions</span> Jupyter Notebooks
+                        </li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -253,7 +307,7 @@
                         <li><span class="material-symbols-outlined">code_blocks</span> HTML</li>
                         <li><span class="material-symbols-outlined">palette</span> CSS</li>
                         <li><span class="material-symbols-outlined">javascript</span> JavaScript</li>
-                 </ul>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -264,13 +318,16 @@
                     <li class="contato-lista">
                         <a href="mailto:renatakarla663@gmail.com" target="_blank" rel="external">
                             <span class="material-symbols-outlined">mail</span>
-                            <span class="lang" data-pt="E-mail: " data-en="E-mail: ">E-mail: </span>renatakarla663@gmail.com
+                            <span class="lang" data-pt="E-mail: " data-en="E-mail: ">E-mail:
+                            </span>renatakarla663@gmail.com
                         </a>
                     </li>
                     <li class="contato-lista">
-                        <a class="contato-link" href="https://www.linkedin.com/in/karlarenata-rosario/" target="_blank" rel="external">
+                        <a class="contato-link" href="https://www.linkedin.com/in/karlarenata-rosario/" target="_blank"
+                            rel="external">
                             <img src="imagens/icone-linkedin.png" alt="Ícone do LinkedIn">
-                            <span class="lang" data-pt="Linkedin: " data-en="Linkedin: ">Linkedin: </span>/karlarenata-rosario/
+                            <span class="lang" data-pt="Linkedin: " data-en="Linkedin: ">Linkedin:
+                            </span>/karlarenata-rosario/
                         </a>
                     </li>
                     <li class="contato-lista">
@@ -290,4 +347,5 @@
     </main>
     <script src="scripts.js"></script>
 </body>
+
 </html>
