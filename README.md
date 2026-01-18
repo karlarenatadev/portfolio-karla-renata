@@ -1,76 +1,79 @@
-# Portfólio Profissional | Karla Renata
+<div align="center">
+  <img src="imagens/projeto-login.png" alt="Capa do Portfólio" width="100%">
 
-![Página Inicial do Portfólio](imagens/projeto-login.png)
+  # 🚀 Portfólio Profissional | Karla Renata
 
-## 🚀 Sobre o Projeto
+  **Vendas | Negócios | Análise de Dados**
 
-Este repositório contém o código-fonte do meu portfólio pessoal, uma página web interativa e responsiva criada para apresentar minha jornada profissional, competências técnicas e os projetos que desenvolvi durante minha transição de carreira para a área de **Análise de Dados**.
+  [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karlarenata-rosario/)
+  [![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:karlarenata692@gmail.com)
+  
+  <br>
 
-O objetivo deste site é ser um hub centralizado onde recrutadores e colegas possam conhecer mais sobre meu trabalho, minhas habilidades e minha paixão por transformar dados em insights valiosos.
-
-**🔗 Visite a versão online:** [**karlarenatadev.github.io/portfolio-karla-renata/**](https://karlarenatadev.github.io/portfolio-karla-renata/)
-
----
-
-## ✒️ Sobre Mim
-
-Olá! Sou Karla Renata, uma profissional que está unindo uma sólida experiência em vendas com o universo da tecnologia, atualmente cursando **Ciência da Computação**. Minha trajetória na área comercial me proporcionou uma forte visão de negócios e habilidades de comunicação, que agora aplico para extrair e comunicar insights a partir de dados.
-
-Meu foco é utilizar ferramentas como Python, SQL e Power BI para otimizar processos, resolver problemas e contribuir ativamente para o crescimento de equipes orientadas a dados.
+  **🔗 [Ver Versão Online](https://karlarenatadev.github.io/portfolio-karla-renata/)**
+</div>
 
 ---
 
-## ✨ Funcionalidades do Site
+## 👩‍💻 Sobre Mim
 
-O portfólio foi desenvolvido com foco na experiência do usuário e conta com as seguintes funcionalidades:
+Olá! Sou **Karla Renata**. Estou unindo minha sólida experiência em **vendas e estratégia comercial** com o poder da tecnologia. 
 
-* **🎨 Design Moderno e Responsivo:** O layout se adapta perfeitamente a desktops, tablets e smartphones, utilizando Media Queries.
-* **🌐 Suporte a Múltiplos Idiomas:** Botões permitem alternar dinamicamente o conteúdo entre Português (PT) e Inglês (EN) usando JavaScript.
-* **🍔 Menu Hambúrguer:** Garante uma navegação fluida e intuitiva em dispositivos móveis.
-* **📄 Download de CV:** Um botão de fácil acesso permite baixar meu currículo atualizado em formato PDF.
-* **🖱️ Navegação Suave (Smooth Scrolling):** Links no menu de navegação rolam suavemente até a seção correspondente na página.
+Atualmente cursando **Ciência da Computação**, meu foco é a **Análise de Dados**. Minha trajetória me ensinou que dados sem contexto são apenas números; meu diferencial é usar minha visão de negócios para transformar esses números em *histórias* e *estratégias* que geram lucro e eficiência.
+
+🛠 **Stack Principal:** Python (Pandas/NumPy), SQL, Power BI, Excel Avançado e Git.
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas Utilizadas
+## 📊 Minhas Estatísticas no GitHub
 
-Este projeto foi construído com as seguintes tecnologias:
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=karlarenatadev&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=karlarenatadev&layout=compact&theme=dracula"/>
+</div>
 
 ---
 
 ## 📂 Projetos em Destaque
 
-Aqui estão alguns dos projetos que demonstram minhas habilidades práticas. Eles estão divididos entre Análise de Dados e Desenvolvimento Web.
+### 📈 Análise de Dados & BI
+| Projeto | Solução / Impacto | Stack | Link |
+| :--- | :--- | :--- | :---: |
+| **Risco de Crédito** | Identificação de padrões de inadimplência para mitigar riscos financeiros. | `Python` `Pandas` `Seaborn` | [Acessar](https://github.com/karlarenatadev/analise-de-dados-credito) |
+| **Dashboard de Vendas** | Painel interativo para monitoramento de KPIs comerciais e regionais. | `Power BI` `DAX` `ETL` | [Acessar](https://github.com/karlarenatadev/dashboard-vendas-power-bi) |
+| **Automação RPA** | Robô para automação de cadastro de produtos em ERP com validação de dados. | `Python` `PyAutoGUI` `Pandas` | [Acessar](LINK_DO_PROJETO_ATUAL) |
 
-### Análise de Dados
-
-| Projeto                      | Descrição                                                                                          | Ferramentas          | Link                                                                                  |
-| ---------------------------- | -------------------------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------------------------- |
-| **Análise de Risco de Crédito** | Análise exploratória para identificar fatores de risco de inadimplência em clientes de um banco.   | `Python`, `Pandas`     | [Ver no GitHub](https://github.com/karlarenatadev/analise-de-dados-credito)           |
-| **Dashboard de Vendas** | Dashboard interativo para análise de performance de vendas, com filtros por região, produto e período. | `Power BI`, `DAX`      | [Ver no GitHub](https://github.com/karlarenatadev/dashboard-vendas-power-bi)        |
-
-### Desenvolvimento Web (Front-End)
-
-| Projeto                 | Descrição                                                              | Tecnologias     | Link                                                                        |
-| ----------------------- | ---------------------------------------------------------------------- | --------------- | --------------------------------------------------------------------------- |
-| **Página de Redes Sociais** | Uma página agregadora para minhas redes sociais.                          | `HTML`, `CSS`     | [Ver Projeto](https://karlarenatadev.github.io/minhas-redes/)             |
-| **Tela de Login Responsiva** | Layout moderno de uma tela de login que se adapta a desktops e celulares. | `HTML`, `CSS`     | [Ver Projeto](https://karlarenatadev.github.io/projeto-login/)            |
-| **Formulário Básico** | Um formulário de contato simples para praticar a estrutura de inputs.    | `HTML`, `CSS`     | [Ver Projeto](https://karlarenatadev.github.io/formulario-basico/)        |
+### 💻 Desenvolvimento Web
+| Projeto | Descrição | Stack | Link |
+| :--- | :--- | :--- | :---: |
+| **Portfólio Pessoal** | Hub central de projetos com suporte multi-idioma e design responsivo. | `JS` `HTML` `CSS` | [Online](https://karlarenatadev.github.io/portfolio-karla-renata/) |
+| **Login Page** | Interface moderna com validação de formulário e dark mode. | `CSS3` `HTML5` | [Online](https://karlarenatadev.github.io/projeto-login/) |
 
 ---
 
-## 💻 Como Executar o Projeto Localmente
+## ✨ Funcionalidades do Portfólio
 
-Caso queira explorar o código ou testar alguma modificação, siga os passos abaixo:
+Este projeto não é apenas estático; ele demonstra conhecimentos em lógica de programação e UX:
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/karlarenatadev/portfolio-karla-renata.git](https://github.com/karlarenatadev/portfolio-karla-renata.git)
-    ```
-2.  **Navegue até o diretório do projeto:**
+* **🎨 Responsividade Total:** Layout adaptável via Media Queries.
+* **🇺🇸/🇧🇷 Internacionalização:** Sistema de troca de idioma em tempo real usando **JavaScript DOM**.
+* **🌑 Dark/Light Mode:** (Se tiver, vale citar, se não, pode remover).
+* **📄 Download de CV:** Acesso direto ao currículo em PDF.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Power Bi](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![SQL](https://img.shields.io/badge/SQL-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+
+---
+
+## 🚀 Como Executar Localmente
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/karlarenatadev/portfolio-karla-renata.git](https://github.com/karlarenatadev/portfolio-karla-renata.git)
