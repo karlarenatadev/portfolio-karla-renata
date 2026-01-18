@@ -364,7 +364,13 @@ section h2::after {
 .projeto-links a:hover {
   background-color: #00b386; /* Tom mais escuro no hover */
 }
-
+.projeto-img-rpa {
+    width: 100%;
+    height: 250px; /* Um pouco mais alto que os outros para caber melhor */
+    object-fit: contain; /* O SEGREDO: Faz o vídeo caber inteiro sem cortar */
+    background-color: #000; /* Fundo preto para parecer uma tela de cinema/terminal */
+    border-bottom: 1px solid #333; /* Detalhe visual */
+}
 
 /* --- SEÇÃO HABILIDADES --- */
 .habilidades-container {

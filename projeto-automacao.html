@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automação RPA | Karla Renata</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/mobile.css">
+
+    <style>
+        /* Estilos EXCLUSIVOS desta página para não mexer no style.css principal */
+        
+        .container-detalhe {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: left; /* Texto alinhado à esquerda para leitura */
+        }
+
+        /* Área do Vídeo estilo "Cinema" */
+        .video-box {
+            background-color: #000;
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            border-radius: 12px;
+            border: 1px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .video-box img {
+            max-width: 100%;
+            max-height: 500px; /* Limite de altura para não estourar telas grandes */
+            object-fit: contain;
+        }
+
+        /* Títulos e Textos */
+        .projeto-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .projeto-header h1 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--cor-destaque);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .badges span {
+            background-color: var(--cor-fundo-secundario);
+            color: var(--cor-texto-secundario);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0 5px;
+            font-weight: bold;
+        }
+
+        .detalhes-texto h2 {
+            font-size: 1.8rem;
+            color: var(--cor-destaque);
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .detalhes-texto p, .detalhes-texto li {
+            color: var(--cor-texto-principal);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Botão de Voltar Flutuante */
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 50px;
+            text-decoration: none;
+            color: var(--cor-texto-secundario);
+            border: 1px solid var(--cor-texto-secundario);
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn-voltar:hover {
+            background-color: var(--cor-fundo-secundario);
+            color: var(--cor-destaque);
+            border-color: var(--cor-destaque);
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container-detalhe">
+        
+        <header class="projeto-header">
+            <h1>Automação de Cadastro (RPA)</h1>
+            <p>Auditoria e input de dados automatizado em ERP</p>
+            
+            <div class="badges">
+                <span>Python</span>
+                <span>PyAutoGUI</span>
+                <span>Pandas</span>
+                <span>Automação</span>
+            </div>
+        </header>
+
+        <section class="video-box">
+            <img src="imagens/demo-rpa.gif" alt="Demonstração do Robô RPA rodando">
+        </section>
+
+        <section class="detalhes-texto">
+            <h2>🚨 O Desafio</h2>
+            <p>
+                O processo manual de cadastro de produtos consumia horas valiosas da equipe e estava sujeito a "erros de dedo" (typos), 
+                como preços incorretos ou códigos duplicados. Além disso, a repetição mecânica gerava fadiga nos colaboradores.
+            </p>
+
+            <h2>💡 A Solução</h2>
+            <p>
+                Desenvolvi um <strong>Bot (Robô) em Python</strong> que atua como um funcionário digital. Ele lê bases de dados, 
+                aplica regras de negócio e interage diretamente com a interface do sistema.
+            </p>
+            <ul>
+                <li><strong>Pandas:</strong> Utilizado para ler arquivos Excel/CSV e limpar os dados (tratamento de células vazias e formatação).</li>
+                <li><strong>PyAutoGUI:</strong> Controla o mouse e o teclado para navegar no sistema ERP, simulando a digitação humana.</li>
+                <li><strong>Lógica de Espera (Wait):</strong> O código é inteligente o suficiente para esperar o sistema carregar entre uma tela e outra.</li>
+            </ul>
+
+            <h2>🚀 Resultados</h2>
+            <p>
+                O script é capaz de cadastrar centenas de produtos em poucos minutos com <strong>100% de precisão</strong>. 
+                Isso liberou a equipe para focar em tarefas analíticas e estratégicas, em vez de operacionais.
+            </p>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://github.com/karlarenatadev/automacao-pyautogui" target="_blank" class="btn-download" style="width: auto; padding: 0 30px; display: inline-flex;">
+                    <span class="btn-text" style="position: static; transform: none;">Ver Código no GitHub</span>
+                </a>
+            </div>
+
+        </section>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="btn-voltar">← Voltar para o Portfólio</a>
+        </div>
+
+    </main>
+
+</body>
+</html>
