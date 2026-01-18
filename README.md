@@ -82,3 +82,9 @@ Este projeto não é apenas estático; ele demonstra conhecimentos em lógica de
 1. **Clone o repositório:**
    ```bash
    git clone [https://github.com/karlarenatadev/portfolio-karla-renata.git](https://github.com/karlarenatadev/portfolio-karla-renata.git)
+
+2. **Entre na pasta:**
+    ```bash
+    cd portfolio-karla-renata
+
+3. **Execute: Abra o arquivo index.html no seu navegador ou use o Live Server do VS Code.**
