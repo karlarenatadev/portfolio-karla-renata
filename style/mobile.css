@@ -171,4 +171,14 @@
     .trilha-passo.baixo::before {
         display: none;
     }
+    /* Ajuste do Card de Destaque */
+    .section-habilidades > .skill-category ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-habilidades > .skill-category {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }

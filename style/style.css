@@ -649,3 +649,79 @@ main > section:last-child {
     background: #333; color: #fff;
     padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; margin: 5px 2px 0 0;
 }
+/* --- SEÇÃO HABILIDADES --- */
+.section-habilidades {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Cards de Categoria */
+.skill-category {
+    background-color: var(--cor-fundo-secundario);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-destaque);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category h3 {
+    color: var(--cor-destaque);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+/* Itens da Lista e Ícones */
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: var(--cor-texto-secundario);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.skill-category li .material-symbols-outlined {
+    font-size: 1.5rem;
+    color: var(--cor-destaque);
+    margin-right: 12px;
+    min-width: 24px;
+}
+
+/* Destaque (Primeiro Card: Negócios) */
+.section-habilidades > .skill-category {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    border: 1px solid var(--cor-destaque);
+    background: linear-gradient(145deg, var(--cor-fundo-secundario) 0%, rgba(0, 200, 150, 0.05) 100%);
+}
+
+.section-habilidades > .skill-category ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Grid das Habilidades Técnicas */
+.habilidades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Vendas | Karla Renata</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/mobile.css">
+    <style>
+        .container-detalhe { max-width: 900px; margin: 0 auto; padding: 20px; text-align: left; }
+        .projeto-header { text-align: center; margin-bottom: 40px; }
+        .projeto-header h1 { font-family: 'Oswald', sans-serif; color: var(--cor-destaque); font-size: 2.5rem; }
+        .badges span { background-color: var(--cor-fundo-secundario); color: var(--cor-texto-secundario); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin: 0 5px; font-weight: bold; }
+        .detalhes-texto h2 { font-size: 1.8rem; color: var(--cor-destaque); border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 40px; }
+        .detalhes-texto p, .detalhes-texto li { color: var(--cor-texto-principal); font-size: 1.1rem; line-height: 1.6; margin-bottom: 15px; }
+        .img-destaque { width: 100%; border-radius: 12px; margin: 20px 0; border: 1px solid #333; }
+        .btn-voltar { display: inline-block; margin-top: 50px; text-decoration: none; color: var(--cor-texto-secundario); border: 1px solid var(--cor-texto-secundario); padding: 10px 20px; border-radius: 8px; transition: 0.3s; }
+        .btn-voltar:hover { background-color: var(--cor-fundo-secundario); color: var(--cor-destaque); border-color: var(--cor-destaque); }
+        
+        /* Estilo para bloco de código (SQL/Python) */
+        .code-block {
+            background-color: #111;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            color: #ddd;
+            overflow-x: auto;
+            border-left: 4px solid var(--cor-destaque);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container-detalhe">
+        
+        <header class="projeto-header">
+            <h1>Análise Exploratória de Vendas</h1>
+            <p>Descobrindo padrões de lucro e comportamento do consumidor</p>
+            
+            <div class="badges">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>Seaborn</span>
+                <span>Storytelling</span>
+            </div>
+        </header>
+
+        <section class="detalhes-texto">
+            <img src="imagens/analise-de-vendas.png" alt="Gráfico de Vendas por Estado" class="img-destaque">
+
+            <h2>🎯 O Problema de Negócio</h2>
+            <p>
+                Uma empresa de varejo precisava entender por que, apesar do alto volume de vendas em certas regiões, 
+                o lucro final estava estagnado. Meu objetivo foi identificar quais produtos e regiões estavam 
+                drenando a margem de lucro.
+            </p>
+
+            <h2>🔍 A Abordagem Técnica</h2>
+            <p>
+                Utilizei <strong>Python</strong> para todo o processo de ETL (Extração, Transformação e Carga).
+            </p>
+            <ul>
+                <li><strong>Limpeza:</strong> Tratamento de valores nulos e duplicados usando Pandas.</li>
+                <li><strong>Exploração:</strong> Análise estatística descritiva (média, mediana, desvio padrão).</li>
+                <li><strong>Visualização:</strong> Criação de gráficos com Matplotlib e Seaborn para identificar outliers.</li>
+            </ul>
+
+            <h3>Snippet de Análise (Exemplo):</h3>
+            <div class="code-block">
+                #Agrupando vendas por Região e calculando Lucro total
+                lucro_por_regiao = df.groupby('Region')['Profit'].sum().sort_values(ascending=False)
+
+                #Visualizando o resultado
+                sns.barplot(x=lucro_por_regiao.index, y=lucro_por_regiao.values)
+            </div>
+
+            <h2>💡 Insights & Resultados</h2>
+            <p>
+                A análise revelou que, embora a categoria "Móveis" tivesse alta receita, os descontos excessivos 
+                aplicados estavam gerando <strong>prejuízo operacional</strong> em 3 estados específicos.
+            </p>
+            <p>
+                <strong>Recomendação de Negócio:</strong> Revisar a política de descontos para a categoria de Móveis 
+                e focar o marketing na categoria "Tecnologia", que apresentou a maior margem de contribuição.
+            </p>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://github.com/karlarenatadev/projeto-analise-de-vendas" target="_blank" class="btn-download" style="width: auto; padding: 0 30px; display: inline-flex;">
+                    <span class="btn-text" style="position: static; transform: none;">Ver Código Completo</span>
+                </a>
+            </div>
+            <h3>Como eu extrairia esses dados via SQL?</h3>
+            <p>Exemplo de query utilizada para agregar o faturamento por categoria:</p>
+
+            <div class="code-block" style="background: #1e1e1e; padding: 15px; border-radius: 8px; border-left: 4px solid #00C896; font-family: monospace; color: #d4d4d4; overflow-x: auto;">
+                <span style="color: #569cd6;">SELECT</span> 
+                    Product_Category, 
+                    <span style="color: #dcdcaa;">SUM</span>(Sales_Amount) <span style="color: #569cd6;">AS</span> Total_Revenue,
+                    <span style="color: #dcdcaa;">COUNT</span>(Order_ID) <span style="color: #569cd6;">AS</span> Total_Orders
+                <br>
+                <span style="color: #569cd6;">FROM</span> sales_table
+                <br>
+                <span style="color: #569cd6;">WHERE</span> Order_Date >= <span style="color: #ce9178;">'2024-01-01'</span>
+                <br>
+                <span style="color: #569cd6;">GROUP BY</span> Product_Category
+                <br>
+                <span style="color: #569cd6;">ORDER BY</span> Total_Revenue <span style="color: #569cd6;">DESC</span>;
+                </div>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="index.html#projetos-dados" class="btn-voltar">← Voltar para o Portfólio</a>
+        </div>
+
+    </main>
+
+</body>
+</html>
