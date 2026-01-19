@@ -123,4 +123,52 @@
     .foto {
         max-width: 200px;
     }
+    /* Transforma a trilha em vertical */
+    .trilha-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 20px 0;
+        padding-left: 20px; /* Espaço para a linha vertical */
+        min-height: auto;
+    }
+
+    /* Linha vira vertical na esquerda */
+    .trilha-linha {
+        width: 4px;
+        height: 100%;
+        top: 0;
+        left: 29px; /* Ajuste fino para alinhar com as bolinhas */
+        transform: none;
+        background: repeating-linear-gradient(to bottom, var(--cor-texto-secundario) 0, var(--cor-texto-secundario) 10px, transparent 10px, transparent 20px);
+    }
+
+    .trilha-passo {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .passo-marcador {
+        margin: 0; /* Remove centralização automática */
+        flex-shrink: 0; /* Garante que a bolinha não amasse */
+    }
+
+    /* Reseta posições absolutas */
+    .passo-card {
+        position: relative;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        width: auto;
+        flex-grow: 1;
+        text-align: left; /* Texto alinhado à esquerda no mobile */
+    }
+
+    /* Remove conectores verticais desktop */
+    .trilha-passo.cima::after,
+    .trilha-passo.baixo::before {
+        display: none;
+    }
 }

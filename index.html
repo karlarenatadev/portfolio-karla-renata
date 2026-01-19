@@ -111,6 +111,104 @@
                 </div>
             </div>
         </section>
+        <section id="jornada" class="section-jornada">
+            <h2 class="lang" data-pt="Minha Trajetória Profissional" data-en="My Professional Journey">Minha Trajetória Profissional</h2>
+            
+            <div class="trilha-container">
+                <div class="trilha-linha"></div>
+
+                <div class="trilha-passo cima" onclick="abrirModal('modal-acqua')">
+                    <div class="passo-marcador"></div>
+                    <div class="passo-card">
+                        <span class="ano">2023</span>
+                        <h4>Acqua Aroma</h4>
+                        <p class="cargo">Consultora de Vendas</p>
+                    </div>
+                </div>
+
+                <div class="trilha-passo baixo" onclick="abrirModal('modal-maria')">
+                    <div class="passo-marcador"></div>
+                    <div class="passo-card">
+                        <span class="ano">2023-2025</span>
+                        <h4>Maria Bonita</h4>
+                        <p class="cargo">Vendedora</p>
+                    </div>
+                </div>
+
+                <div class="trilha-passo cima" onclick="abrirModal('modal-mania')">
+                    <div class="passo-marcador"></div>
+                    <div class="passo-card">
+                        <span class="ano">2025</span>
+                        <h4>Mania D'água</h4>
+                        <p class="cargo">Mkt & Vendas</p>
+                    </div>
+                </div>
+
+                <div class="trilha-passo baixo destaque" onclick="abrirModal('modal-a3data')">
+                    <div class="passo-marcador"></div>
+                    <div class="passo-card">
+                        <span class="ano">Atual</span>
+                        <h4>A3Data</h4>
+                        <p class="cargo">Analista de Dados</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="modal-container" class="modal-overlay" onclick="fecharModal(event)">
+            
+            <div id="modal-acqua" class="modal-content">
+                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+                <h3>Acqua Aroma</h3>
+                <p class="subtitulo">Consultora de Vendas | Mar 2023 - Ago 2023</p>
+                <p class="texto-detalhe">
+                    Atendimento consultivo e análise de preferências de clientes para recomendar soluções personalizadas. 
+                    Responsável pelo registro e controle de vendas diárias e relatórios de desempenho.
+                </p>
+                <div class="tags-modal">
+                    <span>Atendimento Consultivo</span><span>Relatórios</span>
+                </div>
+            </div>
+
+            <div id="modal-maria" class="modal-content">
+                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+                <h3>Maria Bonita Joias</h3>
+                <p class="subtitulo">Vendedora | Set 2023 - Jan 2025</p>
+                <p class="texto-detalhe">
+                    Análise de perfil e comportamento do consumidor para aumentar taxas de conversão e fidelização. 
+                    Colaboração no controle financeiro (caixa) e monitoramento de KPIs de vendas para suporte à gestão.
+                </p>
+                <div class="tags-modal">
+                    <span>KPIs de Vendas</span><span>Gestão Financeira</span><span>Fidelização</span>
+                </div>
+            </div>
+
+            <div id="modal-mania" class="modal-content">
+                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+                <h3>Mania D'água</h3>
+                <p class="subtitulo">Marketing Online & Vendas | Fev 2025 - Jul 2025</p>
+                <p class="texto-detalhe">
+                    Gestão do funil de vendas digital e análise de métricas de engajamento no Instagram. 
+                    Identificação de gargalos no atendimento e otimização da experiência do cliente para aumentar a retenção.
+                </p>
+                <div class="tags-modal">
+                    <span>Funil de Vendas</span><span>CRM</span><span>Marketing Digital</span>
+                </div>
+            </div>
+
+            <div id="modal-a3data" class="modal-content">
+                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+                <h3>A3Data</h3>
+                <p class="subtitulo">Estagiária em Análise de Dados | Nov 2025 - Atual</p>
+                <p class="texto-detalhe">
+                    Criação de dashboards em Power BI e uso de SQL/Python para resolver problemas de negócio. 
+                    Integração de dados com foco em estratégias comerciais e conhecimentos de Cloud (AWS).
+                </p>
+                <div class="tags-modal">
+                    <span>Python</span><span>SQL</span><span>Power BI</span><span>AWS</span>
+                </div>
+            </div>
+        </div>
         <section id="projetos-dados" class="section-projects">
             <h2 class="lang" data-pt="Projetos de Análise de Dados" data-en="Data Analysis Projects">Projetos de Análise
                 de Dados</h2>

@@ -49,3 +49,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 ptBtn.classList.add('active');
+
+// --- LÓGICA DO MODAL DA TRILHA ---
+
+function abrirModal(idModal) {
+    const overlay = document.getElementById('modal-container');
+    const modalConteudo = document.getElementById(idModal);
+
+    // Esconde todos os conteúdos antes de mostrar o escolhido
+    document.querySelectorAll('.modal-content').forEach(el => el.classList.remove('ativo'));
+
+    // Mostra o overlay e o conteúdo específico
+    overlay.classList.add('aberto');
+    modalConteudo.classList.add('ativo');
+}
+
+function fecharModal(event) {
+    // Fecha se clicar no "X" ou fora do conteúdo (no overlay escuro)
+    if (event.target.classList.contains('modal-overlay') || event.target.classList.contains('fechar-modal')) {
+        document.getElementById('modal-container').classList.remove('aberto');
+    }
+}
