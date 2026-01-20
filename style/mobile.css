@@ -1,161 +1,207 @@
 @charset "utf-8";
 
 /* =====================================================================
-   ESTILOS PARA TABLETS E DISPOSITIVOS COM LARGURA ATÉ 992px
+   ESTILOS PARA TABLETS E NOTEBOOKS PEQUENOS (ATÉ 992px)
    ===================================================================== */
 @media screen and (max-width: 992px) {
-    /* Ajusta o layout da seção Home para empilhar os elementos de forma mais organizada */
+    
+    /* --- Home: Empilhamento --- */
     .section-home {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
 
     #foto-sobre {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
-    .section-home .sobre h1 {
-        margin-top: 0; /* Remove a margem superior do H1 que não é mais necessária */
+    .hero-badges {
+        justify-content: center; /* Centraliza as badges no mobile */
     }
 
-    /* Ajusta a grade de habilidades para 2 colunas */
-    .habilidades-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Empilha a timeline horizontalmente */
+    /* --- Timeline Horizontal (Sobre Mim) vira Vertical --- */
     .timeline-container {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2rem;
     }
 
     .timeline-item {
-        width: 80%; /* Aumenta a largura do card da timeline para melhor aproveitamento */
-        max-width: 400px;
+        width: 100%; 
+        max-width: 500px;
     }
 
-    /* Esconde a linha cronológica que só faz sentido no layout horizontal */
-    .timeline-horizontal {
-        padding-top: 20px; /* Remove o espaço extra no topo */
-    }
-
+    /* Remove a linha horizontal decorativa */
     .timeline-horizontal::before,
     .timeline-horizontal .timeline-item::before {
-        display: none; /* Esconde a linha e os círculos */
+        display: none;
+    }
+    
+    .timeline-horizontal {
+        padding-top: 0;
     }
 }
 
-
 /* =====================================================================
-   ESTILOS PARA CELULARES E DISPOSITIVOS COM LARGURA ATÉ 768px
+   ESTILOS PARA CELULARES (ATÉ 768px)
    ===================================================================== */
 @media screen and (max-width: 768px) {
+    
     main {
-        padding: 15px; /* Garante um respiro consistente */
+        padding: 15px;
     }
 
-    /* --- Menu Hambúrguer --- */
+    /* --- Menu Hambúrguer Moderno --- */
+    nav {
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+    }
+
     #burguer {
         display: block;
-        text-align: center;
-        padding: 10px;
         cursor: pointer;
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: var(--cor-destaque);
     }
+
     .menu {
-        display: none; /* Menu principal escondido por padrão */
+        display: none; /* Escondido por padrão */
+        position: absolute;
+        top: 100%;
+        left: 0;
         width: 100%;
+        background-color: rgba(40, 44, 52, 0.95); /* Fundo escuro quase sólido */
+        backdrop-filter: blur(15px); /* Efeito Vidro */
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     }
+
     .menu.menu-aberto {
-        display: block; /* Mostra o menu quando a classe é aplicada via JS */
+        display: flex;
+        flex-direction: column;
+        animation: slideDown 0.3s ease forwards;
     }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
     li.menu-list {
-        display: block; /* Itens do menu agora são blocos, um abaixo do outro */
+        display: block;
         text-align: center;
         margin: 0;
-        padding: 5px 0;
-        border-bottom: 1px solid var(--cor-fundo-principal);
+        padding: 0;
+        border: none;
     }
+
     a.menu-link {
+        display: block;
         padding: 15px;
-        width: 100%; /* Link ocupa toda a largura do item */
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        width: 100%;
     }
-    a.menu-link::after {
-        display: none; /* Remove o efeito de linha no mobile */
+    
+    a.menu-link:hover {
+        background-color: rgba(255,255,255,0.05);
     }
+    
+    a.menu-link::after { display: none; }
 
-
-    /* --- Ajustes Gerais de Seção e Títulos --- */
+    /* --- Títulos --- */
     section h2 {
-        font-size: 2rem; /* Reduz o tamanho dos títulos de seção para melhor encaixe */
+        font-size: 1.8rem;
+        margin: 30px 0;
     }
-
     
-    /* --- Seção Home --- */
-    #home {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
+    /* --- Home --- */
     #foto-sobre {
-        max-width: 200px; /* Foto de perfil um pouco menor em celulares */
-    }
-
-    
-    /* --- Seção de Habilidades --- */
-    .habilidades-container {
-        /* Muda para 1 coluna em telas de celular, garantindo legibilidade */
-        grid-template-columns: 1fr;
-    }
-
-
-    /* --- Seção Contato --- */
-    .contato {
-        flex-direction: column; /* Empilha os itens de contato */
-        text-align: center;
-    }
-    .contato ul {
-        margin-bottom: 30px;
-        text-align: left; /* Alinha o texto dentro da lista */
-    }
-
-    .foto {
         max-width: 200px;
+        border-width: 3px;
     }
-    /* Transforma a trilha em vertical */
+    
+    .section-home .sobre h1 {
+        font-size: 2.5rem;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #saiba-mais, a.btn-download {
+        width: 100%; /* Botões ocupam largura total no celular */
+        max-width: 300px;
+    }
+
+    /* --- Contato --- */
+    .contato {
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+    }
+    
+    .contato ul {
+        text-align: center; /* Centraliza contatos no mobile */
+    }
+    
+    .contato li {
+        justify-content: center;
+    }
+    
+    .contato a {
+        justify-content: center;
+    }
+
+    /* --- JORNADA (TRILHA VERTICAL) --- */
+    /* Transforma o zigue-zague horizontal em linha do tempo vertical */
+    
     .trilha-container {
         flex-direction: column;
         align-items: flex-start;
-        margin: 20px 0;
-        padding-left: 20px; /* Espaço para a linha vertical */
+        margin: 40px 0;
+        padding-left: 10px;
         min-height: auto;
     }
 
-    /* Linha vira vertical na esquerda */
+    /* Ajuste da linha central para a esquerda */
     .trilha-linha {
-        width: 4px;
+        width: 2px;
         height: 100%;
         top: 0;
-        left: 29px; /* Ajuste fino para alinhar com as bolinhas */
+        left: 23px; /* Alinhado ao centro da bolinha */
         transform: none;
-        background: repeating-linear-gradient(to bottom, var(--cor-texto-secundario) 0, var(--cor-texto-secundario) 10px, transparent 10px, transparent 20px);
+        background: repeating-linear-gradient(to bottom, var(--cor-texto-secundario) 0, var(--cor-texto-secundario) 8px, transparent 8px, transparent 16px);
     }
 
     .trilha-passo {
         width: 100%;
         margin-bottom: 30px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 20px;
+        position: relative;
     }
-
+    
+    /* Ajuste do Marcador (Bolinha) */
     .passo-marcador {
-        margin: 0; /* Remove centralização automática */
-        flex-shrink: 0; /* Garante que a bolinha não amasse */
+        margin: 0;
+        flex-shrink: 0;
+        /* Tamanho corrigido para alinhar com a linha */
+        width: 28px; 
+        height: 28px;
     }
 
-    /* Reseta posições absolutas */
+    /* Remove os conectores verticais do desktop */
+    .trilha-passo.cima::after,
+    .trilha-passo.baixo::before {
+        display: none;
+    }
+
+    /* Ajuste do Card */
     .passo-card {
         position: relative;
         top: auto !important;
@@ -163,22 +209,16 @@
         left: auto !important;
         width: auto;
         flex-grow: 1;
-        text-align: left; /* Texto alinhado à esquerda no mobile */
+        text-align: left;
+        margin-top: -5px; /* Alinha o topo do card com a bolinha */
     }
-
-    /* Remove conectores verticais desktop */
-    .trilha-passo.cima::after,
-    .trilha-passo.baixo::before {
-        display: none;
+    
+    /* Habilidades - Um por linha no celular muito pequeno */
+    .habilidades-container {
+        grid-template-columns: 1fr;
     }
-    /* Ajuste do Card de Destaque */
+    
     .section-habilidades > .skill-category ul {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .section-habilidades > .skill-category {
-        width: 100%;
-        margin-bottom: 30px;
+        grid-template-columns: 1fr; /* Lista de soft skills em 1 coluna */
     }
 }
