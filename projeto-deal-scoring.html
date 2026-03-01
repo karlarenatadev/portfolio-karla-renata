@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deal Scoring Preditivo | Karla Renata</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/mobile.css">
+    <style>
+        .container-detalhe { max-width: 900px; margin: 0 auto; padding: 20px; text-align: left; }
+        .projeto-header { text-align: center; margin-bottom: 40px; }
+        .projeto-header h1 { font-family: 'Oswald', sans-serif; color: var(--cor-destaque); font-size: 2.5rem; }
+        .badges span { background-color: var(--cor-fundo-secundario); color: var(--cor-texto-secundario); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin: 0 5px; font-weight: bold; }
+        .detalhes-texto h2 { font-size: 1.8rem; color: var(--cor-destaque); border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 40px; }
+        .detalhes-texto p, .detalhes-texto li { color: var(--cor-texto-principal); font-size: 1.1rem; line-height: 1.6; margin-bottom: 15px; }
+        .img-destaque { width: 100%; border-radius: 12px; margin: 20px 0; border: 1px solid #333; }
+        .btn-voltar { display: inline-block; margin-top: 50px; text-decoration: none; color: var(--cor-texto-secundario); border: 1px solid var(--cor-texto-secundario); padding: 10px 20px; border-radius: 8px; transition: 0.3s; }
+        .btn-voltar:hover { background-color: var(--cor-fundo-secundario); color: var(--cor-destaque); border-color: var(--cor-destaque); }
+        
+        .code-block {
+            background-color: #111;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            color: #ddd;
+            overflow-x: auto;
+            border-left: 4px solid var(--cor-destaque);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container-detalhe">
+        
+        <header class="projeto-header">
+            <h1>Deal Scoring Preditivo</h1>
+            <p>Inteligência Artificial e Business Intelligence no Funil de Vendas</p>
+            
+            <div class="badges">
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Power BI</span>
+                <span>SMOTE</span>
+            </div>
+        </header>
+
+        <section class="detalhes-texto">
+            <img src="imagens/visual-dashboard.png" alt="Dashboard de Risco de Vendas em Power BI" class="img-destaque">
+
+            <h2>🎯 O Problema de Negócio</h2>
+            <p>
+                No cenário comercial, equipas de vendas perdem muito tempo e energia com negociações ("deals") 
+                que têm baixa probabilidade de fechar. O desafio deste projeto foi criar um modelo preditivo capaz 
+                de analisar o comportamento histórico e responder: <strong>Qual é a probabilidade real deste negócio ser ganho?</strong>
+            </p>
+
+            <h2>🧠 A Abordagem Técnica</h2>
+            <p>
+                A inovação do projeto reside em converter dados descritivos de um CRM em estatística acionável. 
+                Para lidar com o desafio clássico do <strong>desbalanceamento de dados em vendas</strong>, implementei:
+            </p>
+            <ul>
+                <li><strong>Feature Engineering:</strong> Utilização de Target Encoding para capturar a performance histórica de variáveis categóricas.</li>
+                <li><strong>Balanceamento:</strong> Aplicação do método SMOTE (Synthetic Minority Over-sampling Technique) para equilibrar as classes minoritárias.</li>
+                <li><strong>Modelagem:</strong> Treino e otimização de um algoritmo <em>Gradient Boosting</em>, que aumentou o ROC-AUC em quase 20% em relação ao baseline.</li>
+            </ul>
+
+            <h3>Snippet do Pipeline de Machine Learning:</h3>
+            <div class="code-block" style="background: #1e1e1e; padding: 15px; border-radius: 8px; border-left: 4px solid #00C896; font-family: monospace; color: #d4d4d4; overflow-x: auto;">
+<span style="color: #6a9955;"># Aplicando SMOTE para balanceamento e treinando o Gradient Boosting</span>
+<span style="color: #569cd6;">from</span> imblearn.over_sampling <span style="color: #569cd6;">import</span> SMOTE
+<span style="color: #569cd6;">from</span> sklearn.ensemble <span style="color: #569cd6;">import</span> GradientBoostingClassifier
+
+smote = SMOTE(random_state=<span style="color: #b5cea8;">42</span>)
+X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)
+
+gb_model = GradientBoostingClassifier(n_estimators=<span style="color: #b5cea8;">100</span>, learning_rate=<span style="color: #b5cea8;">0.1</span>, max_depth=<span style="color: #b5cea8;">5</span>)
+gb_model.fit(X_train_resampled, y_train_resampled)
+
+<span style="color: #6a9955;"># Gerando o Score de Risco (Probabilidade)</span>
+y_proba = gb_model.predict_proba(X_test)[:, <span style="color: #b5cea8;">0</span>] * <span style="color: #b5cea8;">100</span>
+            </div>
+
+            <h2>📊 A Entrega de Valor (Power BI)</h2>
+            <p>
+                Um modelo de ML a correr num ecrã preto não gera impacto comercial. A verdadeira mágica acontece na entrega. 
+                Os resultados (Scores de Risco) foram consumidos por um <strong>Dashboard Interativo no Power BI</strong>.
+            </p>
+            <p>
+                Agora, o gestor de vendas pode aplicar filtros dinâmicos, visualizar um gráfico de dispersão com os riscos de cada negociação e 
+                focar os esforços da equipa exatamente nos negócios sinalizados como "Risco Crítico" (com formatação condicional) hoje.
+            </p>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://github.com/karlarenatadev/projeto-ml-deal-scoring" target="_blank" class="btn-download" style="width: auto; padding: 15px 30px; display: inline-flex; text-decoration: none; border-radius: 8px; background-color: var(--cor-destaque); color: var(--cor-fundo-principal); font-weight: bold;">
+                    Ver Código Completo no GitHub
+                </a>
+            </div>
+            
+        </section>
+
+        <div style="text-align: center;">
+            <a href="index.html#projetos-dados" class="btn-voltar">← Voltar para o Portfólio</a>
+        </div>
+
+    </main>
+
+</body>
+</html>
