@@ -50,11 +50,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ptBtn.classList.add('active');
 
-// --- LÓGICA DO MODAL DA TRILHA ---
+// --- LÓGICA DO SLIDER DE PROJETOS ---
 
-function abrirModal(idModal) {
+/**
+ * Função para controlar o movimento do carrossel de projetos
+ * @param {number} amount - Quantidade de pixels a deslocar (positivo = direita, negativo = esquerda)
+ */
+window.scrollSlider = function(amount) {
+    const container = document.getElementById('dados-slider');
+    if (container) {
+        container.scrollLeft += amount;
+    }
+}
+
+// --- LÓGICA DO MODAL ---
+
+/**
+ * Abre um modal específico
+ * @param {string} idModal - ID do modal a abrir
+ */
+window.abrirModal = function(idModal) {
     const overlay = document.getElementById('modal-container');
     const modalConteudo = document.getElementById(idModal);
+
+    if (!overlay || !modalConteudo) return;
 
     // Esconde todos os conteúdos antes de mostrar o escolhido
     document.querySelectorAll('.modal-content').forEach(el => el.classList.remove('ativo'));
@@ -64,7 +83,11 @@ function abrirModal(idModal) {
     modalConteudo.classList.add('ativo');
 }
 
-function fecharModal(event) {
+/**
+ * Fecha o modal aberto
+ * @param {Event} event - Evento do clique
+ */
+window.fecharModal = function(event) {
     // Fecha se clicar no "X" ou fora do conteúdo (no overlay escuro)
     if (event.target.classList.contains('modal-overlay') || event.target.classList.contains('fechar-modal')) {
         document.getElementById('modal-container').classList.remove('aberto');

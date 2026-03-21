@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão de Estoque | Karla Renata</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/mobile.css">
+    </head>
+<body>
+    <main class="container-detalhe">
+        <header class="projeto-header">
+            <h1>Previsão de Estoque Inteligente</h1>
+            <p>Machine Learning No-Code na AWS</p>
+            <div class="badges">
+                <span>AWS SageMaker</span>
+                <span>Time Series</span>
+                <span>ML No-Code</span>
+                <span>Inventário</span>
+            </div>
+        </header>
+
+        <section class="video-box">
+            <img src="imagens/grafico1.png" alt="Análise de Impacto das Variáveis">
+        </section>
+
+        <section class="detalhes-texto">
+            <h2>🚨 O Desafio</h2>
+            <p>
+                Otimizar a gestão de inventário de varejo para evitar rupturas de estoque ou excesso de produtos parados, utilizando modelos preditivos que considerem variáveis como preço e promoções.
+            </p>
+
+            <h2>💡 A Solução</h2>
+            <p>
+                Desenvolvi um modelo de <strong>Time Series Forecasting</strong> utilizando o Amazon SageMaker Canvas:
+            </p>
+            <ul>
+                <li><strong>Tratamento de Dados:</strong> Uso do Data Flow para garantir que identificadores de produtos fossem tratados corretamente como texto.</li>
+                <li><strong>Treinamento preditivo:</strong> Configuração do modelo para prever a quantidade de estoque para os próximos 5 dias.</li>
+                <li><strong>Análise de Impacto:</strong> Identificação de quais fatores (como o preço) mais influenciavam a baixa do estoque.</li>
+            </ul>
+
+            <h2>🚀 Resultados</h2>
+            <p>
+                Obtenção de métricas sólidas de performance, com um <strong>Avg. wQL de 0.188</strong>, indicando alta precisão nas previsões. O modelo revelou que o preço tem um impacto de aproximadamente 25,44% na variação do estoque.
+            </p>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://github.com/karlarenatadev/lab-aws-sagemaker-canvas-estoque" target="_blank" class="btn-download" style="width: auto; padding: 0 30px; display: inline-flex;">
+                    <span class="btn-text">Ver no GitHub</span>
+                </a>
+            </div>
+        </section>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="btn-voltar">← Voltar para o Portfólio</a>
+        </div>
+    </main>
+</body>
+</html>

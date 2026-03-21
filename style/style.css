@@ -113,7 +113,7 @@ a.menu-link:hover::after { width: 100%; }
 #home {
   font-family: "Oswald", sans-serif;
   text-shadow: 0 0px 20px var(--cor-fundo-principal);
-  min-height: 80vh; /* Ocupa mais espaço da tela */
+  min-height: 80vh;
   padding: 20px;
   position: relative;
   display: flex;
@@ -129,13 +129,26 @@ a.menu-link:hover::after { width: 100%; }
   z-index: -1;
 }
 
-.section-home {
+.home-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
   max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.home-photo {
+  flex-shrink: 0;
+}
+
+.home-content {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
 }
 
 #foto-sobre {
@@ -151,13 +164,13 @@ a.menu-link:hover::after { width: 100%; }
   box-shadow: 0px 0px 30px var(--cor-destaque);
 }
 
-.section-home .sobre h1 {
+.section-home .home-content h1 {
   margin: 0;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   line-height: 1.1;
 }
 
-/* Badges da Hero (Novas) */
+/* Badges da Hero */
 .hero-badges {
     display: flex;
     gap: 10px;
@@ -186,7 +199,7 @@ a.menu-link:hover::after { width: 100%; }
     flex-wrap: wrap;
 }
 
-#saiba-mais {
+.btn-cta {
   border-radius: 12px;
   padding: 12px 30px;
   background-color: var(--cor-destaque);
@@ -196,9 +209,31 @@ a.menu-link:hover::after { width: 100%; }
   transition: transform 0.2s ease, box-shadow 0.2s;
 }
 
-#saiba-mais:hover {
+.btn-cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 200, 150, 0.3);
+}
+
+.lang-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.lang-controls .btn-cta {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  background-color: transparent;
+  border: 2px solid var(--cor-destaque);
+  color: var(--cor-destaque);
+}
+
+.lang-controls .btn-cta.active {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo-principal);
 }
 
 a.btn-download {
@@ -546,3 +581,117 @@ section h2::after {
 
 section { border-bottom: 1px solid rgba(255,255,255,0.05); }
 main > section:last-child { border-bottom: none; }
+
+
+/* --- CARROSSEL PROFISSIONAL --- */
+.slider-wrapper { 
+    position: relative; 
+    width: 100%; 
+    display: flex; 
+    align-items: center;
+    padding: 20px 0;
+}
+
+#dados-slider { 
+    display: flex; 
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    gap: 20px; 
+    padding: 20px 10px; 
+    scroll-snap-type: x mandatory; 
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    max-width: 100%;
+}
+
+#dados-slider::-webkit-scrollbar { display: none; }
+
+.projeto-card { 
+    flex: 0 0 300px; 
+    scroll-snap-align: start; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-slider {
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    color: var(--cor-destaque);
+    border-radius: 50%; 
+    width: 45px; 
+    height: 45px;
+    cursor: pointer; 
+    position: absolute; 
+    z-index: 10; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 200, 150, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.btn-slider:hover { 
+    background: var(--cor-destaque);
+    color: var(--cor-fundo-principal);
+    box-shadow: 0 6px 20px rgba(0, 200, 150, 0.4);
+    transform: scale(1.1);
+}
+
+.btn-slider:active {
+    transform: scale(0.95);
+}
+
+.prev { left: 10px; } 
+.next { right: 10px; }
+
+.projeto-links-modal { 
+    display: flex; 
+    gap: 10px; 
+    margin-top: 20px; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-voltar {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo-principal);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-voltar:hover {
+    background-color: rgba(0, 200, 150, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 200, 150, 0.3);
+}
+
+.texto-detalhe {
+    color: var(--cor-texto-secundario);
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.subtitulo {
+    font-style: italic;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 20px;
+}
+
+/* --- MEDIA QUERIES CARROSSEL --- */
+@media (max-width: 768px) { 
+    .btn-slider { 
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .prev { left: 5px; } 
+    .next { right: 5px; }
+    .projeto-card { flex: 0 0 280px; }
+}

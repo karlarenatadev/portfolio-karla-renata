@@ -8,21 +8,22 @@
     <link rel="apple-touch-icon" sizes="180x180" href="imagens/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon_io/favicon-16x16.png">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/mobile.css">
 </head>
 
 <body>
+    <!-- ========== HEADER ========== -->
     <header>
         <nav>
             <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
             <ul class="menu" id="items">
                 <li class="menu-list"><a class="menu-link lang" href="#" onclick="scrollToSection('home')" data-pt="Home" data-en="Home">Home</a></li>
                 <li class="menu-list"><a class="menu-link lang" href="#" onclick="scrollToSection('sobre')" data-pt="Sobre mim" data-en="About me">Sobre mim</a></li>
+                <li class="menu-list"><a class="menu-link lang" href="#" onclick="scrollToSection('jornada')" data-pt="Jornada" data-en="Journey">Jornada</a></li>
                 <li class="menu-list"><a class="menu-link lang" href="#" onclick="scrollToSection('projetos-dados')" data-pt="Projetos de Dados" data-en="Data Projects">Projetos de Dados</a></li>
-                <li class="menu-list"><a class="menu-link lang" href="#" onclick="scrollToSection('outros-projetos')" data-pt="Outros Projetos" data-en="Other Projects">Outros projetos</a></li>
+                <li class="menu-list"><a class="menu-link lang" href="#" onclick="scrollToSection('outros-projetos')" data-pt="Outros Projetos" data-en="Other Projects">Outros Projetos</a></li>
                 <li class="menu-list"><a class="menu-link lang" href="#" onclick="scrollToSection('habilidades')" data-pt="Habilidades" data-en="Skills">Habilidades</a></li>
                 <li class="menu-list"><a class="menu-link lang" href="#" onclick="scrollToSection('contato')" data-pt="Contato" data-en="Contact">Contato</a></li>
             </ul>
@@ -31,21 +32,16 @@
 
     <main>
         <section id="home" class="section-home">
-            <div>
-                <img id="foto-sobre" src="imagens/foto-sobre.jpg" alt="Karla Renata Foto de Perfil">
-            </div>
+            <div><img id="foto-sobre" src="imagens/foto-sobre.jpg" alt="Karla Renata Foto de Perfil"></div>
             <div class="sobre">
                 <h1>Karla Renata</h1>
-                <p class="lang" data-pt="Desenvolvedora Web | Análise e Visualização de Dados"
-                    data-en="Web Developer | Data Analysis & Visualization">Desenvolvedora Web | Análise e Visualização de Dados</p>
-                
+                <p class="lang" data-pt="Desenvolvedora Web | Análise e Visualização de Dados" data-en="Web Developer | Data Analysis & Visualization">Desenvolvedora Web | Análise e Visualização de Dados</p>
                 <div class="hero-badges">
                     <span class="badge">Python</span>
                     <span class="badge">SQL</span>
                     <span class="badge">Power BI</span>
                     <span class="badge">AWS</span>
                 </div>
-
                 <div class="cta-group">
                     <button onclick="scrollToSection('sobre')" id="saiba-mais" class="lang" data-pt="Saiba mais" data-en="Learn more">Saiba mais</button>
                     <a href="arquivo/curriculo-karla-renata.pdf" download="curriculo-karla-renata.pdf" class="btn-download" aria-label="Download CV">
@@ -59,7 +55,7 @@
                 <button id="enBtn" class="btn-cta">EN</button>
             </div>
         </section>
-
+        
         <section id="sobre" class="section-sobre">
             <h2 class="lang" data-pt="Conheça mais sobre mim" data-en="A little more about me">Conheça mais sobre mim</h2>
             <div class="timeline-container timeline-horizontal">
@@ -67,40 +63,54 @@
                     <div class="timeline-content">
                         <span class="material-symbols-outlined">trending_up</span>
                         <h3 class="lang" data-pt="Vendas & Negócios" data-en="Sales & Business">Vendas & Negócios</h3>
-                        <p class="lang"
-                            data-pt="Desenvolvi uma base sólida em comunicação, visão estratégica de negócios e foco em resultados através da experiência prática."
-                            data-en="Developed a strong foundation in communication, strategic business vision, and a results-oriented focus through hands-on experience.">
-                            Desenvolvi uma base sólida em comunicação, visão estratégica de negócios e foco em resultados.</p>
+                        <p class="lang" data-pt="Desenvolvi uma base sólida em comunicação, visão estratégica de negócios e foco em resultados através da experiência prática." data-en="Developed a strong foundation in communication, strategic business vision, and a results-oriented focus through hands-on experience.">Desenvolvi uma base sólida em comunicação, visão estratégica de negócios e foco em resultados.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <span class="material-symbols-outlined">terminal</span>
                         <h3 class="lang" data-pt="Ciência da Computação" data-en="Computer Science">Ciência da Computação</h3>
-                        <p class="lang"
-                            data-pt="Construindo o alicerce técnico e o pensamento lógico essenciais para a resolução de problemas complexos."
-                            data-en="Building the technical foundation and logical thinking essential for solving complex problems.">
-                            Construindo o alicerce técnico e o pensamento lógico essenciais.</p>
+                        <p class="lang" data-pt="Construindo o alicerce técnico e o pensamento lógico essenciais para a resolução de problemas complexos." data-en="Building the technical foundation and logical thinking essential for solving complex problems.">Construindo o alicerce técnico e o pensamento lógico essenciais.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <span class="material-symbols-outlined">analytics</span>
                         <h3 class="lang" data-pt="Análise de Dados" data-en="Data Analysis">Análise de Dados</h3>
-                        <p class="lang"
-                            data-pt="Unindo a visão de negócio com a proficiência técnica para transformar dados brutos em insights acionáveis."
-                            data-en="Combining business acumen with technical proficiency to transform raw data into actionable insights.">
-                            Unindo a visão de negócio com a proficiência técnica para transformar dados.</p>
+                        <p class="lang" data-pt="Unindo a visão de negócio com a proficiência técnica para transformar dados brutos em insights acionáveis." data-en="Combining business acumen with technical proficiency to transform raw data into actionable insights.">Unindo a visão de negócio com a proficiência técnica para transformar dados.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-container timeline-horizontal">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="material-symbols-outlined">school</span>
+                        <h3 class="lang" data-pt="Formação" data-en="Education">Formação</h3>
+                        <p class="lang" data-pt="Análise de Sistemas e especialização em Data Science. Certificações AWS e Power BI." data-en="Systems Analysis and specialization in Data Science. AWS and Power BI certifications.">Análise de Sistemas e especialização em Data Science. Certificações AWS e Power BI.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="material-symbols-outlined">work</span>
+                        <h3 class="lang" data-pt="Experiência" data-en="Experience">Experiência</h3>
+                        <p class="lang" data-pt="5+ anos em análise de dados, desenvolvimento web e automação de processos com Python." data-en="5+ years in data analysis, web development, and process automation with Python.">5+ anos em análise de dados, desenvolvimento web e automação de processos com Python.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="material-symbols-outlined">code</span>
+                        <h3 class="lang" data-pt="Especialidade" data-en="Specialty">Especialidade</h3>
+                        <p class="lang" data-pt="Transformação digital, BI, Machine Learning e soluções cloud-native com AWS." data-en="Digital transformation, BI, Machine Learning, and cloud-native solutions with AWS.">Transformação digital, BI, Machine Learning e soluções cloud-native com AWS.</p>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <section id="jornada" class="section-jornada">
             <h2 class="lang" data-pt="Minha Trajetória Profissional" data-en="My Professional Journey">Minha Trajetória Profissional</h2>
             <div class="trilha-container">
                 <div class="trilha-linha"></div>
-
                 <div class="trilha-passo cima" onclick="abrirModal('modal-acqua')">
                     <div class="passo-marcador"></div>
                     <div class="passo-card">
@@ -109,7 +119,6 @@
                         <p class="cargo lang" data-pt="Consultora de Vendas" data-en="Sales Consultant">Consultora de Vendas</p>
                     </div>
                 </div>
-
                 <div class="trilha-passo baixo" onclick="abrirModal('modal-maria')">
                     <div class="passo-marcador"></div>
                     <div class="passo-card">
@@ -118,7 +127,6 @@
                         <p class="cargo lang" data-pt="Vendedora" data-en="Salesperson">Vendedora</p>
                     </div>
                 </div>
-
                 <div class="trilha-passo cima" onclick="abrirModal('modal-mania')">
                     <div class="passo-marcador"></div>
                     <div class="passo-card">
@@ -127,7 +135,6 @@
                         <p class="cargo">Mkt & Vendas</p>
                     </div>
                 </div>
-
                 <div class="trilha-passo baixo destaque" onclick="abrirModal('modal-a3data')">
                     <div class="passo-marcador"></div>
                     <div class="passo-card">
@@ -138,371 +145,360 @@
                 </div>
             </div>
         </section>
-
+        
         <div id="modal-container" class="modal-overlay" onclick="fecharModal(event)">
-            
             <div id="modal-acqua" class="modal-content">
                 <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
                 <h3>Acqua Aroma</h3>
                 <p class="subtitulo lang" data-pt="Consultora de Vendas | Mar 2023 - Ago 2023" data-en="Sales Consultant | Mar 2023 - Aug 2023">Consultora de Vendas | Mar 2023 - Ago 2023</p>
-                <p class="texto-detalhe lang" 
-                   data-pt="Atendimento consultivo e análise de preferências de clientes para recomendar soluções personalizadas. Responsável pelo registro e controle de vendas diárias."
-                   data-en="Consultative service and customer preference analysis to recommend personalized solutions. Responsible for daily sales recording and control.">
-                   Atendimento consultivo e análise de preferências de clientes.
-                </p>
+                <p class="texto-detalhe lang" data-pt="Atendimento consultivo e análise de preferências de clientes para recomendar soluções personalizadas. Responsável pelo registro e controle de vendas diárias." data-en="Consultative service and customer preference analysis to recommend personalized solutions. Responsible for daily sales recording and control.">Atendimento consultivo e análise de preferências de clientes.</p>
                 <div class="tags-modal">
                     <span class="lang" data-pt="Atendimento" data-en="Customer Service">Atendimento</span>
                     <span class="lang" data-pt="Relatórios" data-en="Reporting">Relatórios</span>
                 </div>
             </div>
-
             <div id="modal-maria" class="modal-content">
                 <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
                 <h3>Maria Bonita Joias</h3>
                 <p class="subtitulo lang" data-pt="Vendedora | Set 2023 - Jan 2025" data-en="Salesperson | Sep 2023 - Jan 2025">Vendedora | Set 2023 - Jan 2025</p>
-                <p class="texto-detalhe lang"
-                   data-pt="Análise de perfil e comportamento do consumidor para aumentar taxas de conversão. Colaboração no controle financeiro e monitoramento de KPIs."
-                   data-en="Consumer profile and behavior analysis to increase conversion rates. Collaboration in financial control and sales KPI monitoring.">
-                   Análise de perfil e comportamento do consumidor.
-                </p>
+                <p class="texto-detalhe lang" data-pt="Análise de perfil e comportamento do consumidor para aumentar taxas de conversão. Colaboração no controle financeiro e monitoramento de KPIs." data-en="Consumer profile and behavior analysis to increase conversion rates. Collaboration in financial control and sales KPI monitoring.">Análise de perfil e comportamento do consumidor.</p>
                 <div class="tags-modal">
-                    <span>KPIs</span><span>Gestão Financeira</span>
+                    <span>KPIs</span>
+                    <span>Gestão Financeira</span>
                 </div>
             </div>
-
             <div id="modal-mania" class="modal-content">
                 <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
                 <h3>Mania D'água</h3>
                 <p class="subtitulo lang" data-pt="Marketing & Vendas | Fev 2025 - Jul 2025" data-en="Marketing & Sales | Feb 2025 - Jul 2025">Marketing Online & Vendas</p>
-                <p class="texto-detalhe lang"
-                   data-pt="Gestão do funil de vendas digital e análise de métricas de engajamento no Instagram. Otimização da experiência do cliente."
-                   data-en="Digital sales funnel management and Instagram engagement metrics analysis. Customer experience optimization.">
-                   Gestão do funil de vendas digital e análise de métricas.
-                </p>
+                <p class="texto-detalhe lang" data-pt="Gestão do funil de vendas digital e análise de métricas de engajamento no Instagram. Otimização da experiência do cliente." data-en="Digital sales funnel management and Instagram engagement metrics analysis. Customer experience optimization.">Gestão do funil de vendas digital e análise de métricas.</p>
                 <div class="tags-modal">
-                    <span>CRM</span><span>Marketing Digital</span>
+                    <span>CRM</span>
+                    <span>Marketing Digital</span>
                 </div>
             </div>
-
             <div id="modal-a3data" class="modal-content">
                 <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
                 <h3>A3Data</h3>
                 <p class="subtitulo lang" data-pt="Estagiária em Análise de Dados | Nov 2025 - Atual" data-en="Data Analysis Intern | Nov 2025 - Current">Estagiária em Análise de Dados</p>
-                <p class="texto-detalhe lang"
-                   data-pt="Criação de dashboards em Power BI e uso de SQL/Python para resolver problemas de negócio. Integração de dados com foco em estratégias comerciais."
-                   data-en="Creation of Power BI dashboards and use of SQL/Python to solve business problems. Data integration focused on commercial strategies.">
-                   Criação de dashboards em Power BI e uso de SQL/Python.
-                </p>
+                <p class="texto-detalhe lang" data-pt="Criação de dashboards em Power BI e uso de SQL/Python para resolver problemas de negócio. Integração de dados com foco em estratégias comerciais." data-en="Creation of Power BI dashboards and use of SQL/Python to solve business problems. Data integration focused on commercial strategies.">Criação de dashboards em Power BI e uso de SQL/Python.</p>
                 <div class="tags-modal">
-                    <span>Python</span><span>SQL</span><span>Power BI</span><span>AWS</span>
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Power BI</span>
+                    <span>AWS</span>
                 </div>
             </div>
         </div>
 
+        <!-- ========== 4. PROJETOS DE DADOS SECTION (SLIDER) ========== -->
         <section id="projetos-dados" class="section-projects">
             <h2 class="lang" data-pt="Projetos de Análise de Dados" data-en="Data Analysis Projects">Projetos de Análise de Dados</h2>
             
-            <div class="projetos-container">
-                <article class="projeto-card">
-                    <img src="imagens/arquitetura-data.png" alt="Arquitetura ETL AWS Simulator" class="projeto-img">
-                    <div class="projeto-info">
-                        <h3 class="lang" data-pt="AWS Certification Simulator" data-en="AWS Certification Simulator">AWS Certification Simulator</h3>
-                        <p class="lang" 
-                        data-pt="Pipeline ETL autônomo com IA (Gemini) para geração de simulados, incluindo validação semântica e deduplicação de dados." 
-                        data-en="Autonomous AI-powered (Gemini) ETL pipeline for AWS exams, featuring semantic validation and data deduplication.">
-                        Pipeline ETL autônomo com IA (Gemini) para geração de simulados AWS.
-                        </p>
-                        <div class="projeto-ferramentas">
-                            <span>Python</span><span>Google Gemini</span><span>Pydantic</span><span>PWA</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://karlarenatadev.github.io/projeto-simulados-certificacao-aws/" target="_blank" class="lang" data-pt="Ver Demo" data-en="View Demo">Ver Demo</a>
-                            <a href="https://github.com/karlarenatadev/projeto-simulados-certificacao-aws" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="projeto-card">
-                    <img src="imagens/dashboard_overview.png" alt="Dashboard SaaS Sales" class="projeto-img">
-                    <div class="projeto-info">
-                        <h3 class="lang" data-pt="SaaS Sales Analytics" data-en="SaaS Sales Analytics">SaaS Sales Analytics</h3>
-                        <p class="lang" 
-                        data-pt="Análise de tendências e detecção de anomalias em faturamento SaaS utilizando Amazon QuickSight e cálculos de Z-score." 
-                        data-en="Trend analysis and anomaly detection in SaaS revenue using Amazon QuickSight and Z-score calculations.">
-                        Análise de tendências e detecção de anomalias em faturamento SaaS.
-                        </p>
-                        <div class="projeto-ferramentas">
-                            <span>QuickSight</span><span>SPICE</span><span>Estatística</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://github.com/karlarenatadev/saas-sales-analytics-quicksight" target="_blank" class="lang" data-pt="Ver Repositório" data-en="View Repository">Ver Repositório</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="projeto-card">
-                    <img src="imagens/grafico1.png" alt="Impacto de Variáveis SageMaker" class="projeto-img">
-                    <div class="projeto-info">
-                        <h3 class="lang" data-pt="Previsão de Estoque Inteligente" data-en="Smart Inventory Forecasting">Previsão de Estoque Inteligente</h3>
-                        <p class="lang" 
-                        data-pt="Modelo de Time Series para gestão de inventário utilizando Machine Learning no-code na AWS com alta precisão (wQL 0.188)." 
-                        data-en="Time Series model for inventory management using no-code Machine Learning on AWS with high accuracy (wQL 0.188).">
-                        Modelo de Time Series para gestão de inventário utilizando Machine Learning no-code.
-                        </p>
-                        <div class="projeto-ferramentas">
-                            <span>SageMaker Canvas</span><span>AWS</span><span>Machine Learning</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://github.com/karlarenatadev/lab-aws-sagemaker-canvas-estoque" target="_blank" class="lang" data-pt="Ver Repositório" data-en="View Repository">Ver Repositório</a>
-                        </div>
-                    </div>
-                </article>
+            <div class="slider-wrapper">
+                <button class="btn-slider prev" onclick="scrollSlider(-320)" aria-label="Previous">
+                    <span class="material-symbols-outlined">arrow_back_ios</span>
+                </button>
                 
-                <article class="projeto-card">
-                    <img src="imagens/visual-dashboard.png" alt="Dashboard de Deal Scoring" class="projeto-img">
-                    <div class="projeto-info">
-                        <h3 class="lang" data-pt="Deal Scoring Preditivo" data-en="Predictive Deal Scoring">Deal Scoring Preditivo</h3>
-                        <p class="lang" 
-                           data-pt="Modelo de Machine Learning integrado ao Power BI para prever riscos de perda em negociações B2B." 
-                           data-en="Machine Learning model integrated into Power BI to predict loss risks in B2B deals.">
-                           Modelo de Machine Learning integrado ao Power BI para prever riscos de perda.
-                        </p>
-                        <div class="projeto-ferramentas">
-                            <span>Python</span><span>Scikit-Learn</span><span>Power BI</span>
+                <div id="dados-slider">
+                    <!-- Projeto 1: AWS Certification Simulator -->
+                    <article class="projeto-card" onclick="abrirModal('modal-aws-simulator')">
+                        <img src="imagens/arquitetura-data.png" class="projeto-img" alt="AWS Certification Simulator">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="AWS Certification Simulator" data-en="AWS Certification Simulator">AWS Certification Simulator</h3>
+                            <div class="projeto-ferramentas">
+                                <span>Python</span>
+                                <span>Gemini AI</span>
+                                <span>AWS</span>
+                            </div>
                         </div>
-                        <div class="projeto-links">
-                            <a href="projeto-deal-scoring.html" class="lang" data-pt="Ver Projeto" data-en="View Project">Ver Projeto</a>
-                            <a href="https://github.com/karlarenatadev/projeto-ml-deal-scoring" target="_blank">GitHub</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="projeto-card">
-                    <img src="imagens/dashboard-gestao-frotas.png" alt="Dashboard de Gestão de Frotas" class="projeto-img">
-                    <div class="projeto-info">
-                        <h3 class="lang" data-pt="Dashboard Gestão de Frotas" data-en="Fleet Management Dashboard">Dashboard Gestão de Frotas</h3>
-                        <p class="lang" 
-                        data-pt="Solução estratégica para monitoramento de KPIs financeiros e eficiência operacional logística (Business Case UAI Entregas)." 
-                        data-en="Strategic solution for monitoring financial KPIs and logistics operational efficiency (UAI Entregas Business Case).">
-                        Solução estratégica para monitoramento de KPIs financeiros e logísticos.
-                        </p>
-                        <div class="projeto-ferramentas">
-                            <span>Power BI</span><span>DAX</span><span>Modelagem Star Schema</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://github.com/karlarenatadev/gestao-frotas" target="_blank" class="lang" data-pt="Ver Repositório" data-en="View Repository">Ver Repositório</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="projeto-card">
-                    <img src="imagens/demo-rpa.gif" alt="Robô de Automação" class="projeto-img">
-                    <div class="projeto-info">
-                        <h3 class="lang" data-pt="Automação RPA" data-en="RPA Automation">Automação RPA</h3>
-                        <p class="lang" 
-                           data-pt="Robô inteligente que audita planilhas e realiza cadastros em ERP automaticamente, eliminando erros manuais." 
-                           data-en="Intelligent bot that audits spreadsheets and automatically registers data in ERP, eliminating manual errors.">
-                           Robô inteligente que audita planilhas e realiza cadastros em ERP.
-                        </p>
-                        <div class="projeto-ferramentas">
-                            <span>Python</span><span>PyAutoGUI</span><span>Pandas</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="projeto-automacao.html" target="_blank" class="lang" data-pt="Ver Demo" data-en="View Demo">Ver Demo</a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="projeto-card">
-                    <img src="imagens/analise-de-vendas.png" alt="Análise de vendas" class="projeto-img">
-                    <div class="projeto-info">
-                        <h3 class="lang" data-pt="Análise de Vendas" data-en="Sales Analysis">Análise de Vendas</h3>
-                        <p class="lang" 
-                           data-pt="Análise exploratória para identificar padrões de compra e extrair insights estratégicos." 
-                           data-en="Exploratory data analysis to identify purchasing patterns and extract strategic insights.">
-                           Análise exploratória para identificar padrões de compra.
-                        </p>
-                        <div class="projeto-ferramentas">
-                            <span>Python</span><span>Matplotlib</span><span>Seaborn</span>
+                    <!-- Projeto 2: SaaS Sales Analytics -->
+                    <article class="projeto-card" onclick="abrirModal('modal-saas-sales')">
+                        <img src="imagens/dashboard_overview.png" class="projeto-img" alt="SaaS Sales Analytics">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="SaaS Sales Analytics" data-en="SaaS Sales Analytics">SaaS Sales Analytics</h3>
+                            <div class="projeto-ferramentas">
+                                <span>QuickSight</span>
+                                <span>Z-score</span>
+                                <span>AWS</span>
+                            </div>
                         </div>
-                        <div class="projeto-links">
-                            <a href="projeto-analise.html" target="_blank" class="lang" data-pt="Ver Análise" data-en="View Analysis">Ver Análise</a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="projeto-card">
-                    <img src="imagens/logistica-1.png" alt="Dashboard de Logística" class="projeto-img">
-                    <div class="projeto-info">
-                        <h3 class="lang" data-pt="Dashboard de Logística" data-en="Logistics Dashboard">Dashboard Logística</h3>
-                        <p class="lang"
-                           data-pt="Análise de eficiência de entregas, custos e performance de rotas para otimização."
-                           data-en="Analysis of delivery efficiency, costs, and route performance for optimization.">
-                           Análise de eficiência de entregas e performance de rotas.
-                        </p>
-                        <div class="projeto-ferramentas">
-                            <span>Power BI</span><span>DAX</span>
+                    <!-- Projeto 3: Previsão de Estoque Inteligente -->
+                    <article class="projeto-card" onclick="abrirModal('modal-estoque')">
+                        <img src="imagens/grafico1.png" class="projeto-img" alt="Previsão de Estoque">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="Previsão de Estoque Inteligente" data-en="Intelligent Inventory Forecasting">Previsão de Estoque Inteligente</h3>
+                            <div class="projeto-ferramentas">
+                                <span>SageMaker</span>
+                                <span>ML</span>
+                                <span>AWS</span>
+                            </div>
                         </div>
-                        <div class="projeto-links">
-                            <a href="https://github.com/karlarenatadev/dashboard-logistica" target="_blank" class="lang" data-pt="Ver Dashboard" data-en="View Dashboard">Ver Dashboard</a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                 <article class="projeto-card">
-                    <img src="imagens/fluxo-1.png" alt="Fluxo de Caixa" class="projeto-img">
-                    <div class="projeto-info">
-                        <h3 class="lang" data-pt="Fluxo de Caixa" data-en="Cash Flow">Fluxo de Caixa</h3>
-                        <p class="lang"
-                           data-pt="Controle de entradas, saídas e saldo acumulado para análise de saúde financeira."
-                           data-en="Control of inflows, outflows, and accumulated balance for financial health analysis.">
-                           Controle de entradas, saídas e saldo acumulado.
-                        </p>
-                        <div class="projeto-ferramentas">
-                            <span>Power BI</span><span>DAX</span>
+                    <!-- Projeto 4: Deal Scoring Preditivo -->
+                    <article class="projeto-card" onclick="abrirModal('modal-deal-scoring')">
+                        <img src="imagens/visual-dashboard.png" class="projeto-img" alt="Deal Scoring">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="Deal Scoring Preditivo" data-en="Predictive Deal Scoring">Deal Scoring Preditivo</h3>
+                            <div class="projeto-ferramentas">
+                                <span>Python</span>
+                                <span>Scikit-Learn</span>
+                                <span>Power BI</span>
+                            </div>
                         </div>
-                        <div class="projeto-links">
-                            <a href="https://github.com/karlarenatadev/dashboard-fluxo-de-caixa" target="_blank" class="lang" data-pt="Ver Dashboard" data-en="View Dashboard">Ver Dashboard</a>
+                    </article>
+
+                    <!-- Projeto 5: Gestão de Frotas -->
+                    <article class="projeto-card" onclick="abrirModal('modal-frotas')">
+                        <img src="imagens/dashboard-gestao-frotas.png" class="projeto-img" alt="Gestão de Frotas">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="Gestão de Frotas" data-en="Fleet Management">Gestão de Frotas</h3>
+                            <div class="projeto-ferramentas">
+                                <span>Power BI</span>
+                                <span>DAX</span>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+
+                    <!-- Projeto 6: Automação RPA -->
+                    <article class="projeto-card" onclick="abrirModal('modal-rpa')">
+                        <img src="imagens/demo-rpa.gif" class="projeto-img" alt="Automação RPA">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="Automação RPA" data-en="RPA Automation">Automação RPA</h3>
+                            <div class="projeto-ferramentas">
+                                <span>Python</span>
+                                <span>PyAutoGUI</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 7: Análise de Vendas -->
+                    <article class="projeto-card" onclick="abrirModal('modal-vendas-old')">
+                        <img src="imagens/analise-de-vendas.png" class="projeto-img" alt="Análise de Vendas">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="Análise de Vendas (Exploratória)" data-en="Sales Analysis (Exploratory)">Análise de Vendas (Exploratória)</h3>
+                            <div class="projeto-ferramentas">
+                                <span>Python</span>
+                                <span>Seaborn</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 8: Dashboard Logística -->
+                    <article class="projeto-card" onclick="abrirModal('modal-logistica')">
+                        <img src="imagens/logistica-1.png" class="projeto-img" alt="Dashboard Logística">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="Dashboard Logística" data-en="Logistics Dashboard">Dashboard Logística</h3>
+                            <div class="projeto-ferramentas">
+                                <span>Power BI</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 9: Fluxo de Caixa -->
+                    <article class="projeto-card" onclick="abrirModal('modal-caixa')">
+                        <img src="imagens/fluxo-1.png" class="projeto-img" alt="Fluxo de Caixa">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="Fluxo de Caixa" data-en="Cash Flow">Fluxo de Caixa</h3>
+                            <div class="projeto-ferramentas">
+                                <span>Power BI</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <button class="btn-slider next" onclick="scrollSlider(320)" aria-label="Next">
+                    <span class="material-symbols-outlined">arrow_forward_ios</span>
+                </button>
             </div>
         </section>
 
+        <!-- ========== 5. OUTROS PROJETOS SECTION ========== -->
         <section id="outros-projetos" class="section-projects">
-            <h2 class="lang" data-pt="Outros projetos" data-en="Other projects">Outros projetos</h2>
+            <h2 class="lang" data-pt="Desenvolvimento Web" data-en="Web Development">Desenvolvimento Web</h2>
             <div class="projetos-container">
                 <article class="projeto-card">
-                    <img src="imagens/projeto-minhas-redes.png" alt="Minhas Redes Sociais" class="projeto-img">
+                    <img src="imagens/projeto-minhas-redes.png" class="projeto-img" alt="Minhas Redes">
                     <div class="projeto-info">
-                        <h3 class="lang" data-pt="Minhas Redes" data-en="My Networks">Minhas Redes</h3>
-                        <p class="lang" data-pt="Agregador de links sociais." data-en="Social media link aggregator.">Agregador de links sociais.</p>
-                        <div class="projeto-ferramentas">
-                            <span>HTML</span><span>CSS</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://karlarenatadev.github.io/minhas-redes/" target="_blank">Ver Projeto</a>
-                        </div>
+                        <h3>Minhas Redes</h3>
                     </div>
                 </article>
-
                 <article class="projeto-card">
-                    <img src="imagens/projeto-formulario.png" alt="Formulário" class="projeto-img">
+                    <img src="imagens/projeto-login.png" class="projeto-img" alt="Login Page">
                     <div class="projeto-info">
-                        <h3 class="lang" data-pt="Formulário" data-en="Form">Formulário</h3>
-                        <p class="lang" data-pt="Estrutura de inputs simples." data-en="Simple input structure.">Estrutura de inputs.</p>
-                        <div class="projeto-ferramentas">
-                            <span>HTML</span><span>CSS</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://karlarenatadev.github.io/formulario-basico/" target="_blank">Ver Projeto</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="projeto-card">
-                    <img src="imagens/projeto-login.png" alt="Tela de Login" class="projeto-img">
-                    <div class="projeto-info">
-                        <h3 class="lang" data-pt="Login Page" data-en="Login Page">Login Page</h3>
-                        <p class="lang" data-pt="Layout responsivo de login." data-en="Responsive login layout.">Layout responsivo de login.</p>
-                        <div class="projeto-ferramentas">
-                            <span>HTML</span><span>CSS</span>
-                        </div>
-                        <div class="projeto-links">
-                            <a href="https://karlarenatadev.github.io/projeto-login/" target="_blank">Ver Projeto</a>
-                        </div>
+                        <h3>Login Page</h3>
                     </div>
                 </article>
             </div>
         </section>
 
+        <!-- ========== 6. HABILIDADES SECTION ========== -->
         <section id="habilidades" class="section-habilidades">
             <h2 class="lang" data-pt="Habilidades" data-en="Skills">Habilidades</h2>
-            
-            <div class="skill-category">
-                <h3 class="lang" data-pt="Estratégia & Negócios" data-en="Business & Strategy">Estratégia & Negócios</h3>
-                <ul>
-                    <li>
-                        <span class="material-symbols-outlined">psychology</span> 
-                        <span class="lang" data-pt="Storytelling de Dados" data-en="Data Storytelling">Storytelling de Dados</span>
-                    </li>
-                    <li>
-                        <span class="material-symbols-outlined">handshake</span> 
-                        <span class="lang" data-pt="Negociação" data-en="Negotiation">Negociação</span>
-                    </li>
-                    <li>
-                        <span class="material-symbols-outlined">lightbulb</span> 
-                        <span class="lang" data-pt="Resolução de Problemas" data-en="Problem Solving">Resolução de Problemas</span>
-                    </li>
-                    <li>
-                        <span class="material-symbols-outlined">campaign</span> 
-                        <span class="lang" data-pt="Comunicação Assertiva" data-en="Assertive Communication">Comunicação Assertiva</span>
-                    </li>
-                </ul>
-            </div>
-
             <div class="habilidades-container">
                 <div class="skill-category">
-                    <h3 class="lang" data-pt="Linguagens" data-en="Languages">Linguagens</h3>
+                    <h3 class="lang" data-pt="Linguagens de Programação" data-en="Programming Languages">Linguagens de Programação</h3>
                     <ul>
-                        <li><span class="material-symbols-outlined">data_object</span> Python</li>
-                        <li><span class="material-symbols-outlined">database</span> SQL</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Python</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> SQL</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> JavaScript</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> HTML/CSS</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3 class="lang" data-pt="Análise de Dados" data-en="Data Analysis">Análise de Dados</h3>
+                    <h3 class="lang" data-pt="Ferramentas BI & Analytics" data-en="BI & Analytics Tools">Ferramentas BI & Analytics</h3>
                     <ul>
-                        <li><span class="material-symbols-outlined">analytics</span> Pandas</li>
-                        <li><span class="material-symbols-outlined">calculate</span> NumPy</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Power BI</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Amazon QuickSight</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Tableau</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Google Analytics</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3 class="lang" data-pt="Visualização / BI" data-en="Visualization / BI">Visualização / BI</h3>
+                    <h3 class="lang" data-pt="Cloud & DevOps" data-en="Cloud & DevOps">Cloud & DevOps</h3>
                     <ul>
-                        <li><span class="material-symbols-outlined">show_chart</span> Matplotlib</li>
-                        <li><span class="material-symbols-outlined">monitoring</span> Power BI</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> AWS (EC2, S3, Lambda)</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> SageMaker</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Git/GitHub</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Docker</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3 class="lang" data-pt="Automação" data-en="Automation">Automação</h3>
+                    <h3 class="lang" data-pt="Machine Learning" data-en="Machine Learning">Machine Learning</h3>
                     <ul>
-                        <li><span class="material-symbols-outlined">smart_toy</span> n8n</li>
-                        <li><span class="material-symbols-outlined">mouse</span> PyAutoGUI</li>
-                        <li><span class="material-symbols-outlined">web</span> Streamlit</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Scikit-Learn</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> TensorFlow</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Pandas/NumPy</li>
+                        <li><span class="material-symbols-outlined">check_circle</span> Análise Preditiva</li>
                     </ul>
                 </div>
             </div>
         </section>
 
+        <!-- ========== 7. CONTATO SECTION ========== -->
         <section id="contato" class="section-contact">
             <h2 class="lang" data-pt="Contato" data-en="Contact">Contato</h2>
             <div class="contato">
                 <ul>
                     <li class="contato-lista">
-                        <a href="mailto:renatakarla663@gmail.com" target="_blank">
-                            <span class="material-symbols-outlined">mail</span>
-                            <span class="lang" data-pt="E-mail: " data-en="E-mail: ">E-mail: </span>karlarenata692@gmail.com
+                        <a href="mailto:karlarenata692@gmail.com">
+                            <span class="material-symbols-outlined">mail</span> 
+                            karlarenata692@gmail.com
                         </a>
                     </li>
                     <li class="contato-lista">
-                        <a class="contato-link" href="https://www.linkedin.com/in/karlarenata-rosario/" target="_blank">
-                            <img src="imagens/icone-linkedin.png" alt="LinkedIn">
-                            <span class="lang" data-pt="Linkedin: " data-en="Linkedin: ">Linkedin: </span>/karlarenata-rosario/
+                        <a href="https://www.linkedin.com/in/karlarenata-rosario/" target="_blank">
+                            <img src="imagens/icone-linkedin.png" alt="LinkedIn"> 
+                            /karlarenata-rosario/
                         </a>
-                    </li>
-                    <li class="contato-lista">
-                        <a class="contato-link" href="https://github.com/karlarenatadev" target="_blank">
-                            <img src="imagens/icone-github.png" alt="GitHub">
-                            <span class="lang" data-pt="Github: " data-en="Github: ">Github: </span>/karlarenatadev
-                        </a>
-                    </li>
-                    <li>
-                        <span class="material-symbols-outlined">location_on</span>
-                        <span class="lang" data-pt="Salvador - BA" data-en="Salvador - BA, Brazil">Salvador - BA</span>
                     </li>
                 </ul>
-                <div><img src="imagens/perfil.png" alt="Foto de perfil" class="foto"></div>
+                <img src="imagens/perfil.png" class="foto" alt="Karla Renata">
             </div>
         </section>
     </main>
+
+    <!-- ========== MODAL CONTAINER ========== -->
+    <div id="modal-container" class="modal-overlay" onclick="fecharModal(event)">
+
+        <!-- ===== MODAIS DOS PROJETOS DE DADOS ===== -->
+        <div id="modal-aws-simulator" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3 class="lang" data-pt="AWS Certification Simulator" data-en="AWS Certification Simulator">AWS Certification Simulator</h3>
+            <p class="subtitulo lang" data-pt="Pipeline ETL autônomo com IA" data-en="Autonomous ETL Pipeline with AI">Pipeline ETL autônomo com IA</p>
+            <p class="texto-detalhe lang" data-pt="Geração de simulados AWS com 4 camadas de validação utilizando Gemini AI para análise de respostas e feedback inteligente." data-en="AWS exam simulation generation with 4 validation layers using Gemini AI for answer analysis and intelligent feedback.">Geração de simulados AWS com 4 camadas de validação utilizando Gemini AI para análise de respostas e feedback inteligente.</p>
+            <div class="projeto-links-modal">
+                <a href="https://github.com/karlarenatadev/projeto-simulados-certificacao-aws" target="_blank" class="btn-voltar">GitHub</a>
+            </div>
+        </div>
+
+        <div id="modal-saas-sales" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3 class="lang" data-pt="SaaS Sales Analytics" data-en="SaaS Sales Analytics">SaaS Sales Analytics</h3>
+            <p class="subtitulo lang" data-pt="Análise de Tendências e Anomalias" data-en="Trend Analysis and Anomaly Detection">Análise de Tendências e Anomalias</p>
+            <p class="texto-detalhe lang" data-pt="Detecção de anomalias em faturamento SaaS via Amazon QuickSight com algoritmo Z-score para identificação de padrões anormais em receita." data-en="SaaS revenue anomaly detection via Amazon QuickSight using Z-score algorithm to identify abnormal revenue patterns.">Detecção de anomalias em faturamento SaaS via Amazon QuickSight com algoritmo Z-score para identificação de padrões anormais em receita.</p>
+            <div class="projeto-links-modal">
+                <a href="https://github.com/karlarenatadev/saas-sales-analytics-quicksight" target="_blank" class="btn-voltar">GitHub</a>
+            </div>
+        </div>
+
+        <div id="modal-estoque" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3 class="lang" data-pt="Previsão de Estoque Inteligente" data-en="Intelligent Inventory Forecasting">Previsão de Estoque Inteligente</h3>
+            <p class="subtitulo lang" data-pt="Machine Learning No-Code" data-en="No-Code Machine Learning">Machine Learning No-Code</p>
+            <p class="texto-detalhe lang" data-pt="Gestão de inventário utilizando Amazon SageMaker Canvas com modelos preditivos para otimização de estoque (wQL 0.188)." data-en="Inventory management using Amazon SageMaker Canvas with predictive models for stock optimization (wQL 0.188).">Gestão de inventário utilizando Amazon SageMaker Canvas com modelos preditivos para otimização de estoque (wQL 0.188).</p>
+            <div class="projeto-links-modal">
+                <a href="https://github.com/karlarenatadev/lab-aws-sagemaker-canvas-estoque" target="_blank" class="btn-voltar">GitHub</a>
+            </div>
+        </div>
+
+        <div id="modal-deal-scoring" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3 class="lang" data-pt="Deal Scoring Preditivo" data-en="Predictive Deal Scoring">Deal Scoring Preditivo</h3>
+            <p class="subtitulo lang" data-pt="Modelo de Machine Learning" data-en="Machine Learning Model">Modelo de Machine Learning</p>
+            <p class="texto-detalhe lang" data-pt="Previsão de riscos de perda em negociações B2B utilizando Scikit-Learn com visualização em Power BI para suporte à decisão." data-en="Predicting loss risks in B2B negotiations using Scikit-Learn with Power BI visualization for decision support.">Previsão de riscos de perda em negociações B2B utilizando Scikit-Learn com visualização em Power BI para suporte à decisão.</p>
+            <div class="projeto-links-modal">
+                <a href="https://github.com/karlarenatadev/projeto-ml-deal-scoring" target="_blank" class="btn-voltar">GitHub</a>
+            </div>
+        </div>
+
+        <div id="modal-frotas" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3 class="lang" data-pt="Gestão de Frotas" data-en="Fleet Management">Gestão de Frotas</h3>
+            <p class="subtitulo lang" data-pt="Dashboard Executivo" data-en="Executive Dashboard">Dashboard Executivo</p>
+            <p class="texto-detalhe lang" data-pt="Dashboard interativo em Power BI com DAX para monitoramento de frotas, custos operacionais e KPIs de desempenho." data-en="Interactive Power BI dashboard with DAX for fleet monitoring, operational costs, and performance KPIs.">Dashboard interativo em Power BI com DAX para monitoramento de frotas, custos operacionais e KPIs de desempenho.</p>
+            <div class="projeto-links-modal">
+                <a href="https://github.com/karlarenatadev/dashboard-gestao-frotas" target="_blank" class="btn-voltar">GitHub</a>
+            </div>
+        </div>
+
+        <div id="modal-rpa" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3 class="lang" data-pt="Automação RPA" data-en="RPA Automation">Automação RPA</h3>
+            <p class="subtitulo lang" data-pt="Robô Inteligente" data-en="Intelligent Bot">Robô Inteligente</p>
+            <p class="texto-detalhe lang" data-pt="Robô para auditoria e cadastro automático de produtos em ERP via Python e PyAutoGUI com validação de dados." data-en="Bot for auditing and automatic product registration in ERP via Python and PyAutoGUI with data validation.">Robô para auditoria e cadastro automático de produtos em ERP via Python e PyAutoGUI com validação de dados.</p>
+            <div class="projeto-links-modal">
+                <a href="https://github.com/karlarenatadev/automacao-pyautogui" target="_blank" class="btn-voltar">GitHub</a>
+            </div>
+        </div>
+
+        <div id="modal-vendas-old" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3 class="lang" data-pt="Análise de Vendas (Exploratória)" data-en="Sales Analysis (Exploratory)">Análise de Vendas (Exploratória)</h3>
+            <p class="subtitulo lang" data-pt="Análise Exploratória de Dados" data-en="Exploratory Data Analysis">Análise Exploratória de Dados</p>
+            <p class="texto-detalhe lang" data-pt="Análise exploratória de dados de vendas com visualizações em Seaborn e Matplotlib para identificação de padrões e tendências." data-en="Exploratory analysis of sales data with Seaborn and Matplotlib visualizations to identify patterns and trends.">Análise exploratória de dados de vendas com visualizações em Seaborn e Matplotlib para identificação de padrões e tendências.</p>
+            <div class="projeto-links-modal">
+                <a href="https://github.com/karlarenatadev/analise-vendas-exploratoria" target="_blank" class="btn-voltar">GitHub</a>
+            </div>
+        </div>
+
+        <div id="modal-logistica" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3 class="lang" data-pt="Dashboard Logística" data-en="Logistics Dashboard">Dashboard Logística</h3>
+            <p class="subtitulo lang" data-pt="Visualização de Operações" data-en="Operations Visualization">Visualização de Operações</p>
+            <p class="texto-detalhe lang" data-pt="Dashboard em Power BI para acompanhamento de operações logísticas, rotas, prazos de entrega e eficiência operacional." data-en="Power BI dashboard for tracking logistics operations, routes, delivery times, and operational efficiency.">Dashboard em Power BI para acompanhamento de operações logísticas, rotas, prazos de entrega e eficiência operacional.</p>
+            <div class="projeto-links-modal">
+                <a href="https://github.com/karlarenatadev/dashboard-logistica" target="_blank" class="btn-voltar">GitHub</a>
+            </div>
+        </div>
+
+        <div id="modal-caixa" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3 class="lang" data-pt="Fluxo de Caixa" data-en="Cash Flow">Fluxo de Caixa</h3>
+            <p class="subtitulo lang" data-pt="Gestão Financeira" data-en="Financial Management">Gestão Financeira</p>
+            <p class="texto-detalhe lang" data-pt="Dashboard de fluxo de caixa em Power BI com análise de receitas, despesas e projeções financeiras para planejamento." data-en="Cash flow dashboard in Power BI with analysis of revenues, expenses, and financial projections for planning.">Dashboard de fluxo de caixa em Power BI com análise de receitas, despesas e projeções financeiras para planejamento.</p>
+            <div class="projeto-links-modal">
+                <a href="https://github.com/karlarenatadev/dashboard-fluxo-caixa" target="_blank" class="btn-voltar">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
     <script src="scripts.js"></script>
 </body>
 </html>
