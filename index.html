@@ -71,27 +71,31 @@
 
     <main role="main">
         <section id="home" class="section-home">
-            <div><img id="foto-sobre" src="imagens/foto-sobre.jpg" alt="Karla Renata Foto de Perfil"></div>
-            <div class="sobre">
-                <h1>Karla Renata</h1>
-                <p class="lang" data-pt="Desenvolvedora Web | Análise e Visualização de Dados" data-en="Web Developer | Data Analysis & Visualization">Desenvolvedora Web | Análise e Visualização de Dados</p>
-                <div class="hero-badges">
-                    <span class="badge">Python</span>
-                    <span class="badge">SQL</span>
-                    <span class="badge">Power BI</span>
-                    <span class="badge">AWS</span>
+            <div class="home-container">
+                <div class="home-photo">
+                    <img id="foto-sobre" src="imagens/foto-sobre.jpg" alt="Karla Renata Foto de Perfil">
                 </div>
-                <div class="cta-group">
-                    <button onclick="scrollToSection('sobre')" id="saiba-mais" class="lang" data-pt="Saiba mais" data-en="Learn more">Saiba mais</button>
-                    <a href="arquivo/curriculo-karla-renata.pdf" download="curriculo-karla-renata.pdf" class="btn-download" aria-label="Download CV">
-                        <span class="btn-text lang" data-pt="Download CV" data-en="Download CV">Download CV</span>
-                        <i class="bi bi-cloud-download"><span class="material-symbols-outlined">download</span></i>
-                    </a>
+                <div class="home-content sobre">
+                    <h1>Karla Renata</h1>
+                    <p class="lang" data-pt="Desenvolvedora Web | Análise e Visualização de Dados" data-en="Web Developer | Data Analysis & Visualization">Desenvolvedora Web | Análise e Visualização de Dados</p>
+                    <div class="hero-badges">
+                        <span class="badge">Python</span>
+                        <span class="badge">SQL</span>
+                        <span class="badge">Power BI</span>
+                        <span class="badge">AWS</span>
+                    </div>
+                    <div class="cta-group">
+                        <button onclick="scrollToSection('sobre')" id="saiba-mais" class="lang" data-pt="Saiba mais" data-en="Learn more">Saiba mais</button>
+                        <a href="arquivo/curriculo-karla-renata.pdf" download="curriculo-karla-renata.pdf" class="btn-download" aria-label="Download CV">
+                            <span class="btn-text lang" data-pt="Download CV" data-en="Download CV">Download CV</span>
+                            <span class="material-symbols-outlined">download</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="lang-controls">
-                <button id="ptBtn" class="btn-cta">PT</button>
-                <button id="enBtn" class="btn-cta">EN</button>
+                <div class="lang-controls">
+                    <button id="ptBtn" class="btn-cta">PT</button>
+                    <button id="enBtn" class="btn-cta">EN</button>
+                </div>
             </div>
         </section>
         
@@ -185,51 +189,6 @@
             </div>
         </section>
         
-        <div id="modal-container" class="modal-overlay" onclick="fecharModal(event)">
-            <div id="modal-acqua" class="modal-content">
-                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
-                <h3>Acqua Aroma</h3>
-                <p class="subtitulo lang" data-pt="Consultora de Vendas | Mar 2023 - Ago 2023" data-en="Sales Consultant | Mar 2023 - Aug 2023">Consultora de Vendas | Mar 2023 - Ago 2023</p>
-                <p class="texto-detalhe lang" data-pt="Atendimento consultivo e análise de preferências de clientes para recomendar soluções personalizadas. Responsável pelo registro e controle de vendas diárias." data-en="Consultative service and customer preference analysis to recommend personalized solutions. Responsible for daily sales recording and control.">Atendimento consultivo e análise de preferências de clientes.</p>
-                <div class="tags-modal">
-                    <span class="lang" data-pt="Atendimento" data-en="Customer Service">Atendimento</span>
-                    <span class="lang" data-pt="Relatórios" data-en="Reporting">Relatórios</span>
-                </div>
-            </div>
-            <div id="modal-maria" class="modal-content">
-                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
-                <h3>Maria Bonita Joias</h3>
-                <p class="subtitulo lang" data-pt="Vendedora | Set 2023 - Jan 2025" data-en="Salesperson | Sep 2023 - Jan 2025">Vendedora | Set 2023 - Jan 2025</p>
-                <p class="texto-detalhe lang" data-pt="Análise de perfil e comportamento do consumidor para aumentar taxas de conversão. Colaboração no controle financeiro e monitoramento de KPIs." data-en="Consumer profile and behavior analysis to increase conversion rates. Collaboration in financial control and sales KPI monitoring.">Análise de perfil e comportamento do consumidor.</p>
-                <div class="tags-modal">
-                    <span>KPIs</span>
-                    <span>Gestão Financeira</span>
-                </div>
-            </div>
-            <div id="modal-mania" class="modal-content">
-                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
-                <h3>Mania D'água</h3>
-                <p class="subtitulo lang" data-pt="Marketing & Vendas | Fev 2025 - Jul 2025" data-en="Marketing & Sales | Feb 2025 - Jul 2025">Marketing Online & Vendas</p>
-                <p class="texto-detalhe lang" data-pt="Gestão do funil de vendas digital e análise de métricas de engajamento no Instagram. Otimização da experiência do cliente." data-en="Digital sales funnel management and Instagram engagement metrics analysis. Customer experience optimization.">Gestão do funil de vendas digital e análise de métricas.</p>
-                <div class="tags-modal">
-                    <span>CRM</span>
-                    <span>Marketing Digital</span>
-                </div>
-            </div>
-            <div id="modal-a3data" class="modal-content">
-                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
-                <h3>A3Data</h3>
-                <p class="subtitulo lang" data-pt="Estagiária em Análise de Dados | Nov 2025 - Atual" data-en="Data Analysis Intern | Nov 2025 - Current">Estagiária em Análise de Dados</p>
-                <p class="texto-detalhe lang" data-pt="Criação de dashboards em Power BI e uso de SQL/Python para resolver problemas de negócio. Integração de dados com foco em estratégias comerciais." data-en="Creation of Power BI dashboards and use of SQL/Python to solve business problems. Data integration focused on commercial strategies.">Criação de dashboards em Power BI e uso de SQL/Python.</p>
-                <div class="tags-modal">
-                    <span>Python</span>
-                    <span>SQL</span>
-                    <span>Power BI</span>
-                    <span>AWS</span>
-                </div>
-            </div>
-        </div>
-
         <!-- ========== 4. PROJETOS DE DADOS SECTION (SLIDER) ========== -->
         <section id="projetos-dados" class="section-projects">
             <h2 class="lang" data-pt="Projetos de Análise de Dados" data-en="Data Analysis Projects">Projetos de Análise de Dados</h2>
@@ -242,7 +201,7 @@
                 <div id="dados-slider">
                     <!-- Projeto 1: AWS Certification Simulator -->
                     <article class="projeto-card" onclick="abrirModal('modal-aws-simulator')">
-                        <img src="imagens/arquitetura-data.png" class="projeto-img" alt="AWS Certification Simulator">
+                        <img src="imagens/arquitetura-data.png" class="projeto-img" alt="AWS Certification Simulator" loading="lazy">
                         <div class="projeto-info">
                             <h3 class="lang" data-pt="AWS Certification Simulator" data-en="AWS Certification Simulator">AWS Certification Simulator</h3>
                             <div class="projeto-ferramentas">
@@ -255,7 +214,7 @@
 
                     <!-- Projeto 2: SaaS Sales Analytics -->
                     <article class="projeto-card" onclick="abrirModal('modal-saas-sales')">
-                        <img src="imagens/dashboard_overview.png" class="projeto-img" alt="SaaS Sales Analytics">
+                        <img src="imagens/dashboard_overview.png" class="projeto-img" alt="SaaS Sales Analytics" loading="lazy">
                         <div class="projeto-info">
                             <h3 class="lang" data-pt="SaaS Sales Analytics" data-en="SaaS Sales Analytics">SaaS Sales Analytics</h3>
                             <div class="projeto-ferramentas">
@@ -268,7 +227,7 @@
 
                     <!-- Projeto 3: Previsão de Estoque Inteligente -->
                     <article class="projeto-card" onclick="abrirModal('modal-estoque')">
-                        <img src="imagens/grafico1.png" class="projeto-img" alt="Previsão de Estoque">
+                        <img src="imagens/grafico1.png" class="projeto-img" alt="Previsão de Estoque" loading="lazy">
                         <div class="projeto-info">
                             <h3 class="lang" data-pt="Previsão de Estoque Inteligente" data-en="Intelligent Inventory Forecasting">Previsão de Estoque Inteligente</h3>
                             <div class="projeto-ferramentas">
@@ -281,7 +240,7 @@
 
                     <!-- Projeto 4: Deal Scoring Preditivo -->
                     <article class="projeto-card" onclick="abrirModal('modal-deal-scoring')">
-                        <img src="imagens/visual-dashboard.png" class="projeto-img" alt="Deal Scoring">
+                        <img src="imagens/visual-dashboard.png" class="projeto-img" alt="Deal Scoring" loading="lazy">
                         <div class="projeto-info">
                             <h3 class="lang" data-pt="Deal Scoring Preditivo" data-en="Predictive Deal Scoring">Deal Scoring Preditivo</h3>
                             <div class="projeto-ferramentas">
@@ -294,7 +253,7 @@
 
                     <!-- Projeto 5: Gestão de Frotas -->
                     <article class="projeto-card" onclick="abrirModal('modal-frotas')">
-                        <img src="imagens/dashboard-gestao-frotas.png" class="projeto-img" alt="Gestão de Frotas">
+                        <img src="imagens/dashboard-gestao-frotas.png" class="projeto-img" alt="Gestão de Frotas" loading="lazy">
                         <div class="projeto-info">
                             <h3 class="lang" data-pt="Gestão de Frotas" data-en="Fleet Management">Gestão de Frotas</h3>
                             <div class="projeto-ferramentas">
@@ -306,7 +265,7 @@
 
                     <!-- Projeto 6: Automação RPA -->
                     <article class="projeto-card" onclick="abrirModal('modal-rpa')">
-                        <img src="imagens/demo-rpa.gif" class="projeto-img" alt="Automação RPA">
+                        <img src="imagens/demo-rpa.gif" class="projeto-img" alt="Automação RPA" loading="lazy">
                         <div class="projeto-info">
                             <h3 class="lang" data-pt="Automação RPA" data-en="RPA Automation">Automação RPA</h3>
                             <div class="projeto-ferramentas">
@@ -318,7 +277,7 @@
 
                     <!-- Projeto 7: Análise de Vendas -->
                     <article class="projeto-card" onclick="abrirModal('modal-vendas-old')">
-                        <img src="imagens/analise-de-vendas.png" class="projeto-img" alt="Análise de Vendas">
+                        <img src="imagens/analise-de-vendas.png" class="projeto-img" alt="Análise de Vendas" loading="lazy">
                         <div class="projeto-info">
                             <h3 class="lang" data-pt="Análise de Vendas (Exploratória)" data-en="Sales Analysis (Exploratory)">Análise de Vendas (Exploratória)</h3>
                             <div class="projeto-ferramentas">
@@ -330,7 +289,7 @@
 
                     <!-- Projeto 8: Dashboard Logística -->
                     <article class="projeto-card" onclick="abrirModal('modal-logistica')">
-                        <img src="imagens/logistica-1.png" class="projeto-img" alt="Dashboard Logística">
+                        <img src="imagens/logistica-1.png" class="projeto-img" alt="Dashboard Logística" loading="lazy">
                         <div class="projeto-info">
                             <h3 class="lang" data-pt="Dashboard Logística" data-en="Logistics Dashboard">Dashboard Logística</h3>
                             <div class="projeto-ferramentas">
@@ -341,7 +300,7 @@
 
                     <!-- Projeto 9: Fluxo de Caixa -->
                     <article class="projeto-card" onclick="abrirModal('modal-caixa')">
-                        <img src="imagens/fluxo-1.png" class="projeto-img" alt="Fluxo de Caixa">
+                        <img src="imagens/fluxo-1.png" class="projeto-img" alt="Fluxo de Caixa" loading="lazy">
                         <div class="projeto-info">
                             <h3 class="lang" data-pt="Fluxo de Caixa" data-en="Cash Flow">Fluxo de Caixa</h3>
                             <div class="projeto-ferramentas">
@@ -362,13 +321,13 @@
             <h2 class="lang" data-pt="Desenvolvimento Web" data-en="Web Development">Desenvolvimento Web</h2>
             <div class="projetos-container">
                 <article class="projeto-card">
-                    <img src="imagens/projeto-minhas-redes.png" class="projeto-img" alt="Minhas Redes">
+                    <img src="imagens/projeto-minhas-redes.png" class="projeto-img" alt="Minhas Redes" loading="lazy">
                     <div class="projeto-info">
                         <h3>Minhas Redes</h3>
                     </div>
                 </article>
                 <article class="projeto-card">
-                    <img src="imagens/projeto-login.png" class="projeto-img" alt="Login Page">
+                    <img src="imagens/projeto-login.png" class="projeto-img" alt="Login Page" loading="lazy">
                     <div class="projeto-info">
                         <h3>Login Page</h3>
                     </div>
@@ -431,19 +390,66 @@
                         </a>
                     </li>
                     <li class="contato-lista">
-                        <a href="https://www.linkedin.com/in/karlarenata-rosario/" target="_blank">
+                        <a href="https://www.linkedin.com/in/karlarenata-rosario/" target="_blank" rel="noopener noreferrer">
                             <img src="imagens/icone-linkedin.png" alt="LinkedIn"> 
                             /karlarenata-rosario/
                         </a>
                     </li>
                 </ul>
-                <img src="imagens/perfil.png" class="foto" alt="Karla Renata">
+                <img src="imagens/perfil.png" class="foto" alt="Karla Renata" loading="lazy">
             </div>
         </section>
     </main>
 
     <!-- ========== MODAL CONTAINER ========== -->
     <div id="modal-container" class="modal-overlay" onclick="fecharModal(event)">
+        
+        <!-- ===== MODAIS DA JORNADA ===== -->
+        <div id="modal-acqua" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3>Acqua Aroma</h3>
+            <p class="subtitulo lang" data-pt="Consultora de Vendas | Mar 2023 - Ago 2023" data-en="Sales Consultant | Mar 2023 - Aug 2023">Consultora de Vendas | Mar 2023 - Ago 2023</p>
+            <p class="texto-detalhe lang" data-pt="Atendimento consultivo e análise de preferências de clientes para recomendar soluções personalizadas. Responsável pelo registro e controle de vendas diárias." data-en="Consultative service and customer preference analysis to recommend personalized solutions. Responsible for daily sales recording and control.">Atendimento consultivo e análise de preferências de clientes.</p>
+            <div class="tags-modal">
+                <span class="lang" data-pt="Atendimento" data-en="Customer Service">Atendimento</span>
+                <span class="lang" data-pt="Relatórios" data-en="Reporting">Relatórios</span>
+            </div>
+        </div>
+        
+        <div id="modal-maria" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3>Maria Bonita Joias</h3>
+            <p class="subtitulo lang" data-pt="Vendedora | Set 2023 - Jan 2025" data-en="Salesperson | Sep 2023 - Jan 2025">Vendedora | Set 2023 - Jan 2025</p>
+            <p class="texto-detalhe lang" data-pt="Análise de perfil e comportamento do consumidor para aumentar taxas de conversão. Colaboração no controle financeiro e monitoramento de KPIs." data-en="Consumer profile and behavior analysis to increase conversion rates. Collaboration in financial control and sales KPI monitoring.">Análise de perfil e comportamento do consumidor.</p>
+            <div class="tags-modal">
+                <span>KPIs</span>
+                <span>Gestão Financeira</span>
+            </div>
+        </div>
+        
+        <div id="modal-mania" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3>Mania D'água</h3>
+            <p class="subtitulo lang" data-pt="Marketing & Vendas | Fev 2025 - Jul 2025" data-en="Marketing & Sales | Feb 2025 - Jul 2025">Marketing Online & Vendas</p>
+            <p class="texto-detalhe lang" data-pt="Gestão do funil de vendas digital e análise de métricas de engajamento no Instagram. Otimização da experiência do cliente." data-en="Digital sales funnel management and Instagram engagement metrics analysis. Customer experience optimization.">Gestão do funil de vendas digital e análise de métricas.</p>
+            <div class="tags-modal">
+                <span>CRM</span>
+                <span>Marketing Digital</span>
+            </div>
+        </div>
+        
+        <div id="modal-a3data" class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+            <h3>A3Data</h3>
+            <p class="subtitulo lang" data-pt="Estagiária em Análise de Dados | Nov 2025 - Atual" data-en="Data Analysis Intern | Nov 2025 - Current">Estagiária em Análise de Dados</p>
+            <p class="texto-detalhe lang" data-pt="Criação de dashboards em Power BI e uso de SQL/Python para resolver problemas de negócio. Integração de dados com foco em estratégias comerciais." data-en="Creation of Power BI dashboards and use of SQL/Python to solve business problems. Data integration focused on commercial strategies.">Criação de dashboards em Power BI e uso de SQL/Python.</p>
+            <div class="tags-modal">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>Power BI</span>
+                <span>AWS</span>
+            </div>
+        </div>
 
         <!-- ===== MODAIS DOS PROJETOS DE DADOS ===== -->
         <div id="modal-aws-simulator" class="modal-content">
@@ -452,7 +458,7 @@
             <p class="subtitulo lang" data-pt="Pipeline ETL autônomo com IA" data-en="Autonomous ETL Pipeline with AI">Pipeline ETL autônomo com IA</p>
             <p class="texto-detalhe lang" data-pt="Geração de simulados AWS com 4 camadas de validação utilizando Gemini AI para análise de respostas e feedback inteligente." data-en="AWS exam simulation generation with 4 validation layers using Gemini AI for answer analysis and intelligent feedback.">Geração de simulados AWS com 4 camadas de validação utilizando Gemini AI para análise de respostas e feedback inteligente.</p>
             <div class="projeto-links-modal">
-                <a href="https://github.com/karlarenatadev/projeto-simulados-certificacao-aws" target="_blank" class="btn-voltar">GitHub</a>
+                <a href="https://github.com/karlarenatadev/projeto-simulados-certificacao-aws" target="_blank" rel="noopener noreferrer" class="btn-voltar">GitHub</a>
             </div>
         </div>
 
@@ -462,7 +468,7 @@
             <p class="subtitulo lang" data-pt="Análise de Tendências e Anomalias" data-en="Trend Analysis and Anomaly Detection">Análise de Tendências e Anomalias</p>
             <p class="texto-detalhe lang" data-pt="Detecção de anomalias em faturamento SaaS via Amazon QuickSight com algoritmo Z-score para identificação de padrões anormais em receita." data-en="SaaS revenue anomaly detection via Amazon QuickSight using Z-score algorithm to identify abnormal revenue patterns.">Detecção de anomalias em faturamento SaaS via Amazon QuickSight com algoritmo Z-score para identificação de padrões anormais em receita.</p>
             <div class="projeto-links-modal">
-                <a href="https://github.com/karlarenatadev/saas-sales-analytics-quicksight" target="_blank" class="btn-voltar">GitHub</a>
+                <a href="https://github.com/karlarenatadev/saas-sales-analytics-quicksight" target="_blank" rel="noopener noreferrer" class="btn-voltar">GitHub</a>
             </div>
         </div>
 
@@ -472,7 +478,7 @@
             <p class="subtitulo lang" data-pt="Machine Learning No-Code" data-en="No-Code Machine Learning">Machine Learning No-Code</p>
             <p class="texto-detalhe lang" data-pt="Gestão de inventário utilizando Amazon SageMaker Canvas com modelos preditivos para otimização de estoque (wQL 0.188)." data-en="Inventory management using Amazon SageMaker Canvas with predictive models for stock optimization (wQL 0.188).">Gestão de inventário utilizando Amazon SageMaker Canvas com modelos preditivos para otimização de estoque (wQL 0.188).</p>
             <div class="projeto-links-modal">
-                <a href="https://github.com/karlarenatadev/lab-aws-sagemaker-canvas-estoque" target="_blank" class="btn-voltar">GitHub</a>
+                <a href="https://github.com/karlarenatadev/lab-aws-sagemaker-canvas-estoque" target="_blank" rel="noopener noreferrer" class="btn-voltar">GitHub</a>
             </div>
         </div>
 
@@ -482,7 +488,7 @@
             <p class="subtitulo lang" data-pt="Modelo de Machine Learning" data-en="Machine Learning Model">Modelo de Machine Learning</p>
             <p class="texto-detalhe lang" data-pt="Previsão de riscos de perda em negociações B2B utilizando Scikit-Learn com visualização em Power BI para suporte à decisão." data-en="Predicting loss risks in B2B negotiations using Scikit-Learn with Power BI visualization for decision support.">Previsão de riscos de perda em negociações B2B utilizando Scikit-Learn com visualização em Power BI para suporte à decisão.</p>
             <div class="projeto-links-modal">
-                <a href="https://github.com/karlarenatadev/projeto-ml-deal-scoring" target="_blank" class="btn-voltar">GitHub</a>
+                <a href="https://github.com/karlarenatadev/projeto-ml-deal-scoring" target="_blank" rel="noopener noreferrer" class="btn-voltar">GitHub</a>
             </div>
         </div>
 
@@ -492,7 +498,7 @@
             <p class="subtitulo lang" data-pt="Dashboard Executivo" data-en="Executive Dashboard">Dashboard Executivo</p>
             <p class="texto-detalhe lang" data-pt="Dashboard interativo em Power BI com DAX para monitoramento de frotas, custos operacionais e KPIs de desempenho." data-en="Interactive Power BI dashboard with DAX for fleet monitoring, operational costs, and performance KPIs.">Dashboard interativo em Power BI com DAX para monitoramento de frotas, custos operacionais e KPIs de desempenho.</p>
             <div class="projeto-links-modal">
-                <a href="https://github.com/karlarenatadev/dashboard-gestao-frotas" target="_blank" class="btn-voltar">GitHub</a>
+                <a href="https://github.com/karlarenatadev/dashboard-gestao-frotas" target="_blank" rel="noopener noreferrer" class="btn-voltar">GitHub</a>
             </div>
         </div>
 
@@ -502,7 +508,7 @@
             <p class="subtitulo lang" data-pt="Robô Inteligente" data-en="Intelligent Bot">Robô Inteligente</p>
             <p class="texto-detalhe lang" data-pt="Robô para auditoria e cadastro automático de produtos em ERP via Python e PyAutoGUI com validação de dados." data-en="Bot for auditing and automatic product registration in ERP via Python and PyAutoGUI with data validation.">Robô para auditoria e cadastro automático de produtos em ERP via Python e PyAutoGUI com validação de dados.</p>
             <div class="projeto-links-modal">
-                <a href="https://github.com/karlarenatadev/automacao-pyautogui" target="_blank" class="btn-voltar">GitHub</a>
+                <a href="https://github.com/karlarenatadev/automacao-pyautogui" target="_blank" rel="noopener noreferrer" class="btn-voltar">GitHub</a>
             </div>
         </div>
 
@@ -512,7 +518,7 @@
             <p class="subtitulo lang" data-pt="Análise Exploratória de Dados" data-en="Exploratory Data Analysis">Análise Exploratória de Dados</p>
             <p class="texto-detalhe lang" data-pt="Análise exploratória de dados de vendas com visualizações em Seaborn e Matplotlib para identificação de padrões e tendências." data-en="Exploratory analysis of sales data with Seaborn and Matplotlib visualizations to identify patterns and trends.">Análise exploratória de dados de vendas com visualizações em Seaborn e Matplotlib para identificação de padrões e tendências.</p>
             <div class="projeto-links-modal">
-                <a href="https://github.com/karlarenatadev/analise-vendas-exploratoria" target="_blank" class="btn-voltar">GitHub</a>
+                <a href="https://github.com/karlarenatadev/analise-vendas-exploratoria" target="_blank" rel="noopener noreferrer" class="btn-voltar">GitHub</a>
             </div>
         </div>
 
@@ -522,7 +528,7 @@
             <p class="subtitulo lang" data-pt="Visualização de Operações" data-en="Operations Visualization">Visualização de Operações</p>
             <p class="texto-detalhe lang" data-pt="Dashboard em Power BI para acompanhamento de operações logísticas, rotas, prazos de entrega e eficiência operacional." data-en="Power BI dashboard for tracking logistics operations, routes, delivery times, and operational efficiency.">Dashboard em Power BI para acompanhamento de operações logísticas, rotas, prazos de entrega e eficiência operacional.</p>
             <div class="projeto-links-modal">
-                <a href="https://github.com/karlarenatadev/dashboard-logistica" target="_blank" class="btn-voltar">GitHub</a>
+                <a href="https://github.com/karlarenatadev/dashboard-logistica" target="_blank" rel="noopener noreferrer" class="btn-voltar">GitHub</a>
             </div>
         </div>
 
@@ -532,7 +538,7 @@
             <p class="subtitulo lang" data-pt="Gestão Financeira" data-en="Financial Management">Gestão Financeira</p>
             <p class="texto-detalhe lang" data-pt="Dashboard de fluxo de caixa em Power BI com análise de receitas, despesas e projeções financeiras para planejamento." data-en="Cash flow dashboard in Power BI with analysis of revenues, expenses, and financial projections for planning.">Dashboard de fluxo de caixa em Power BI com análise de receitas, despesas e projeções financeiras para planejamento.</p>
             <div class="projeto-links-modal">
-                <a href="https://github.com/karlarenatadev/dashboard-fluxo-caixa" target="_blank" class="btn-voltar">GitHub</a>
+                <a href="https://github.com/karlarenatadev/dashboard-fluxo-caixa" target="_blank" rel="noopener noreferrer" class="btn-voltar">GitHub</a>
             </div>
         </div>
     </div>

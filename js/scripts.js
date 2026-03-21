@@ -1,3 +1,9 @@
+// Constantes de configuração
+const CONFIG = {
+    SLIDER_SCROLL_AMOUNT: 320,
+    MOBILE_BREAKPOINT: 768
+};
+
 // Adiciona um listener que espera o HTML carregar completamente
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -12,16 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Função do menu hambúrguer CORRIGIDA
+    // Função do menu hambúrguer
     window.clickMenu = function() {
-        // Alterna a classe 'menu-aberto' no elemento do menu
         items.classList.toggle('menu-aberto');
     }
 
     // Função para ajustar o menu ao mudar o tamanho da tela
     function mudouTamanho() {
-        // Se a tela for maior que 768px, remove a classe para garantir que o menu não fique "preso" no estado fechado
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= CONFIG.MOBILE_BREAKPOINT) {
             items.classList.remove('menu-aberto');
         }
     }
@@ -47,8 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
       enBtn.classList.add('active');
       ptBtn.classList.remove('active');
     });
+    
+    // Define PT como idioma padrão
+    ptBtn.classList.add('active');
 });
-ptBtn.classList.add('active');
 
 // --- LÓGICA DO SLIDER DE PROJETOS ---
 
@@ -57,9 +63,15 @@ ptBtn.classList.add('active');
  * @param {number} amount - Quantidade de pixels a deslocar (positivo = direita, negativo = esquerda)
  */
 window.scrollSlider = function(amount) {
-    const container = document.getElementById('dados-slider');
-    if (container) {
-        container.scrollLeft += amount;
+    try {
+        const container = document.getElementById('dados-slider');
+        if (container) {
+            container.scrollLeft += amount;
+        } else {
+            console.warn('Slider container não encontrado');
+        }
+    } catch (error) {
+        console.error('Erro ao mover slider:', error);
     }
 }
 
@@ -70,17 +82,24 @@ window.scrollSlider = function(amount) {
  * @param {string} idModal - ID do modal a abrir
  */
 window.abrirModal = function(idModal) {
-    const overlay = document.getElementById('modal-container');
-    const modalConteudo = document.getElementById(idModal);
+    try {
+        const overlay = document.getElementById('modal-container');
+        const modalConteudo = document.getElementById(idModal);
 
-    if (!overlay || !modalConteudo) return;
+        if (!overlay || !modalConteudo) {
+            console.warn(`Modal ${idModal} ou overlay não encontrado`);
+            return;
+        }
 
-    // Esconde todos os conteúdos antes de mostrar o escolhido
-    document.querySelectorAll('.modal-content').forEach(el => el.classList.remove('ativo'));
+        // Esconde todos os conteúdos antes de mostrar o escolhido
+        document.querySelectorAll('.modal-content').forEach(el => el.classList.remove('ativo'));
 
-    // Mostra o overlay e o conteúdo específico
-    overlay.classList.add('aberto');
-    modalConteudo.classList.add('ativo');
+        // Mostra o overlay e o conteúdo específico
+        overlay.classList.add('aberto');
+        modalConteudo.classList.add('ativo');
+    } catch (error) {
+        console.error('Erro ao abrir modal:', error);
+    }
 }
 
 /**
@@ -88,8 +107,15 @@ window.abrirModal = function(idModal) {
  * @param {Event} event - Evento do clique
  */
 window.fecharModal = function(event) {
-    // Fecha se clicar no "X" ou fora do conteúdo (no overlay escuro)
-    if (event.target.classList.contains('modal-overlay') || event.target.classList.contains('fechar-modal')) {
-        document.getElementById('modal-container').classList.remove('aberto');
+    try {
+        // Fecha se clicar no "X" ou fora do conteúdo (no overlay escuro)
+        if (event.target.classList.contains('modal-overlay') || event.target.classList.contains('fechar-modal')) {
+            const modalContainer = document.getElementById('modal-container');
+            if (modalContainer) {
+                modalContainer.classList.remove('aberto');
+            }
+        }
+    } catch (error) {
+        console.error('Erro ao fechar modal:', error);
     }
 }
