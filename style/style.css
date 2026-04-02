@@ -134,11 +134,10 @@ a.menu-link:hover::after { width: 100%; }
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1200px;
+  gap: 30px; 
+  max-width: 1000px; 
   width: 100%;
   margin: 0 auto;
-  position: relative;
 }
 
 .home-photo {
@@ -146,9 +145,8 @@ a.menu-link:hover::after { width: 100%; }
 }
 
 .home-content {
-  flex: 1;
-  min-width: 300px;
-  text-align: center;
+  min-width: 600px;
+  text-align: left;
 }
 
 #foto-sobre {
@@ -168,6 +166,30 @@ a.menu-link:hover::after { width: 100%; }
   margin: 0;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   line-height: 1.1;
+}
+
+/* Garante que os títulos e textos sigam o alinhamento do container */
+.section-home .home-content h1,
+.section-home .home-content p {
+  text-align: left;
+}
+
+/* Alinha as badges à esquerda no desktop */
+.hero-badges {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start; 
+    margin: 20px 0 30px 0;
+    flex-wrap: wrap;
+}
+
+/* Alinha os botões à esquerda no desktop */
+.cta-group {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Badges da Hero */
@@ -217,7 +239,7 @@ a.menu-link:hover::after { width: 100%; }
 .lang-controls {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 40px;
   display: flex;
   gap: 10px;
   z-index: 10;
@@ -310,6 +332,7 @@ section h2::after {
 
 .timeline-content:hover {
   transform: translateY(-8px);
+  box-shadow: 0px 0px 30px var(--cor-destaque);
   border-color: var(--cor-destaque);
 }
 
@@ -320,7 +343,6 @@ section h2::after {
 /* --- SEÇÃO PROJETOS (GRID MODERNO) --- */
 .projetos-container {
   display: grid;
-  /* Cria colunas automáticas: mínimo de 300px, máximo preenche o espaço */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 1200px;
@@ -329,15 +351,14 @@ section h2::after {
 }
 
 .projeto-card {
-  background-color: var(--glass-bg); /* Fundo com transparência */
-  backdrop-filter: blur(10px); /* Efeito vidro */
+  background-color: var(--glass-bg); 
+  backdrop-filter: blur(10px); 
   border: var(--glass-border);
   color: var(--cor-texto-principal);
   border-radius: 16px;
   overflow: hidden;
-  /* Remove width fixo para o grid funcionar */
   width: 100%; 
-  height: 100%; /* Garante altura igual nas colunas */
+  height: 100%; 
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
@@ -346,7 +367,7 @@ section h2::after {
 
 .projeto-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0px 0px 30px var(--cor-destaque);
   border-color: var(--cor-destaque);
 }
 
@@ -442,7 +463,7 @@ section h2::after {
 .skill-category:hover {
   transform: translateY(-5px);
   border-color: var(--cor-destaque);
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0px 0px 30px var(--cor-destaque);
 }
 
 .skill-category h3 {
@@ -514,7 +535,9 @@ section h2::after {
 .trilha-passo {
   position: relative; z-index: 1; width: 22%; cursor: pointer; transition: transform 0.3s ease;
 }
-.trilha-passo:hover { transform: scale(1.05); }
+.trilha-passo:hover { 
+  transform: scale(1.05);
+ }
 
 .passo-marcador {
   width: 20px; height: 20px;
@@ -534,7 +557,10 @@ section h2::after {
   transition: border-color 0.3s;
 }
 
-.trilha-passo:hover .passo-card { border-color: var(--cor-destaque); }
+.trilha-passo:hover .passo-card { 
+  border-color: var(--cor-destaque);
+  box-shadow: 0px 0px 30px var(--cor-destaque); 
+}
 
 .trilha-passo.cima .passo-card { bottom: 40px; }
 .trilha-passo.cima::after {
@@ -598,28 +624,40 @@ section { border-bottom: 1px solid rgba(255,255,255,0.05); }
 main > section:last-child { border-bottom: none; }
 
 
-/* --- CARROSSEL PROFISSIONAL --- */
+/* --- CARROSSEL PROFISSIONAL (Atualizado para Grid de 2 Linhas) --- */
 .slider-wrapper { 
     position: relative; 
     width: 100%; 
+    max-width: 1200px; /* Limita a largura igual à seção de baixo */
+    margin: 0 auto;    /* Centraliza o bloco inteiro na tela */
     display: flex; 
     align-items: center;
     padding: 20px 0;
 }
 
 #dados-slider { 
-    display: flex; 
+    display: grid; 
+    grid-template-rows: 1fr 1fr; 
+    grid-auto-flow: column; 
+    grid-auto-columns: calc(33.333% - 14px); 
+    gap: 20px; 
     overflow-x: auto; 
     scroll-behavior: smooth; 
-    gap: 20px; 
     padding: 20px 10px; 
     scroll-snap-type: x mandatory; 
     -ms-overflow-style: none; 
     scrollbar-width: none;
-    max-width: 100%;
+    width: 100%; /* Força a grade a preencher todo o espaço do wrapper */
 }
 
 #dados-slider::-webkit-scrollbar { display: none; }
+
+#dados-slider .projeto-card { 
+    width: 100%; 
+    height: 100%; 
+    scroll-snap-align: start; 
+    transition: all 0.3s ease;
+}
 
 .projeto-card { 
     flex: 0 0 300px; 

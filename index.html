@@ -194,7 +194,7 @@
             <h2 class="lang" data-pt="Projetos de Análise de Dados" data-en="Data Analysis Projects">Projetos de Análise de Dados</h2>
             
             <div class="slider-wrapper">
-                <button class="btn-slider prev" onclick="scrollSlider(-320)" aria-label="Previous">
+                <button class="btn-slider prev" onclick="scrollSlider(-document.getElementById('dados-slider').clientWidth)" aria-label="Previous">
                     <span class="material-symbols-outlined">arrow_back_ios</span>
                 </button>
                 
@@ -310,7 +310,7 @@
                     </article>
                 </div>
 
-                <button class="btn-slider next" onclick="scrollSlider(320)" aria-label="Next">
+                <button class="btn-slider next" onclick="scrollSlider(document.getElementById('dados-slider').clientWidth)" aria-label="Next">
                     <span class="material-symbols-outlined">arrow_forward_ios</span>
                 </button>
             </div>
@@ -318,22 +318,119 @@
 
         <!-- ========== 5. OUTROS PROJETOS SECTION ========== -->
         <section id="outros-projetos" class="section-projects">
-            <h2 class="lang" data-pt="Desenvolvimento Web" data-en="Web Development">Desenvolvimento Web</h2>
-            <div class="projetos-container">
-                <article class="projeto-card">
-                    <img src="imagens/projeto-minhas-redes.png" class="projeto-img" alt="Minhas Redes" loading="lazy">
-                    <div class="projeto-info">
-                        <h3>Minhas Redes</h3>
+        <h2 class="lang" data-pt="Desenvolvimento Web & JavaScript" data-en="Web Development & JS">Desenvolvimento Web & JavaScript</h2>
+        
+        <div class="projetos-container">
+            <article class="projeto-card">
+                <img src="imagens/projeto-minhas-redes.png" class="projeto-img" alt="Minhas Redes" loading="lazy">
+                <div class="projeto-info">
+                    <h3>Minhas Redes</h3>
+                    <p class="lang" data-pt="Página de links agrupados responsiva para centralização de contatos e redes sociais profissionais." data-en="Responsive link tree page for centralizing professional contacts and social networks.">Página de links agrupados responsiva para centralização de contatos e redes sociais profissionais.</p>
+                    
+                    <div class="projeto-ferramentas">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>UI Design</span>
                     </div>
-                </article>
-                <article class="projeto-card">
-                    <img src="imagens/projeto-login.png" class="projeto-img" alt="Login Page" loading="lazy">
-                    <div class="projeto-info">
-                        <h3>Login Page</h3>
+                    
+                    <div class="projeto-links" style="margin-top: 15px;">
+                        <a href="https://github.com/karlarenatadev/minhas-redes" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
                     </div>
-                </article>
-            </div>
-        </section>
+                </div>
+            </article>
+
+            <article class="projeto-card">
+                <img src="imagens/projeto-login.png" class="projeto-img" alt="Login Page" loading="lazy">
+                <div class="projeto-info">
+                    <h3>Login Page</h3>
+                    <p class="lang" data-pt="Interface de autenticação moderna com design responsivo (Mobile First) e CSS Media Queries." data-en="Modern authentication interface with responsive design (Mobile First) and CSS Media Queries.">Interface de autenticação moderna com design responsivo (Mobile First) e CSS Media Queries.</p>
+                    
+                    <div class="projeto-ferramentas">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Mobile First</span>
+                    </div>
+                    
+                    <div class="projeto-links" style="margin-top: 15px;">
+                        <a href="https://github.com/karlarenatadev/projeto-login" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="projeto-card">
+                <img src="imagens/projeto-analisador.png" class="projeto-img" alt="Analisador de Números" loading="lazy">
+                <div class="projeto-info">
+                    <h3>Analisador de Números</h3>
+                    <p class="lang" data-pt="Aplicação interativa para análise estatística (maior, menor, média) de vetores numéricos." data-en="Interactive app for statistical analysis (max, min, average) of numerical arrays.">Aplicação interativa para análise estatística de vetores numéricos.</p>
+                    
+                    <div class="projeto-ferramentas">
+                        <span>JavaScript</span>
+                        <span>Lógica</span>
+                        <span>DOM</span>
+                    </div>
+                    
+                    <div class="projeto-links" style="margin-top: 15px;">
+                        <a href="https://github.com/karlarenatadev/projeto-analisador-de-numeros" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projeto-card">
+                <img src="imagens/projeto-clima.png" class="projeto-img" alt="App de Clima" loading="lazy">
+                <div class="projeto-info">
+                    <h3>Weather App</h3>
+                    <p class="lang" data-pt="Consumo de API RESTful para busca e exibição de dados climáticos em tempo real." data-en="RESTful API consumption to fetch and display real-time weather data.">Consumo de API RESTful para busca e exibição de dados climáticos.</p>
+                    
+                    <div class="projeto-ferramentas">
+                        <span>JavaScript</span>
+                        <span>Fetch API</span>
+                        <span>JSON</span>
+                    </div>
+                    
+                    <div class="projeto-links" style="margin-top: 15px;">
+                        <a href="https://github.com/karlarenatadev/projeto-clima-js" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projeto-card">
+                <img src="imagens/projeto-destinocerto.png" class="projeto-img" alt="Destino Certo" loading="lazy">
+                <div class="projeto-info">
+                    <h3>Destino Certo (Fullstack)</h3>
+                    <p class="lang" data-pt="Plataforma com backend em Node.js e banco de dados SQLite para gestão de viagens." data-en="Platform with Node.js backend and SQLite database for travel management.">Plataforma com backend em Node.js e banco de dados SQLite.</p>
+                    
+                    <div class="projeto-ferramentas">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>SQLite</span>
+                    </div>
+                    
+                    <div class="projeto-links" style="margin-top: 15px;">
+                        <a href="https://github.com/karlarenatadev/projeto-DestinoCerto" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="projeto-card">
+                <img src="imagens/projeto-verificador.png" class="projeto-img" alt="Verificador de Idade" loading="lazy">
+                <div class="projeto-info">
+                    <h3>Verificador de Idade</h3>
+                    <p class="lang" data-pt="Aplicação interativa que calcula a idade e identifica o estágio de vida, alterando dinamicamente a interface gráfica." data-en="Interactive application that calculates age and identifies life stage, dynamically changing the graphical interface.">Aplicação interativa que calcula a idade e identifica o estágio de vida, alterando dinamicamente a interface gráfica.</p>
+                    
+                    <div class="projeto-ferramentas">
+                        <span>JavaScript</span>
+                        <span>DOM</span>
+                        <span>Lógica</span>
+                    </div>
+                    
+                    <div class="projeto-links" style="margin-top: 15px;">
+                        <a href="https://github.com/karlarenatadev/projeto-verificador-de-idade" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
 
         <!-- ========== 6. HABILIDADES SECTION ========== -->
         <section id="habilidades" class="section-habilidades">
