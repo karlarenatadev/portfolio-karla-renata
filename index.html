@@ -8,14 +8,12 @@
     <meta name="keywords" content="Karla Renata, Desenvolvedora Web, Análise de Dados, Python, SQL, Power BI, AWS, Machine Learning, Data Science">
     <meta name="author" content="Karla Renata">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://karlarenatadev.github.io/portfolio-karla-renata/">
     <meta property="og:title" content="Karla Renata | Desenvolvedora Web & Analista de Dados">
     <meta property="og:description" content="Portfólio profissional com projetos de análise de dados, machine learning e desenvolvimento web.">
     <meta property="og:image" content="imagens/perfil.png">
     
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://karlarenatadev.github.io/portfolio-karla-renata/">
     <meta property="twitter:title" content="Karla Renata | Desenvolvedora Web & Analista de Dados">
@@ -34,7 +32,6 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/mobile.css">
     
-    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -54,7 +51,6 @@
       }
     }
     </script>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y5MYESS84"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -196,7 +192,6 @@
             </div>
         </section>
         
-        <!-- ========== 4. PROJETOS DE DADOS SECTION (SLIDER) ========== -->
         <section id="projetos-dados" class="section-projects">
             <h2 class="lang" data-pt="Projetos de Análise de Dados" data-en="Data Analysis Projects">Projetos de Análise de Dados</h2>
             
@@ -206,73 +201,65 @@
                 </button>
                 
                 <div id="dados-slider">
-                    <a href="pages/projeto-aws-simulator.html" style="text-decoration: none; color: inherit;">
-                        <article class="projeto-card">
-                            <img src="imagens/arquitetura-data.png" class="projeto-img" alt="AWS Certification Simulator" loading="lazy">
-                            <div class="projeto-info">
-                                <h3 class="lang" data-pt="AWS Certification Simulator" data-en="AWS Certification Simulator">AWS Certification Simulator</h3>
-                                <div class="projeto-ferramentas">
-                                    <span>Python</span>
-                                    <span>Gemini AI</span>
-                                    <span>AWS</span>
-                                </div>
-                                <div style="margin-top: 15px;">
-                                    <span style="color: #00ff88; font-size: 0.9rem; font-weight: bold;">Ver Case Study →</span>
-                                </div>
+                    <article class="projeto-card" onclick="abrirModal('modal-aws-simulator')">
+                        <img src="imagens/arquitetura-data.png" class="projeto-img" alt="AWS Certification Simulator" loading="lazy">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="AWS Certification Simulator" data-en="AWS Certification Simulator">AWS Certification Simulator</h3>
+                            <div class="projeto-ferramentas">
+                                <span>Python</span>
+                                <span>Gemini AI</span>
+                                <span>AWS</span>
                             </div>
-                        </article>
-                    </a>
+                            <div style="margin-top: 15px;">
+                                <span style="color: var(--cor-destaque); font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
+                            </div>
+                        </div>
+                    </article>
 
-                    <a href="pages/projeto-saas-sales.html" style="text-decoration: none; color: inherit;">
-                        <article class="projeto-card">
-                            <img src="imagens/dashboard_overview.png" class="projeto-img" alt="SaaS Sales Analytics" loading="lazy">
-                            <div class="projeto-info">
-                                <h3 class="lang" data-pt="SaaS Sales Analytics" data-en="SaaS Sales Analytics">SaaS Sales Analytics</h3>
-                                <div class="projeto-ferramentas">
-                                    <span>QuickSight</span>
-                                    <span>Z-score</span>
-                                    <span>AWS</span>
-                                </div>
-                                <div style="margin-top: 15px;">
-                                    <span style="color: #00ff88; font-size: 0.9rem; font-weight: bold;">Ver Case Study →</span>
-                                </div>
+                    <article class="projeto-card" onclick="abrirModal('modal-saas-sales')">
+                        <img src="imagens/dashboard_overview.png" class="projeto-img" alt="SaaS Sales Analytics" loading="lazy">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="SaaS Sales Analytics" data-en="SaaS Sales Analytics">SaaS Sales Analytics</h3>
+                            <div class="projeto-ferramentas">
+                                <span>QuickSight</span>
+                                <span>Z-score</span>
+                                <span>AWS</span>
                             </div>
-                        </article>
-                    </a>
+                            <div style="margin-top: 15px;">
+                                <span style="color: var(--cor-destaque); font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
+                            </div>
+                        </div>
+                    </article>
 
-                    <a href="pages/projeto-estoque.html" style="text-decoration: none; color: inherit;">
-                        <article class="projeto-card">
-                            <img src="imagens/grafico1.png" class="projeto-img" alt="Previsão de Estoque" loading="lazy">
-                            <div class="projeto-info">
-                                <h3 class="lang" data-pt="Previsão de Estoque Inteligente" data-en="Intelligent Inventory Forecasting">Previsão de Estoque Inteligente</h3>
-                                <div class="projeto-ferramentas">
-                                    <span>SageMaker</span>
-                                    <span>ML</span>
-                                    <span>AWS</span>
-                                </div>
-                                <div style="margin-top: 15px;">
-                                    <span style="color: #00ff88; font-size: 0.9rem; font-weight: bold;">Ver Case Study →</span>
-                                </div>
+                    <article class="projeto-card" onclick="abrirModal('modal-estoque')">
+                        <img src="imagens/grafico1.png" class="projeto-img" alt="Previsão de Estoque" loading="lazy">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="Previsão de Estoque Inteligente" data-en="Intelligent Inventory Forecasting">Previsão de Estoque Inteligente</h3>
+                            <div class="projeto-ferramentas">
+                                <span>SageMaker</span>
+                                <span>ML</span>
+                                <span>AWS</span>
                             </div>
-                        </article>
-                    </a>
+                            <div style="margin-top: 15px;">
+                                <span style="color: var(--cor-destaque); font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
+                            </div>
+                        </div>
+                    </article>
 
-                    <a href="pages/projeto-deal-scoring.html" style="text-decoration: none; color: inherit;">
-                        <article class="projeto-card">
-                            <img src="imagens/visual-dashboard.png" class="projeto-img" alt="Deal Scoring" loading="lazy">
-                            <div class="projeto-info">
-                                <h3 class="lang" data-pt="Deal Scoring Preditivo" data-en="Predictive Deal Scoring">Deal Scoring Preditivo</h3>
-                                <div class="projeto-ferramentas">
-                                    <span>Python</span>
-                                    <span>Scikit-Learn</span>
-                                    <span>Power BI</span>
-                                </div>
-                                <div style="margin-top: 15px;">
-                                    <span style="color: #00ff88; font-size: 0.9rem; font-weight: bold;">Ver Case Study →</span>
-                                </div>
+                    <article class="projeto-card" onclick="abrirModal('modal-deal-scoring')">
+                        <img src="imagens/visual-dashboard.png" class="projeto-img" alt="Deal Scoring" loading="lazy">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="Deal Scoring Preditivo" data-en="Predictive Deal Scoring">Deal Scoring Preditivo</h3>
+                            <div class="projeto-ferramentas">
+                                <span>Python</span>
+                                <span>Scikit-Learn</span>
+                                <span>Power BI</span>
                             </div>
-                        </article>
-                    </a>
+                            <div style="margin-top: 15px;">
+                                <span style="color: var(--cor-destaque); font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
+                            </div>
+                        </div>
+                    </article>
 
                     <article class="projeto-card" onclick="abrirModal('modal-frotas')">
                         <img src="imagens/dashboard-gestao-frotas.png" class="projeto-img" alt="Gestão de Frotas" loading="lazy">
@@ -283,42 +270,38 @@
                                 <span>DAX</span>
                             </div>
                             <div style="margin-top: 15px;">
-                                <span style="color: #00ff88; font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
+                                <span style="color: var(--cor-destaque); font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
                             </div>
                         </div>
                     </article>
 
-                    <a href="pages/projeto-automacao.html" style="text-decoration: none; color: inherit;">
-                        <article class="projeto-card">
-                            <img src="imagens/demo-rpa.gif" class="projeto-img" alt="Automação RPA" loading="lazy">
-                            <div class="projeto-info">
-                                <h3 class="lang" data-pt="Automação RPA" data-en="RPA Automation">Automação RPA</h3>
-                                <div class="projeto-ferramentas">
-                                    <span>Python</span>
-                                    <span>PyAutoGUI</span>
-                                </div>
-                                <div style="margin-top: 15px;">
-                                    <span style="color: #00ff88; font-size: 0.9rem; font-weight: bold;">Ver Case Study →</span>
-                                </div>
+                    <article class="projeto-card" onclick="abrirModal('modal-rpa')">
+                        <img src="imagens/demo-rpa.gif" class="projeto-img" alt="Automação RPA" loading="lazy">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="Automação RPA" data-en="RPA Automation">Automação RPA</h3>
+                            <div class="projeto-ferramentas">
+                                <span>Python</span>
+                                <span>PyAutoGUI</span>
                             </div>
-                        </article>
-                    </a>
+                            <div style="margin-top: 15px;">
+                                <span style="color: var(--cor-destaque); font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
+                            </div>
+                        </div>
+                    </article>
 
-                    <a href="pages/projeto-analise.html" style="text-decoration: none; color: inherit;">
-                        <article class="projeto-card">
-                            <img src="imagens/analise-de-vendas.png" class="projeto-img" alt="Análise de Vendas" loading="lazy">
-                            <div class="projeto-info">
-                                <h3 class="lang" data-pt="Análise de Vendas (Exploratória)" data-en="Sales Analysis (Exploratory)">Análise de Vendas (Exploratória)</h3>
-                                <div class="projeto-ferramentas">
-                                    <span>Python</span>
-                                    <span>Seaborn</span>
-                                </div>
-                                <div style="margin-top: 15px;">
-                                    <span style="color: #00ff88; font-size: 0.9rem; font-weight: bold;">Ver Case Study →</span>
-                                </div>
+                    <article class="projeto-card" onclick="abrirModal('modal-vendas-old')">
+                        <img src="imagens/analise-de-vendas.png" class="projeto-img" alt="Análise de Vendas" loading="lazy">
+                        <div class="projeto-info">
+                            <h3 class="lang" data-pt="Análise de Vendas (Exploratória)" data-en="Sales Analysis (Exploratory)">Análise de Vendas (Exploratória)</h3>
+                            <div class="projeto-ferramentas">
+                                <span>Python</span>
+                                <span>Seaborn</span>
                             </div>
-                        </article>
-                    </a>
+                            <div style="margin-top: 15px;">
+                                <span style="color: var(--cor-destaque); font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
+                            </div>
+                        </div>
+                    </article>
 
                     <article class="projeto-card" onclick="abrirModal('modal-logistica')">
                         <img src="imagens/logistica-1.png" class="projeto-img" alt="Dashboard Logística" loading="lazy">
@@ -328,7 +311,7 @@
                                 <span>Power BI</span>
                             </div>
                             <div style="margin-top: 15px;">
-                                <span style="color: #00ff88; font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
+                                <span style="color: var(--cor-destaque); font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
                             </div>
                         </div>
                     </article>
@@ -341,7 +324,7 @@
                                 <span>Power BI</span>
                             </div>
                             <div style="margin-top: 15px;">
-                                <span style="color: #00ff88; font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
+                                <span style="color: var(--cor-destaque); font-size: 0.9rem; font-weight: bold;">Ver Resumo →</span>
                             </div>
                         </div>
                     </article>
@@ -353,7 +336,6 @@
             </div>
         </section>
 
-        <!-- ========== 5. OUTROS PROJETOS SECTION ========== -->
         <section id="outros-projetos" class="section-projects">
         <h2 class="lang" data-pt="Desenvolvimento Web & JavaScript" data-en="Web Development & JS">Desenvolvimento Web & JavaScript</h2>
         
@@ -469,7 +451,6 @@
         </div>
     </section>
 
-        <!-- ========== 6. HABILIDADES SECTION ========== -->
         <section id="habilidades" class="section-habilidades">
             <h2 class="lang" data-pt="Habilidades" data-en="Skills">Habilidades</h2>
             <div class="habilidades-container">
@@ -521,12 +502,10 @@
             </div>
         </section>
 
-        <!-- ========== 7. CONTATO SECTION ========== -->
         <section id="contato" class="section-contact">
             <h2 class="lang" data-pt="Contato" data-en="Contact">Contato</h2>
             
             <div class="contato-wrapper">
-                <!-- Lado esquerdo: Informações -->
                 <div class="contato-info">
                     <h3 class="lang" data-pt="Vamos Conversar?" data-en="Let's Talk?">
                         Vamos Conversar? 💬
@@ -564,7 +543,6 @@
                     <img src="imagens/perfil.png" class="foto" alt="Karla Renata" loading="lazy">
                 </div>
 
-                <!-- Lado direito: Formulário Google -->
                 <div class="contato-form">
                     <iframe 
                         id="googleFormFrame"
@@ -632,6 +610,66 @@
                 </div>
             </div>
 
+            <div id="modal-aws-simulator" class="modal-content">
+                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+                <h3 class="lang" data-pt="AWS Certification Simulator" data-en="AWS Certification Simulator">AWS Certification Simulator</h3>
+                <p class="subtitulo lang" data-pt="Pipeline ETL autônomo com IA" data-en="Autonomous ETL Pipeline with AI">Pipeline ETL autônomo com IA</p>
+                <p class="texto-detalhe lang" data-pt="Geração de simulados AWS com 4 camadas de validação utilizando Gemini AI para análise de respostas e feedback inteligente." data-en="AWS exam simulation generation with 4 validation layers using Gemini AI for answer analysis and intelligent feedback.">Geração de simulados AWS com 4 camadas de validação utilizando Gemini AI para análise de respostas e feedback inteligente.</p>
+                <div class="projeto-links-modal">
+                    <a href="pages/projeto-aws-simulator.html" class="btn-voltar" style="background-color: var(--cor-destaque); color: var(--cor-fundo-principal);">Ver Case Study Completo</a>
+                </div>
+            </div>
+    
+            <div id="modal-saas-sales" class="modal-content">
+                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+                <h3 class="lang" data-pt="SaaS Sales Analytics" data-en="SaaS Sales Analytics">SaaS Sales Analytics</h3>
+                <p class="subtitulo lang" data-pt="Análise de Tendências e Anomalias" data-en="Trend Analysis and Anomaly Detection">Análise de Tendências e Anomalias</p>
+                <p class="texto-detalhe lang" data-pt="Detecção de anomalias em faturamento SaaS via Amazon QuickSight com algoritmo Z-score para identificação de padrões anormais em receita." data-en="SaaS revenue anomaly detection via Amazon QuickSight using Z-score algorithm to identify abnormal revenue patterns.">Detecção de anomalias em faturamento SaaS via Amazon QuickSight com algoritmo Z-score para identificação de padrões anormais em receita.</p>
+                <div class="projeto-links-modal">
+                    <a href="pages/projeto-saas-sales.html" class="btn-voltar" style="background-color: var(--cor-destaque); color: var(--cor-fundo-principal);">Ver Case Study Completo</a>
+                </div>
+            </div>
+    
+            <div id="modal-estoque" class="modal-content">
+                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+                <h3 class="lang" data-pt="Previsão de Estoque Inteligente" data-en="Intelligent Inventory Forecasting">Previsão de Estoque Inteligente</h3>
+                <p class="subtitulo lang" data-pt="Machine Learning No-Code" data-en="No-Code Machine Learning">Machine Learning No-Code</p>
+                <p class="texto-detalhe lang" data-pt="Gestão de inventário utilizando Amazon SageMaker Canvas com modelos preditivos para otimização de estoque (wQL 0.188)." data-en="Inventory management using Amazon SageMaker Canvas with predictive models for stock optimization (wQL 0.188).">Gestão de inventário utilizando Amazon SageMaker Canvas com modelos preditivos para otimização de estoque (wQL 0.188).</p>
+                <div class="projeto-links-modal">
+                    <a href="pages/projeto-estoque.html" class="btn-voltar" style="background-color: var(--cor-destaque); color: var(--cor-fundo-principal);">Ver Case Study Completo</a>
+                </div>
+            </div>
+    
+            <div id="modal-deal-scoring" class="modal-content">
+                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+                <h3 class="lang" data-pt="Deal Scoring Preditivo" data-en="Predictive Deal Scoring">Deal Scoring Preditivo</h3>
+                <p class="subtitulo lang" data-pt="Modelo de Machine Learning" data-en="Machine Learning Model">Modelo de Machine Learning</p>
+                <p class="texto-detalhe lang" data-pt="Previsão de riscos de perda em negociações B2B utilizando Scikit-Learn com visualização em Power BI para suporte à decisão." data-en="Predicting loss risks in B2B negotiations using Scikit-Learn with Power BI visualization for decision support.">Previsão de riscos de perda em negociações B2B utilizando Scikit-Learn com visualização em Power BI para suporte à decisão.</p>
+                <div class="projeto-links-modal">
+                    <a href="pages/projeto-deal-scoring.html" class="btn-voltar" style="background-color: var(--cor-destaque); color: var(--cor-fundo-principal);">Ver Case Study Completo</a>
+                </div>
+            </div>
+    
+            <div id="modal-rpa" class="modal-content">
+                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+                <h3 class="lang" data-pt="Automação RPA" data-en="RPA Automation">Automação RPA</h3>
+                <p class="subtitulo lang" data-pt="Robô Inteligente" data-en="Intelligent Bot">Robô Inteligente</p>
+                <p class="texto-detalhe lang" data-pt="Robô para auditoria e cadastro automático de produtos em ERP via Python e PyAutoGUI com validação de dados." data-en="Bot for auditing and automatic product registration in ERP via Python and PyAutoGUI with data validation.">Robô para auditoria e cadastro automático de produtos em ERP via Python e PyAutoGUI com validação de dados.</p>
+                <div class="projeto-links-modal">
+                    <a href="pages/projeto-automacao.html" class="btn-voltar" style="background-color: var(--cor-destaque); color: var(--cor-fundo-principal);">Ver Case Study Completo</a>
+                </div>
+            </div>
+    
+            <div id="modal-vendas-old" class="modal-content">
+                <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
+                <h3 class="lang" data-pt="Análise de Vendas (Exploratória)" data-en="Sales Analysis (Exploratory)">Análise de Vendas (Exploratória)</h3>
+                <p class="subtitulo lang" data-pt="Análise Exploratória de Dados" data-en="Exploratory Data Analysis">Análise Exploratória de Dados</p>
+                <p class="texto-detalhe lang" data-pt="Análise exploratória de dados de vendas com visualizações em Seaborn e Matplotlib para identificação de padrões e tendências." data-en="Exploratory analysis of sales data with Seaborn and Matplotlib visualizations to identify patterns and trends.">Análise exploratória de dados de vendas com visualizações em Seaborn e Matplotlib para identificação de padrões e tendências.</p>
+                <div class="projeto-links-modal">
+                    <a href="pages/projeto-analise.html" class="btn-voltar" style="background-color: var(--cor-destaque); color: var(--cor-fundo-principal);">Ver Case Study Completo</a>
+                </div>
+            </div>
+
             <div id="modal-frotas" class="modal-content">
                 <span class="fechar-modal" onclick="fecharModal(event)">&times;</span>
                 <h3 class="lang" data-pt="Gestão de Frotas" data-en="Fleet Management">Gestão de Frotas</h3>
@@ -663,7 +701,6 @@
             </div>
     </div>
 
-    <!-- ========== SCRIPTS ========== -->
     <script src="js/scripts.js"></script>
 </body>
 </html>

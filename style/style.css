@@ -227,6 +227,7 @@ a.menu-link:hover::after { width: 100%; }
   font-weight: bold;
   font-size: 1rem;
   transition: transform 0.2s ease, box-shadow 0.2s;
+  will-change: transform, box-shadow; /* Otimização GPU */
 }
 
 .btn-cta:hover {
@@ -279,7 +280,7 @@ a.btn-download:hover {
 }
 
 a.btn-download .material-symbols-outlined { font-size: 20px; }
-.btn-text, .bi-cloud-download { position: static; transform: none; } /* Reset do estilo antigo complexo */
+.btn-text, .bi-cloud-download { position: static; transform: none; }
 
 /* --- TÍTULOS --- */
 section h2 {
@@ -310,7 +311,7 @@ section h2::after {
   gap: 2rem;
   max-width: 1200px;
   margin: 50px auto;
-  flex-wrap: wrap; /* Permite quebrar em telas menores */
+  flex-wrap: wrap;
 }
 
 .timeline-item {
@@ -326,6 +327,7 @@ section h2::after {
   height: 100%;
   transition: transform 0.3s ease;
   border: 1px solid transparent;
+  will-change: transform, box-shadow, border-color; /* Otimização GPU */
 }
 
 .timeline-content:hover {
@@ -361,6 +363,7 @@ section h2::after {
   flex-direction: column;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  will-change: transform, box-shadow; /* Otimização GPU */
 }
 
 .projeto-card:hover {
@@ -386,6 +389,7 @@ section h2::after {
   flex-direction: column;
   flex-grow: 1;
   text-align: left;
+  background: linear-gradient(to top, var(--cor-fundo-principal) 5%, transparent); /* Melhoria de contraste */
 }
 
 .projeto-info h3 {
@@ -535,7 +539,7 @@ section h2::after {
 }
 .trilha-passo:hover { 
   transform: scale(1.05);
- }
+}
 
 .passo-marcador {
   width: 20px; height: 20px;
@@ -621,13 +625,12 @@ section h2::after {
 section { border-bottom: 1px solid rgba(255,255,255,0.05); }
 main > section:last-child { border-bottom: none; }
 
-
-/* --- CARROSSEL PROFISSIONAL (Atualizado para Grid de 2 Linhas) --- */
+/* --- CARROSSEL PROFISSIONAL --- */
 .slider-wrapper { 
     position: relative; 
     width: 100%; 
-    max-width: 1200px; /* Limita a largura igual à seção de baixo */
-    margin: 0 auto;    /* Centraliza o bloco inteiro na tela */
+    max-width: 1200px; 
+    margin: 0 auto;    
     display: flex; 
     align-items: center;
     padding: 20px 0;
@@ -645,7 +648,8 @@ main > section:last-child { border-bottom: none; }
     scroll-snap-type: x mandatory; 
     -ms-overflow-style: none; 
     scrollbar-width: none;
-    width: 100%; /* Força a grade a preencher todo o espaço do wrapper */
+    width: 100%; 
+    touch-action: pan-x; /* Otimização touch mobile */
 }
 
 #dados-slider::-webkit-scrollbar { display: none; }
@@ -752,8 +756,8 @@ main > section:last-child { border-bottom: none; }
     gap: 40px;
     max-width: 1400px;
     margin: 0 auto;
-    align-items: stretch; /* ← Importante: estica ambas as colunas */
-    height: auto; /* ← Permite altura dinâmica */
+    align-items: stretch;
+    height: auto; 
 }
 
 .contato-info {
@@ -847,10 +851,10 @@ main > section:last-child { border-bottom: none; }
     background-color: var(--cor-fundo-secundario);
     border-radius: 12px;
     border: 1px solid rgba(0, 200, 150, 0.3);
-    padding: 0; /* ← Sem padding para ocupar 100% */
-    overflow: hidden; /* ← Esconde qualquer overflow */
-    height: auto; /* ← Altura automática */
-    min-height: 600px; /* ← Altura mínima */
+    padding: 0; 
+    overflow: hidden; 
+    height: auto; 
+    min-height: 600px; 
 }
 
 .contato-form iframe {
@@ -859,6 +863,28 @@ main > section:last-child { border-bottom: none; }
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 1024px) {
+    .contato-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contato-form {
+        min-height: 600px;
+        order: 1;
+    }
+
+    .contato-info {
+        order: 2;
+        padding: 30px;
+    }
+
+    .foto {
+        max-width: 150px;
+    }
 }
 
 /* --- ACESSIBILIDADE: Foco visível para navegação por teclado --- */

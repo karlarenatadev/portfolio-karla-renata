@@ -1,85 +1,13 @@
-@charset "utf-8";
+@charset "UTF-8";
 
-/* =====================================================================
-   ESTILOS PARA TABLETS E NOTEBOOKS PEQUENOS (ATÉ 992px)
-   ===================================================================== */
-@media screen and (max-width: 992px) {
-    
-    /* --- Home: Empilhamento --- */
-    .home-container { 
-        flex-direction: column;
-        text-align: center;
-        gap: 15px; 
-    }
+/* =========================================================================
+   ESTILOS PARA DISPOSITIVOS MÓVEIS (Telas até 768px)
+   Focado em UX para toque, leitura confortável e empilhamento de blocos.
+   ========================================================================= */
 
-    .home-content,
-    .section-home .home-content h1,
-    .section-home .home-content p {
-        text-align: center; 
-    }
-
-    .hero-badges,
-    .cta-group {
-        justify-content: center; 
-    }
-
-    #foto-sobre {
-        margin-bottom: 0; 
-    }
-
-    /* --- Timeline Horizontal (Sobre Mim) vira Vertical --- */
-    .timeline-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    .timeline-item {
-        width: 100%; 
-        max-width: 500px;
-    }
-
-    /* Remove a linha horizontal decorativa */
-    .timeline-horizontal::before,
-    .timeline-horizontal .timeline-item::before {
-        display: none;
-    }
-    
-    .timeline-horizontal {
-        padding-top: 0;
-    }
-
-    #dados-slider {
-        grid-auto-columns: calc(50% - 10px); /* Tablets: 2 colunas */
-    }
-        .contato-wrapper {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .contato-info {
-        order: 2; /* Coloca formulário primeiro em mobile */
-    }
-
-    .contato-form {
-        order: 1;
-    }
-
-    .foto {
-        max-width: 150px;
-    }
-}
-
-/* =====================================================================
-   ESTILOS PARA CELULARES (ATÉ 768px)
-   ===================================================================== */
 @media screen and (max-width: 768px) {
     
-    main {
-        padding: 15px;
-    }
-
-    /* --- Menu Hambúrguer Moderno --- */
+    /* --- CABEÇALHO E NAVEGAÇÃO (MENU HAMBÚRGUER) --- */
     nav {
         justify-content: space-between;
         padding: 10px 20px;
@@ -88,28 +16,31 @@
 
     #burguer {
         display: block;
-        cursor: pointer;
-        font-size: 2rem;
         color: var(--cor-destaque);
+        font-size: 32px;
+        cursor: pointer;
+        padding: 5px;
     }
 
-    .menu {
-        display: none; /* Escondido por padrão */
+    /* Esconde os itens por padrão e os prepara para o menu dropdown */
+    ul#items {
+        display: none; 
+        flex-direction: column;
         position: absolute;
-        top: 100%;
+        top: 60px;
         left: 0;
         width: 100%;
-        background-color: rgba(40, 44, 52, 0.95); /* Fundo escuro quase sólido */
-        backdrop-filter: blur(15px); /* Efeito Vidro */
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        padding: 20px 0;
+        background-color: var(--cor-fundo-secundario);
+        padding: 0;
+        margin: 0;
         box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        border-top: 1px solid var(--cor-destaque);
     }
 
-    .menu.menu-aberto {
+    /* Classe ativada via JavaScript quando clica no hambúrguer */
+    ul#items.ativo {
         display: flex;
-        flex-direction: column;
-        animation: slideDown 0.3s ease forwards;
+        animation: slideDown 0.3s ease;
     }
 
     @keyframes slideDown {
@@ -118,40 +49,51 @@
     }
 
     li.menu-list {
-        display: block;
-        text-align: center;
         margin: 0;
-        padding: 0;
-        border: none;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        width: 100%;
     }
 
     a.menu-link {
         display: block;
-        padding: 15px;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-        width: 100%;
+        padding: 20px;
+        font-size: 1rem;
     }
-    
-    a.menu-link:hover {
-        background-color: rgba(255,255,255,0.05);
-    }
-    
-    a.menu-link::after { display: none; }
 
-    /* --- Títulos --- */
-    section h2 {
-        font-size: 1.8rem;
-        margin: 30px 0;
+    /* Seletor de Idiomas no topo (ajuste para não brigar com o menu) */
+    .lang-controls {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-left: auto;
     }
-    
-    /* --- Home --- */
+
+    /* --- SEÇÃO HOME --- */
+    .home-container {
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .home-content {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    /* Força o alinhamento central no mobile */
+    .section-home .home-content h1,
+    .section-home .home-content p {
+        text-align: center;
+    }
+
+    .hero-badges, 
+    .cta-group {
+        justify-content: center; /* Centraliza badges e botões */
+    }
+
     #foto-sobre {
-        max-width: 200px;
-        border-width: 3px;
-    }
-    
-    .section-home .sobre h1 {
-        font-size: 2.5rem;
+        max-width: 200px; /* Foto menor no celular */
+        margin-top: 20px;
     }
 
     .cta-group {
@@ -159,119 +101,180 @@
         width: 100%;
     }
 
-    #saiba-mais, a.btn-download {
-        width: 100%; /* Botões ocupam largura total no celular */
+    .btn-cta, a.btn-download {
+        width: 100%;
         max-width: 300px;
     }
 
-    /* --- Contato --- */
-    .contato {
-        flex-direction: column;
-        padding: 20px;
-        gap: 30px;
-    }
-    
-    .contato ul {
-        text-align: center; /* Centraliza contatos no mobile */
-    }
-    
-    .contato li {
-        justify-content: center;
-    }
-    
-    .contato a {
-        justify-content: center;
+    section h2 {
+        font-size: 2rem;
     }
 
-    /* --- JORNADA (TRILHA VERTICAL) --- */
-    /* Transforma o zigue-zague horizontal em linha do tempo vertical */
-    
+    /* --- SEÇÃO SOBRE (TIMELINE) --- */
+    .timeline-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* --- SEÇÃO JORNADA (VERTICALIZANDO A TRILHA) --- */
     .trilha-container {
         flex-direction: column;
-        align-items: flex-start;
-        margin: 40px 0;
-        padding-left: 10px;
-        min-height: auto;
+        gap: 40px;
+        margin: 40px auto;
     }
 
-    /* Ajuste da linha central para a esquerda */
     .trilha-linha {
-        width: 2px;
-        height: 100%;
-        top: 0;
-        left: 23px; /* Alinhado ao centro da bolinha */
-        transform: none;
-        background: repeating-linear-gradient(to bottom, var(--cor-texto-secundario) 0, var(--cor-texto-secundario) 8px, transparent 8px, transparent 16px);
+        display: none; /* Esconde a linha horizontal */
     }
 
     .trilha-passo {
         width: 100%;
-        margin-bottom: 30px;
         display: flex;
-        align-items: flex-start;
-        gap: 20px;
-        position: relative;
-    }
-    
-    /* Ajuste do Marcador (Bolinha) */
-    .passo-marcador {
-        margin: 0;
-        flex-shrink: 0;
-        /* Tamanho corrigido para alinhar com a linha */
-        width: 28px; 
-        height: 28px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Remove os conectores verticais do desktop */
-    .trilha-passo.cima::after,
+    /* Reset do posicionamento zig-zag (Cima/Baixo) */
+    .trilha-passo.cima .passo-card, 
+    .trilha-passo.baixo .passo-card {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        width: 90%;
+        margin-top: 15px;
+    }
+
+    /* Esconde os tracinhos verticais do zig-zag */
+    .trilha-passo.cima::after, 
     .trilha-passo.baixo::before {
-        display: none;
+        display: none; 
     }
 
-    /* Ajuste do Card */
-    .passo-card {
-        position: relative;
-        top: auto !important;
-        bottom: auto !important;
-        left: auto !important;
-        width: auto;
-        flex-grow: 1;
-        text-align: left;
-        margin-top: -5px; /* Alinha o topo do card com a bolinha */
-    }
-    
-    /* Habilidades - Um por linha no celular muito pequeno */
-    .habilidades-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .section-habilidades > .skill-category ul {
-        grid-template-columns: 1fr; /* Lista de soft skills em 1 coluna */
-    }
-
-    .btn-slider { 
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-    .prev { left: 5px; } 
-    .next { right: 5px; }
-    
+    /* --- CARROSSEL DE PROJETOS DE DADOS --- */
     #dados-slider {
-        grid-auto-columns: 100%; /* Celulares: 1 coluna */
-    }
-    .contato-info {
-        padding: 20px;
+        grid-template-rows: 1fr; /* Força 1 única linha no celular para facilitar o swipe */
+        grid-auto-columns: 85%; /* Deixa o próximo card aparecendo um pouquinho (dica visual) */
+        padding: 10px;
     }
 
-    .contato-form {
-        padding: 15px;
+    .btn-slider {
+        display: none; /* Esconde as setas, o usuário vai arrastar com o dedo */
+    }
+
+    /* --- MODAIS --- */
+    .modal-content {
+        padding: 25px 20px;
+        width: 95%;
+        max-height: 85vh; /* Evita que o modal ultrapasse a tela */
+        overflow-y: auto; /* Permite rolar dentro do modal se o texto for longo */
+    }
+
+    .modal-content h3 {
+        font-size: 1.3rem;
+        padding-right: 20px; /* Dá espaço para o X de fechar */
+    }
+
+    .fechar-modal {
+        top: 5px;
+        right: 15px;
+    }
+
+    .projeto-links-modal {
+        flex-direction: column;
+    }
+
+    .projeto-links-modal a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* --- SEÇÃO CONTATO E FORMS --- */
+    .contato-info {
+        padding: 25px;
     }
 
     .contato-direto ul {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .contato-lista a {
+        font-size: 0.85rem;
+    }
+
+    .contato-form {
+        min-height: 550px;
+    }
+
+    .foto {
+        max-width: 130px;
+        margin: 20px auto 0 auto; /* Centraliza a foto no bloco de contato */
+    }
+
+    /* =========================================================================
+       NOVAS PÁGINAS DE PROJETOS (CASE STUDIES)
+       Ajustes finos para leitura confortável no mobile.
+       ========================================================================= */
+       
+    .project-main {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .project-header-box h2 {
+        font-size: 2.2rem;
+    }
+
+    .project-subtitle {
+        font-size: 1rem;
+    }
+
+    .project-hero-image {
+        margin-bottom: 30px;
+        border-radius: 12px;
+    }
+
+    .project-content-box {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+
+    .project-content-box h3 {
+        font-size: 1.25rem;
+    }
+
+    .project-content-box p, 
+    .project-content-box ul {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Botão do GitHub dentro dos Case Studies */
+    .project-content-box .btn-download {
+        width: 100%;
+        justify-content: center;
     }
 }
 
+/* =========================================================================
+   TELAS MUITO PEQUENAS (Até 400px - Ex: iPhone SE, Galaxy Fold antigos)
+   ========================================================================= */
+@media screen and (max-width: 400px) {
+    .section-home .home-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    section h2 {
+        font-size: 1.7rem;
+    }
+}
