@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://karlarenatadev.github.io/portfolio-karla-renata/sitemap.xml
