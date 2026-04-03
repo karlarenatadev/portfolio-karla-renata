@@ -170,3 +170,37 @@ window.fecharModal = function(event) {
         console.error('Erro ao fechar modal:', error);
     }
 }
+// ========== GOOGLE FORMS AUTO-HEIGHT ==========
+document.addEventListener('DOMContentLoaded', function() {
+    const googleFormFrame = document.getElementById('googleFormFrame');
+    
+    if (googleFormFrame) {
+        // Função para ajustar altura do iframe
+        function resizeIframe() {
+            try {
+                // Tenta acessar o conteúdo do iframe
+                const iframeDoc = googleFormFrame.contentDocument || googleFormFrame.contentWindow.document;
+                
+                if (iframeDoc) {
+                    // Pega a altura do conteúdo dentro do iframe
+                    const height = iframeDoc.body.scrollHeight;
+                    googleFormFrame.style.height = (height + 20) + 'px';
+                }
+            } catch (e) {
+                // Se não conseguir acessar (CORS), mantém a altura padrão
+                console.log('Não foi possível auto-resize do formulário (CORS). Usando altura padrão.');
+            }
+        }
+        
+        // Chama ao carregar
+        googleFormFrame.onload = resizeIframe;
+        
+        // Reajusta a cada 500ms durante os primeiros 3 segundos
+        let attempts = 0;
+        const resizeInterval = setInterval(() => {
+            resizeIframe();
+            attempts++;
+            if (attempts > 6) clearInterval(resizeInterval);
+        }, 500);
+    }
+});

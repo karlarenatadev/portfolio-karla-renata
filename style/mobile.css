@@ -52,6 +52,22 @@
     #dados-slider {
         grid-auto-columns: calc(50% - 10px); /* Tablets: 2 colunas */
     }
+        .contato-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contato-info {
+        order: 2; /* Coloca formulário primeiro em mobile */
+    }
+
+    .contato-form {
+        order: 1;
+    }
+
+    .foto {
+        max-width: 150px;
+    }
 }
 
 /* =====================================================================
@@ -244,4 +260,18 @@
     #dados-slider {
         grid-auto-columns: 100%; /* Celulares: 1 coluna */
     }
+    .contato-info {
+        padding: 20px;
+    }
+
+    .contato-form {
+        padding: 15px;
+    }
+
+    .contato-direto ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 }
+
