@@ -17,12 +17,18 @@
 <body>
 
     <nav role="navigation" aria-label="Menu de navegação">
-        <ul class="menu" style="display: flex; width: 100%; max-width: 1000px; margin: 0 auto; padding-left: 20px;">
+        <ul class="menu" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
             <li class="menu-list" style="margin: 0;">
-                <a class="nav-back" href="../index.html#projetos-dados">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                    Voltar ao Portfólio
+                <a class="nav-back lang" href="../index.html#projetos-dados" data-pt="Voltar ao Portfólio" data-en="Back to Portfolio">
+                    <span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 5px;">arrow_back</span>
+                    <span class="lang" data-pt="Voltar" data-en="Back">Voltar</span>
                 </a>
+            </li>
+            <li style="list-style: none;">
+                <div style="display: flex; gap: 10px;">
+                    <button id="ptBtn" class="btn-cta active" style="padding: 6px 12px; font-size: 0.85rem; margin: 0;">PT</button>
+                    <button id="enBtn" class="btn-cta" style="padding: 6px 12px; font-size: 0.85rem; margin: 0; background-color: transparent; border: 2px solid var(--cor-destaque); color: var(--cor-destaque);">EN</button>
+                </div>
             </li>
         </ul>
     </nav>
@@ -30,8 +36,8 @@
     <main class="project-main">
         
         <header class="project-header-box">
-            <h2>Automação de Cadastro (RPA)</h2>
-            <p class="project-subtitle">Auditoria e input de dados automatizado em ERP</p>
+            <h2 class="lang" data-pt="Automação de Cadastro (RPA)" data-en="Data Entry Automation (RPA)">Automação de Cadastro (RPA)</h2>
+            <p class="project-subtitle lang" data-pt="Auditoria e input de dados automatizado em ERP" data-en="Automated data auditing and input into ERP">Auditoria e input de dados automatizado em ERP</p>
             
             <div class="hero-badges" style="justify-content: flex-start;">
                 <span class="badge">Python</span>
@@ -44,33 +50,30 @@
         <img src="../imagens/demo-rpa.gif" alt="Demonstração do Robô RPA rodando" class="project-hero-image" style="background-color: #000; object-fit: contain;">
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">target</span> O Desafio</h3>
-            <p>O processo manual de cadastro de produtos consumia horas valiosas da equipa e estava sujeito a "erros de dedo" (typos), como preços incorretos ou códigos duplicados. Além disso, a repetição mecânica gerava fadiga nos colaboradores, reduzindo a produtividade em tarefas mais analíticas.</p>
+            <h3><span class="material-symbols-outlined">target</span> <span class="lang" data-pt="O Desafio" data-en="The Challenge">O Desafio</span></h3>
+            <p class="lang" data-pt="O processo manual de cadastro de produtos consumia horas valiosas da equipa e estava sujeito a erros de digitação (typos), como preços incorretos ou códigos duplicados. Além disso, a repetição mecânica gerava fadiga nos colaboradores, reduzindo a produtividade em tarefas mais analíticas." data-en="The manual product registration process consumed valuable team hours and was prone to typos, such as incorrect prices or duplicate codes. Additionally, mechanical repetition caused employee fatigue, reducing productivity in more analytical tasks.">O processo manual de cadastro de produtos...</p>
         </section>
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">smart_toy</span> A Solução</h3>
-            <p>Desenvolvi um <strong>Bot (Robô) em Python</strong> que atua como um funcionário digital. Ele lê bases de dados, aplica regras de negócio e interage diretamente com a interface do sistema ERP simulando interações humanas.</p>
+            <h3><span class="material-symbols-outlined">smart_toy</span> <span class="lang" data-pt="A Solução" data-en="The Solution">A Solução</span></h3>
+            <p class="lang" data-pt="Desenvolvi um Bot (Robô) em Python que atua como um funcionário digital. Ele lê bases de dados, aplica regras de negócio e interage diretamente com a interface do sistema ERP simulando interações humanas." data-en="I developed a Python Bot that acts as a digital employee. It reads databases, applies business rules, and interacts directly with the ERP system interface, simulating human interactions.">Desenvolvi um Bot (Robô) em Python...</p>
             <ul>
-                <li><strong>Pandas:</strong> Utilizado para extrair dados de ficheiros Excel/CSV e realizar a higienização prévia (tratamento de células vazias e formatação).</li>
-                <li><strong>PyAutoGUI:</strong> Controla o mouse e o teclado para navegar no sistema ERP de forma autônoma.</li>
-                <li><strong>Lógica de Espera (Wait):</strong> O código é dinâmico e inteligente o suficiente para aguardar o tempo de carregamento do sistema entre uma tela e outra, evitando quebras na execução.</li>
+                <li><strong class="lang" data-pt="Pandas:" data-en="Pandas:">Pandas:</strong> <span class="lang" data-pt="Utilizado para extrair dados de ficheiros Excel/CSV e realizar a higienização prévia." data-en="Used to extract data from Excel/CSV files and perform initial data cleansing.">Utilizado para extrair dados...</span></li>
+                <li><strong class="lang" data-pt="PyAutoGUI:" data-en="PyAutoGUI:">PyAutoGUI:</strong> <span class="lang" data-pt="Controla o mouse e o teclado para navegar no sistema ERP de forma autônoma." data-en="Controls the mouse and keyboard to navigate the ERP system autonomously.">Controla o mouse e o teclado...</span></li>
+                <li><strong class="lang" data-pt="Lógica de Espera (Wait):" data-en="Wait Logic:">Lógica de Espera (Wait):</strong> <span class="lang" data-pt="O código é inteligente o suficiente para aguardar o tempo de carregamento do sistema entre uma tela e outra." data-en="The code is intelligent enough to wait for the system loading time between screens, preventing execution crashes.">O código é dinâmico e inteligente...</span></li>
             </ul>
         </section>
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">rocket_launch</span> Resultados</h3>
-            <p>O script tornou-se capaz de auditar e cadastrar centenas de produtos em poucos minutos com <strong>100% de precisão</strong>. Este ganho de eficiência operacional libertou a equipa comercial para focar em tarefas de negociação e estratégia, eliminando completamente o gargalo do <em>backoffice</em>.</p>
+            <h3><span class="material-symbols-outlined">rocket_launch</span> <span class="lang" data-pt="Resultados" data-en="Results">Resultados</span></h3>
+            <p class="lang" data-pt="O script tornou-se capaz de auditar e cadastrar centenas de produtos em poucos minutos com 100% de precisão. Este ganho de eficiência operacional libertou a equipa comercial para focar em tarefas de negociação e estratégia, eliminando completamente o gargalo do backoffice." data-en="The script became capable of auditing and registering hundreds of products in a few minutes with 100% accuracy. This operational efficiency gain freed the commercial team to focus on negotiation and strategic tasks, completely eliminating the backoffice bottleneck.">O script tornou-se capaz de auditar e cadastrar centenas de produtos...</p>
         </section>
 
         <div style="text-align: center; margin-top: 40px; display: flex; flex-direction: column; gap: 20px; align-items: center;">
-            
             <a href="https://github.com/karlarenatadev/automacao-pyautogui" target="_blank" class="btn-download" style="width: auto; padding: 0 30px; display: inline-flex; margin: 0 auto; gap: 10px; align-items: center; text-decoration: none;">
                 <img src="../imagens/icone-github.png" alt="GitHub" style="width: 24px; filter: brightness(0) invert(1);"> 
-                <span class="btn-text">Ver Código no GitHub</span>
+                <span class="btn-text lang" data-pt="Ver no GitHub" data-en="View on GitHub">Ver no GitHub</span>
             </a>
-
-            <a href="../index.html#projetos-dados" class="btn-voltar">← Voltar para o Portfólio</a>
         </div>
 
     </main>

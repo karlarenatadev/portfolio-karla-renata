@@ -865,31 +865,31 @@ main > section:last-child { border-bottom: none; }
     border: none;
 }
 
-/* --- RESPONSIVO --- */
-@media (max-width: 1024px) {
-    .contato-wrapper {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .contato-form {
-        min-height: 600px;
-        order: 1;
-    }
-
-    .contato-info {
-        order: 2;
-        padding: 30px;
-    }
-
-    .foto {
-        max-width: 150px;
-    }
-}
-
 /* --- ACESSIBILIDADE: Foco visível para navegação por teclado --- */
 :focus-visible {
     outline: 3px solid var(--cor-destaque);
     outline-offset: 4px;
     border-radius: 4px;
+}
+/* --- ESTILO DO LINK VOLTAR (CASE STUDIES) --- */
+.nav-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cor-texto-secundario);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.nav-back:hover {
+    color: var(--cor-destaque);
+    background-color: rgba(0, 200, 150, 0.05); /* Um leve brilho ao passar o rato */
+    transform: translateX(-5px); /* Pequeno movimento para a esquerda */
+}
+
+.nav-back .material-symbols-outlined {
+    font-size: 20px;
 }

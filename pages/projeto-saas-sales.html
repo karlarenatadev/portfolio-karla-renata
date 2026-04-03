@@ -15,11 +15,30 @@
     <link rel="stylesheet" href="../style/mobile.css">
 </head>
 <body>
-    <main style="max-width: 1000px; margin: 40px auto; padding: 20px;">
+
+    <nav role="navigation" aria-label="Menu de navegação">
+        <ul class="menu" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+            <li class="menu-list" style="margin: 0;">
+                <a class="nav-back lang" href="../index.html#projetos-dados" data-pt="Voltar ao Portfólio" data-en="Back to Portfolio">
+                    <span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 5px;">arrow_back</span>
+                    <span class="lang" data-pt="Voltar" data-en="Back">Voltar</span>
+                </a>
+            </li>
+            
+            <li style="list-style: none;">
+                <div style="display: flex; gap: 10px;">
+                    <button id="ptBtn" class="btn-cta active" style="padding: 6px 12px; font-size: 0.85rem; margin: 0;">PT</button>
+                    <button id="enBtn" class="btn-cta" style="padding: 6px 12px; font-size: 0.85rem; margin: 0; background-color: transparent; border: 2px solid var(--cor-destaque); color: var(--cor-destaque);">EN</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="project-main">
         
-        <header style="text-align: left; margin-bottom: 40px;">
-            <h2 style="margin: 0 0 10px 0; font-size: 3rem;">SaaS Sales Analytics</h2>
-            <p style="color: var(--cor-texto-secundario); font-size: 1.2rem; font-style: italic; margin-bottom: 20px;">Inteligência de Vendas e Detecção de Anomalias</p>
+        <header class="project-header-box">
+            <h2 class="lang" data-pt="SaaS Sales Analytics" data-en="SaaS Sales Analytics">SaaS Sales Analytics</h2>
+            <p class="project-subtitle lang" data-pt="Inteligência de Vendas e Detecção de Anomalias" data-en="Sales Intelligence and Anomaly Detection">Inteligência de Vendas e Detecção de Anomalias</p>
             
             <div class="hero-badges" style="justify-content: flex-start;">
                 <span class="badge">Amazon QuickSight</span>
@@ -29,35 +48,49 @@
             </div>
         </header>
 
-        <section style="margin-bottom: 40px;">
-            <img src="../imagens/dashboard_overview.png" alt="Dashboard de Vendas SaaS" style="width: 100%; border-radius: 16px; border: 1px solid var(--cor-destaque); box-shadow: 0 10px 30px rgba(0, 200, 150, 0.2);">
+        <img src="../imagens/dashboard_overview.png" alt="Dashboard de Vendas SaaS" class="project-hero-image">
+
+        <section class="project-content-box">
+            <h3><span class="material-symbols-outlined">crisis_alert</span> <span class="lang" data-pt="O Desafio" data-en="The Challenge">O Desafio</span></h3>
+            <p class="lang" 
+               data-pt="Transformar dados brutos de faturamento em uma visão estratégica que permitisse identificar sazonalidades, tendências de mercado e, principalmente, desvios ou anomalias financeiras em tempo real." 
+               data-en="Transform raw revenue data into a strategic view to identify seasonalities, market trends, and, most importantly, financial deviations or anomalies in real-time.">
+               Transformar dados brutos de faturamento em uma visão estratégica que permitisse identificar sazonalidades, tendências de mercado e, principalmente, desvios ou anomalias financeiras em tempo real.
+            </p>
         </section>
 
-        <section class="contato-info" style="margin-bottom: 40px; text-align: left;">
-            <h3 style="display: flex; align-items: center; gap: 10px;"><span class="material-symbols-outlined">crisis_alert</span> O Desafio</h3>
-            <p>Transformar dados brutos de faturamento em uma visão estratégica que permitisse identificar sazonalidades, tendências de mercado e, principalmente, desvios ou anomalias financeiras em tempo real.</p>
-
-            <h3 style="display: flex; align-items: center; gap: 10px; margin-top: 30px;"><span class="material-symbols-outlined">lightbulb</span> A Solução</h3>
-            <p>Utilizei o ecossistema <strong>AWS QuickSight</strong> para criar um dashboard analítico focado em Storytelling de Dados:</p>
-            <ul style="color: var(--cor-texto-secundario); line-height: 1.6; margin-left: 20px; margin-bottom: 20px;">
-                <li><strong>QuickSight Q:</strong> Integração de BI generativo para consultas rápidas.</li>
-                <li><strong>Sankey Diagrams:</strong> Visualização do fluxo de vendas entre diferentes segmentos de indústria e regiões geográficas.</li>
-                <li><strong>Análise Estatística:</strong> Implementação de cálculo de Z-score para identificação automática de anomalias no faturamento mensal.</li>
+        <section class="project-content-box">
+            <h3><span class="material-symbols-outlined">lightbulb</span> <span class="lang" data-pt="A Solução" data-en="The Solution">A Solução</span></h3>
+            <p class="lang" 
+               data-pt="Utilizei o ecossistema AWS QuickSight para criar um dashboard analítico focado em Storytelling de Dados:" 
+               data-en="I used the AWS QuickSight ecosystem to create an analytical dashboard focused on Data Storytelling:">
+               Utilizei o ecossistema AWS QuickSight para criar um dashboard analítico focado em Storytelling de Dados:
+            </p>
+            <ul>
+                <li><strong class="lang" data-pt="QuickSight Q:" data-en="QuickSight Q:">QuickSight Q:</strong> <span class="lang" data-pt="Integração de BI generativo para consultas rápidas." data-en="Generative BI integration for quick natural language queries.">Integração de BI generativo para consultas rápidas.</span></li>
+                <li><strong class="lang" data-pt="Sankey Diagrams:" data-en="Sankey Diagrams:">Sankey Diagrams:</strong> <span class="lang" data-pt="Visualização do fluxo de vendas entre diferentes segmentos de indústria e regiões geográficas." data-en="Sales flow visualization across different industry segments and geographic regions.">Visualização do fluxo de vendas entre diferentes segmentos de indústria e regiões geográficas.</span></li>
+                <li><strong class="lang" data-pt="Análise Estatística:" data-en="Statistical Analysis:">Análise Estatística:</strong> <span class="lang" data-pt="Implementação de cálculo de Z-score para identificação automática de anomalias no faturamento mensal." data-en="Implementation of Z-score calculation for automatic identification of anomalies in monthly revenue.">Implementação de cálculo de Z-score para identificação automática de anomalias no faturamento mensal.</span></li>
             </ul>
-
-            <h3 style="display: flex; align-items: center; gap: 10px; margin-top: 30px;"><span class="material-symbols-outlined">rocket_launch</span> Resultados</h3>
-            <p>Identificação de um crescimento de <strong>+51,6%</strong> entre 2021 e 2024 e detecção de uma anomalia crítica em novembro de 2024 (Z-score +2,57), permitindo uma investigação imediata das causas de variação no faturamento.</p>
-
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="https://github.com/karlarenatadev/saas-sales-analytics-quicksight" target="_blank" class="btn-download" style="width: auto; padding: 0 30px; display: inline-flex; margin: 0 auto;">
-                    <span class="btn-text">Ver no GitHub</span>
-                </a>
-            </div>
         </section>
 
-        <div style="text-align: center;">
-            <a href="../index.html" class="btn-voltar">← Voltar para o Portfólio</a>
+        <section class="project-content-box">
+            <h3><span class="material-symbols-outlined">rocket_launch</span> <span class="lang" data-pt="Resultados" data-en="Results">Resultados</span></h3>
+            <p class="lang" 
+               data-pt="Identificação de um crescimento de +51,6% entre 2021 e 2024 e detecção de uma anomalia crítica em novembro de 2024 (Z-score +2,57), permitindo uma investigação imediata das causas de variação no faturamento." 
+               data-en="Identified a +51.6% growth between 2021 and 2024 and detected a critical anomaly in November 2024 (Z-score +2.57), enabling immediate investigation into the causes of revenue variation.">
+               Identificação de um crescimento de +51,6% entre 2021 e 2024 e detecção de uma anomalia crítica em novembro de 2024 (Z-score +2,57), permitindo uma investigação imediata das causas de variação no faturamento.
+            </p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px; display: flex; flex-direction: column; gap: 20px; align-items: center;">
+            <a href="https://github.com/karlarenatadev/saas-sales-analytics-quicksight" target="_blank" class="btn-download" style="width: auto; padding: 0 30px; display: inline-flex; margin: 0 auto; gap: 10px; align-items: center; text-decoration: none;">
+                <img src="../imagens/icone-github.png" alt="GitHub" style="width: 24px; filter: brightness(0) invert(1);"> 
+                <span class="btn-text lang" data-pt="Ver no GitHub" data-en="View on GitHub">Ver no GitHub</span>
+            </a>
         </div>
+
     </main>
+
+    <script src="../js/scripts.js"></script>
 </body>
 </html>

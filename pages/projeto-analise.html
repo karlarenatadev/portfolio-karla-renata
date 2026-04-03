@@ -17,12 +17,18 @@
 <body>
 
     <nav role="navigation" aria-label="Menu de navegação">
-        <ul class="menu" style="display: flex; width: 100%; max-width: 1000px; margin: 0 auto; padding-left: 20px;">
+        <ul class="menu" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
             <li class="menu-list" style="margin: 0;">
-                <a class="nav-back" href="../index.html#projetos-dados">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                    Voltar ao Portfólio
+                <a class="nav-back lang" href="../index.html#projetos-dados" data-pt="Voltar ao Portfólio" data-en="Back to Portfolio">
+                    <span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 5px;">arrow_back</span>
+                    <span class="lang" data-pt="Voltar" data-en="Back">Voltar</span>
                 </a>
+            </li>
+            <li style="list-style: none;">
+                <div style="display: flex; gap: 10px;">
+                    <button id="ptBtn" class="btn-cta active" style="padding: 6px 12px; font-size: 0.85rem; margin: 0;">PT</button>
+                    <button id="enBtn" class="btn-cta" style="padding: 6px 12px; font-size: 0.85rem; margin: 0; background-color: transparent; border: 2px solid var(--cor-destaque); color: var(--cor-destaque);">EN</button>
+                </div>
             </li>
         </ul>
     </nav>
@@ -30,8 +36,8 @@
     <main class="project-main">
         
         <header class="project-header-box">
-            <h2>Análise Exploratória de Vendas</h2>
-            <p class="project-subtitle">Descobrindo padrões de lucro e comportamento do consumidor</p>
+            <h2 class="lang" data-pt="Análise Exploratória de Vendas" data-en="Exploratory Sales Analysis">Análise Exploratória de Vendas</h2>
+            <p class="project-subtitle lang" data-pt="Descobrindo padrões de lucro e comportamento do consumidor" data-en="Discovering profit patterns and consumer behavior">Descobrindo padrões de lucro e comportamento do consumidor</p>
             
             <div class="hero-badges" style="justify-content: flex-start;">
                 <span class="badge">Python</span>
@@ -44,37 +50,37 @@
         <img src="../imagens/analise-de-vendas.png" alt="Gráfico de Vendas por Estado" class="project-hero-image">
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">target</span> O Problema de Negócio</h3>
-            <p>Uma empresa de varejo precisava entender por que, apesar do alto volume de vendas em certas regiões, o lucro final estava estagnado. O meu objetivo foi identificar de forma cirúrgica quais os produtos e regiões que estavam a drenar a margem de lucro da operação.</p>
+            <h3><span class="material-symbols-outlined">target</span> <span class="lang" data-pt="O Problema de Negócio" data-en="The Business Problem">O Problema de Negócio</span></h3>
+            <p class="lang" data-pt="Uma empresa de varejo precisava entender por que, apesar do alto volume de vendas em certas regiões, o lucro final estava estagnado. O meu objetivo foi identificar de forma cirúrgica quais os produtos e regiões que estavam a drenar a margem de lucro da operação." data-en="A retail company needed to understand why, despite high sales volumes in certain regions, the final profit was stagnant. My goal was to surgically identify which products and regions were draining the operation's profit margin.">Uma empresa de varejo precisava entender por que...</p>
         </section>
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">build</span> A Abordagem Técnica</h3>
-            <p>Utilizei <strong>Python</strong> para todo o processo de ETL (Extração, Transformação e Carga) e análise:</p>
+            <h3><span class="material-symbols-outlined">build</span> <span class="lang" data-pt="A Abordagem Técnica" data-en="The Technical Approach">A Abordagem Técnica</span></h3>
+            <p class="lang" data-pt="Utilizei Python para todo o processo de ETL (Extração, Transformação e Carga) e análise:" data-en="I used Python for the entire ETL (Extract, Transform, and Load) and analysis process:">Utilizei Python para todo o processo...</p>
             <ul>
-                <li><strong>Limpeza:</strong> Tratamento de valores nulos e duplicados usando a biblioteca Pandas.</li>
-                <li><strong>Exploração:</strong> Análise estatística descritiva (média, mediana, desvio padrão).</li>
-                <li><strong>Visualização:</strong> Criação de gráficos de dispersão e barras com Matplotlib e Seaborn para identificar <em>outliers</em>.</li>
+                <li><strong class="lang" data-pt="Limpeza:" data-en="Cleaning:">Limpeza:</strong> <span class="lang" data-pt="Tratamento de valores nulos e duplicados usando a biblioteca Pandas." data-en="Handling null and duplicate values using the Pandas library.">Tratamento de valores nulos...</span></li>
+                <li><strong class="lang" data-pt="Exploração:" data-en="Exploration:">Exploração:</strong> <span class="lang" data-pt="Análise estatística descritiva (média, mediana, desvio padrão)." data-en="Descriptive statistical analysis (mean, median, standard deviation).">Análise estatística descritiva...</span></li>
+                <li><strong class="lang" data-pt="Visualização:" data-en="Visualization:">Visualização:</strong> <span class="lang" data-pt="Criação de gráficos de dispersão e barras com Matplotlib e Seaborn para identificar outliers." data-en="Creation of scatter and bar charts with Matplotlib and Seaborn to identify outliers.">Criação de gráficos de dispersão...</span></li>
             </ul>
 
-            <h4 style="color: var(--cor-destaque); margin: 30px 0 10px 0; font-size: 1.1rem;">Snippet de Análise em Python:</h4>
+            <h4 class="lang" data-pt="Snippet de Análise em Python:" data-en="Python Analysis Snippet:" style="color: var(--cor-destaque); margin: 30px 0 10px 0; font-size: 1.1rem;">Snippet de Análise em Python:</h4>
             <div style="background-color: #1e1e1e; padding: 20px; border-radius: 8px; border-left: 4px solid var(--cor-destaque); font-family: 'Courier New', monospace; color: #d4d4d4; overflow-x: auto; line-height: 1.5; font-size: 0.95rem;">
-                <span style="color: #6a9955;"># Agrupando vendas por Região e calculando Lucro total</span><br>
+                <span style="color: #6a9955;"># Grouping sales by Region and calculating Total Profit</span><br>
                 lucro_por_regiao = df.groupby(<span style="color: #ce9178;">'Region'</span>)[<span style="color: #ce9178;">'Profit'</span>].sum().sort_values(ascending=<span style="color: #569cd6;">False</span>)<br><br>
-                <span style="color: #6a9955;"># Visualizando o resultado com Seaborn</span><br>
+                <span style="color: #6a9955;"># Visualizing the result with Seaborn</span><br>
                 sns.barplot(x=lucro_por_regiao.index, y=lucro_por_regiao.values)
             </div>
         </section>
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">lightbulb</span> Insights & Resultados</h3>
-            <p>A análise revelou que, embora a categoria "Móveis" gerasse uma alta receita bruta, os descontos excessivos aplicados para fechar essas vendas estavam a gerar um <strong>prejuízo operacional</strong> silencioso em 3 estados específicos.</p>
-            <p><strong>Recomendação Estratégica:</strong> Revisar urgentemente a política de descontos para a categoria de Móveis e redirecionar o orçamento de marketing para a categoria "Tecnologia", que apresentou a maior margem de contribuição real.</p>
+            <h3><span class="material-symbols-outlined">lightbulb</span> <span class="lang" data-pt="Insights & Resultados" data-en="Insights & Results">Insights & Resultados</span></h3>
+            <p class="lang" data-pt="A análise revelou que, embora a categoria 'Móveis' gerasse uma alta receita bruta, os descontos excessivos aplicados para fechar essas vendas estavam a gerar um prejuízo operacional silencioso em 3 estados específicos." data-en="The analysis revealed that, although the 'Furniture' category generated high gross revenue, excessive discounts applied to close these sales were silently causing operating losses in 3 specific states.">A análise revelou que, embora a categoria...</p>
+            <p><strong class="lang" data-pt="Recomendação Estratégica:" data-en="Strategic Recommendation:">Recomendação Estratégica:</strong> <span class="lang" data-pt="Revisar urgentemente a política de descontos para a categoria de Móveis e redirecionar o orçamento de marketing para a categoria 'Tecnologia', que apresentou a maior margem de contribuição real." data-en="Urgently review the discount policy for the Furniture category and redirect the marketing budget to the 'Technology' category, which showed the highest real contribution margin.">Revisar urgentemente a política...</span></p>
         </section>
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">database</span> Visão de Extração via SQL</h3>
-            <p>Para garantir que tenho a capacidade de extrair estes dados diretamente do banco de dados antes de os processar em Python, utilizaria uma query de agregação semelhante a esta:</p>
+            <h3><span class="material-symbols-outlined">database</span> <span class="lang" data-pt="Visão de Extração via SQL" data-en="SQL Extraction View">Visão de Extração via SQL</span></h3>
+            <p class="lang" data-pt="Para garantir que tenho a capacidade de extrair estes dados diretamente do banco de dados antes de os processar em Python, utilizaria uma query de agregação semelhante a esta:" data-en="To ensure I have the capability to extract this data directly from the database before processing it in Python, I would use an aggregation query similar to this:">Para garantir que tenho a capacidade de extrair...</p>
 
             <div style="background-color: #1e1e1e; padding: 20px; border-radius: 8px; border-left: 4px solid var(--cor-destaque); font-family: 'Courier New', monospace; color: #d4d4d4; overflow-x: auto; line-height: 1.5; font-size: 0.95rem; margin-top: 15px;">
                 <span style="color: #569cd6;">SELECT</span> <br>
@@ -89,13 +95,10 @@
         </section>
 
         <div style="text-align: center; margin-top: 40px; display: flex; flex-direction: column; gap: 20px; align-items: center;">
-            
             <a href="https://github.com/karlarenatadev/projeto-analise-de-vendas" target="_blank" class="btn-download" style="width: auto; padding: 0 30px; display: inline-flex; margin: 0 auto; gap: 10px; align-items: center; text-decoration: none;">
                 <img src="../imagens/icone-github.png" alt="GitHub" style="width: 24px; filter: brightness(0) invert(1);"> 
-                <span class="btn-text">Ver Código Completo</span>
+                <span class="btn-text lang" data-pt="Ver Código Completo" data-en="View Full Code">Ver Código Completo</span>
             </a>
-
-            <a href="../index.html#projetos-dados" class="btn-voltar">← Voltar para o Portfólio</a>
         </div>
 
     </main>

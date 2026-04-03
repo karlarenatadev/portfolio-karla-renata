@@ -17,12 +17,18 @@
 <body>
 
     <nav role="navigation" aria-label="Menu de navegação">
-        <ul class="menu" style="display: flex; width: 100%; max-width: 1000px; margin: 0 auto; padding-left: 20px;">
+        <ul class="menu" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
             <li class="menu-list" style="margin: 0;">
-                <a class="nav-back" href="../index.html#projetos-dados">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                    Voltar ao Portfólio
+                <a class="nav-back lang" href="../index.html#projetos-dados" data-pt="Voltar ao Portfólio" data-en="Back to Portfolio">
+                    <span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 5px;">arrow_back</span>
+                    <span class="lang" data-pt="Voltar" data-en="Back">Voltar</span>
                 </a>
+            </li>
+            <li style="list-style: none;">
+                <div style="display: flex; gap: 10px;">
+                    <button id="ptBtn" class="btn-cta active" style="padding: 6px 12px; font-size: 0.85rem; margin: 0;">PT</button>
+                    <button id="enBtn" class="btn-cta" style="padding: 6px 12px; font-size: 0.85rem; margin: 0; background-color: transparent; border: 2px solid var(--cor-destaque); color: var(--cor-destaque);">EN</button>
+                </div>
             </li>
         </ul>
     </nav>
@@ -30,8 +36,12 @@
     <main class="project-main">
         
         <header class="project-header-box">
-            <h2>Previsão de Estoque Inteligente</h2>
-            <p class="project-subtitle">Machine Learning No-Code na AWS</p>
+            <h2 class="lang" data-pt="Previsão de Estoque Inteligente" data-en="Intelligent Inventory Forecasting">Previsão de Estoque Inteligente</h2>
+            <p class="project-subtitle lang" 
+               data-pt="Machine Learning No-Code na AWS" 
+               data-en="No-Code Machine Learning on AWS">
+               Machine Learning No-Code na AWS
+            </p>
             
             <div class="hero-badges" style="justify-content: flex-start;">
                 <span class="badge">AWS SageMaker</span>
@@ -44,34 +54,47 @@
         <img src="../imagens/grafico1.png" alt="Análise de Impacto das Variáveis" class="project-hero-image" style="background-color: #1A1D24; padding: 10px; object-fit: contain;">
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">inventory_2</span> O Desafio</h3>
-            <p>Otimizar a gestão de inventário de varejo para evitar o pior pesadelo do setor: a ruptura de estoque (que causa perda de vendas e insatisfação) ou o excesso de produtos parados (que drena o fluxo de caixa). O desafio era prever a demanda futura utilizando modelos matemáticos que considerassem variáveis dinâmicas, como o preço e ações promocionais.</p>
+            <h3><span class="material-symbols-outlined">inventory_2</span> <span class="lang" data-pt="O Desafio" data-en="The Challenge">O Desafio</span></h3>
+            <p class="lang" 
+               data-pt="Otimizar a gestão de inventário de varejo para evitar o pior pesadelo do setor: a ruptura de estoque (que causa perda de vendas e insatisfação) ou o excesso de produtos parados (que drena o fluxo de caixa). O desafio era prever a demanda futura utilizando modelos matemáticos que considerassem variáveis dinâmicas, como o preço e ações promocionais." 
+               data-en="Optimize retail inventory management to avoid the sector's worst nightmares: stockouts (causing lost sales and dissatisfaction) or excess idle products (draining cash flow). The challenge was predicting future demand using mathematical models that account for dynamic variables, such as price and promotional actions.">
+               Otimizar a gestão de inventário...
+            </p>
         </section>
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">timeline</span> A Solução</h3>
-            <p>Desenvolvi um modelo de <strong>Time Series Forecasting (Previsão de Séries Temporais)</strong> utilizando o Amazon SageMaker Canvas, aplicando o conceito de Machine Learning Low-Code/No-Code focado em valor de negócio:</p>
+            <h3><span class="material-symbols-outlined">timeline</span> <span class="lang" data-pt="A Solução" data-en="The Solution">A Solução</span></h3>
+            <p class="lang" 
+               data-pt="Desenvolvi um modelo de Time Series Forecasting (Previsão de Séries Temporais) utilizando o Amazon SageMaker Canvas, aplicando o conceito de Machine Learning Low-Code/No-Code focado em valor de negócio:" 
+               data-en="I developed a Time Series Forecasting model using Amazon SageMaker Canvas, applying the concept of Low-Code/No-Code Machine Learning focused on business value:">
+               Desenvolvi um modelo de Time Series Forecasting...
+            </p>
             <ul>
-                <li><strong>Tratamento de Dados:</strong> Uso do Data Flow do SageMaker para garantir que identificadores de produtos fossem tratados corretamente como dados categóricos/texto, evitando distorções no treino.</li>
-                <li><strong>Treinamento Preditivo:</strong> Configuração do modelo de Machine Learning para prever com precisão a quantidade necessária de estoque para os próximos 5 dias.</li>
-                <li><strong>Análise de Impacto (Feature Importance):</strong> Identificação clara de quais fatores mais influenciavam a baixa ou alta do estoque (ex: sensibilidade ao preço).</li>
+                <li><strong class="lang" data-pt="Tratamento de Dados:" data-en="Data Processing:">Tratamento de Dados:</strong> <span class="lang" data-pt="Uso do Data Flow do SageMaker para garantir que identificadores de produtos fossem tratados corretamente como dados categóricos/texto, evitando distorções no treino." data-en="Use of SageMaker Data Flow to ensure product identifiers were correctly treated as categorical/text data, preventing training distortions.">Uso do Data Flow...</span></li>
+                <li><strong class="lang" data-pt="Treinamento Preditivo:" data-en="Predictive Training:">Treinamento Preditivo:</strong> <span class="lang" data-pt="Configuração do modelo de Machine Learning para prever com precisão a quantidade necessária de estoque para os próximos 5 dias." data-en="Machine Learning model configuration to accurately predict the required inventory amount for the next 5 days.">Configuração do modelo...</span></li>
+                <li><strong class="lang" data-pt="Análise de Impacto:" data-en="Impact Analysis (Feature Importance):">Análise de Impacto:</strong> <span class="lang" data-pt="Identificação clara de quais fatores mais influenciavam a baixa ou alta do estoque (ex: sensibilidade ao preço)." data-en="Clear identification of which factors most influenced inventory fluctuations (e.g., price sensitivity).">Identificação clara de quais fatores...</span></li>
             </ul>
         </section>
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">query_stats</span> Resultados</h3>
-            <p>A fase de testes gerou métricas sólidas de performance para o modelo preditivo, alcançando um <strong>Avg. wQL (Weighted Quantile Loss) de 0.188</strong>, o que indica uma alta precisão nas previsões traçadas.</p>
-            <p>Além da previsão numérica, a interpretabilidade do modelo gerou um insight de negócio valioso: o modelo revelou que a variável <strong>preço tem um impacto de aproximadamente 25,44%</strong> na variação do estoque deste dataset, direcionando a estratégia de <em>pricing</em> da empresa.</p>
+            <h3><span class="material-symbols-outlined">query_stats</span> <span class="lang" data-pt="Resultados" data-en="Results">Resultados</span></h3>
+            <p class="lang" 
+               data-pt="A fase de testes gerou métricas sólidas de performance para o modelo preditivo, alcançando um Avg. wQL (Weighted Quantile Loss) de 0.188, o que indica uma alta precisão nas previsões traçadas." 
+               data-en="The testing phase generated solid performance metrics for the predictive model, reaching an Avg. wQL (Weighted Quantile Loss) of 0.188, indicating high accuracy in the generated forecasts.">
+               A fase de testes gerou métricas sólidas...
+            </p>
+            <p class="lang" 
+               data-pt="Além da previsão numérica, a interpretabilidade do modelo gerou um insight de negócio valioso: o modelo revelou que a variável preço tem um impacto de aproximadamente 25,44% na variação do estoque deste dataset, direcionando a estratégia de pricing da empresa." 
+               data-en="Beyond numerical forecasting, the model's interpretability generated a valuable business insight: it revealed that the price variable impacts approximately 25.44% of inventory variation in this dataset, directly guiding the company's pricing strategy.">
+               Além da previsão numérica...
+            </p>
         </section>
 
         <div style="text-align: center; margin-top: 40px; display: flex; flex-direction: column; gap: 20px; align-items: center;">
-            
             <a href="https://github.com/karlarenatadev/lab-aws-sagemaker-canvas-estoque" target="_blank" class="btn-download" style="width: auto; padding: 0 30px; display: inline-flex; margin: 0 auto; gap: 10px; align-items: center; text-decoration: none;">
                 <img src="../imagens/icone-github.png" alt="GitHub" style="width: 24px; filter: brightness(0) invert(1);"> 
-                <span class="btn-text">Ver no GitHub</span>
+                <span class="btn-text lang" data-pt="Ver no GitHub" data-en="View on GitHub">Ver no GitHub</span>
             </a>
-
-            <a href="../index.html#projetos-dados" class="btn-voltar">← Voltar para o Portfólio</a>
         </div>
 
     </main>

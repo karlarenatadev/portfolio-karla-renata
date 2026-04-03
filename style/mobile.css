@@ -259,6 +259,15 @@
         width: 100%;
         justify-content: center;
     }
+
+    .nav-back {
+        padding: 10px 0; /* Menos espaço lateral no mobile */
+        font-size: 0.9rem;
+    }
+    
+    .nav-back span:last-child {
+        display: none; /* Esconde a palavra 'Voltar' e deixa só a seta no mobile se o espaço for curto */
+    }
 }
 
 /* =========================================================================

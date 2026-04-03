@@ -17,12 +17,18 @@
 <body>
 
     <nav role="navigation" aria-label="Menu de navegação">
-        <ul class="menu" style="display: flex; width: 100%; max-width: 1000px; margin: 0 auto; padding-left: 20px;">
+        <ul class="menu" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
             <li class="menu-list" style="margin: 0;">
-                <a class="nav-back" href="../index.html#projetos-dados">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                    Voltar ao Portfólio
+                <a class="nav-back lang" href="../index.html#projetos-dados" data-pt="Voltar ao Portfólio" data-en="Back to Portfolio">
+                    <span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 5px;">arrow_back</span>
+                    <span class="lang" data-pt="Voltar" data-en="Back">Voltar</span>
                 </a>
+            </li>
+            <li style="list-style: none;">
+                <div style="display: flex; gap: 10px;">
+                    <button id="ptBtn" class="btn-cta active" style="padding: 6px 12px; font-size: 0.85rem; margin: 0;">PT</button>
+                    <button id="enBtn" class="btn-cta" style="padding: 6px 12px; font-size: 0.85rem; margin: 0; background-color: transparent; border: 2px solid var(--cor-destaque); color: var(--cor-destaque);">EN</button>
+                </div>
             </li>
         </ul>
     </nav>
@@ -30,8 +36,12 @@
     <main class="project-main">
         
         <header class="project-header-box">
-            <h2>AWS Certification Simulator</h2>
-            <p class="project-subtitle">Pipeline de Dados Autônomo com LLM (Google Gemini) e PWA</p>
+            <h2 class="lang" data-pt="AWS Certification Simulator" data-en="AWS Certification Simulator">AWS Certification Simulator</h2>
+            <p class="project-subtitle lang" 
+               data-pt="Pipeline de Dados Autônomo com LLM (Google Gemini) e PWA" 
+               data-en="Autonomous Data Pipeline with LLM (Google Gemini) and PWA">
+               Pipeline de Dados Autônomo com LLM (Google Gemini) e PWA
+            </p>
             
             <div class="hero-badges" style="justify-content: flex-start;">
                 <span class="badge">Python</span>
@@ -45,21 +55,29 @@
         <img src="../imagens/arquitetura-data.png" alt="Arquitetura do Pipeline de Dados" class="project-hero-image" style="background-color: #050505; padding: 20px; object-fit: contain;">
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">crisis_alert</span> O Desafio</h3>
-            <p>Criar uma plataforma de simulados para certificações AWS (CLF-C02, SAA-C03) que se atualizasse de forma autônoma utilizando Inteligência Artificial Generativa. O maior desafio técnico era <strong>evitar alucinações da IA</strong> — ou seja, garantir que o modelo não inventasse serviços inexistentes ou incluísse tecnologias fora do escopo específico de cada prova.</p>
+            <h3><span class="material-symbols-outlined">crisis_alert</span> <span class="lang" data-pt="O Desafio" data-en="The Challenge">O Desafio</span></h3>
+            <p class="lang" 
+               data-pt="Criar uma plataforma de simulados para certificações AWS (CLF-C02, SAA-C03) que se atualizasse de forma autônoma utilizando Inteligência Artificial Generativa. O maior desafio técnico era evitar alucinações da IA — ou seja, garantir que o modelo não inventasse serviços inexistentes ou incluísse tecnologias fora do escopo específico de cada prova." 
+               data-en="Create a mock exam platform for AWS certifications (CLF-C02, SAA-C03) that updates autonomously using Generative AI. The biggest technical challenge was preventing AI hallucinations — ensuring the model wouldn't invent non-existent services or include technologies outside the specific scope of each exam.">
+               Criar uma plataforma de simulados para certificações AWS (CLF-C02, SAA-C03)...
+            </p>
         </section>
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">architecture</span> Arquitetura e Data Quality</h3>
-            <p>Em vez de apenas fazer requisições simples a uma API, construí um <strong>Pipeline ETL</strong> completo em Python com 4 camadas de <em>Quality Assurance (QA)</em> para os dados gerados pelo Google Gemini:</p>
+            <h3><span class="material-symbols-outlined">architecture</span> <span class="lang" data-pt="Arquitetura e Data Quality" data-en="Architecture & Data Quality">Arquitetura e Data Quality</span></h3>
+            <p class="lang" 
+               data-pt="Em vez de apenas fazer requisições simples a uma API, construí um Pipeline ETL completo em Python com 4 camadas de Quality Assurance (QA) para os dados gerados pelo Google Gemini:" 
+               data-en="Instead of just making simple API requests, I built a complete Python ETL Pipeline with 4 layers of Quality Assurance (QA) for the data generated by Google Gemini:">
+               Em vez de apenas fazer requisições simples a uma API...
+            </p>
             <ul>
-                <li><strong>1. Schema Enforcement (Pydantic):</strong> Garante que a IA devolva estritamente um JSON estruturado com pergunta, opções, resposta correta e explicação.</li>
-                <li><strong>2. Validação Semântica Customizada:</strong> Um script (<code>aws_semantic_validator.py</code>) que atua como "juiz de negócios". Ele bloqueia questões que mencionem serviços avançados (ex: Transit Gateway) num simulado de nível fundacional (Cloud Practitioner).</li>
-                <li><strong>3. Motor de Deduplicação:</strong> Utilização do algoritmo <em>SequenceMatcher</em> para medir a similaridade semântica, evitando que a IA popule o banco de dados com perguntas repetidas.</li>
-                <li><strong>4. Sanity Check:</strong> Verificação final de integridade antes do <em>merge</em> no repositório.</li>
+                <li><strong class="lang" data-pt="1. Schema Enforcement (Pydantic):" data-en="1. Schema Enforcement (Pydantic):">1. Schema Enforcement (Pydantic):</strong> <span class="lang" data-pt="Garante que a IA devolva estritamente um JSON estruturado com pergunta, opções, resposta correta e explicação." data-en="Ensures the AI strictly returns a structured JSON with question, options, correct answer, and explanation.">Garante que a IA devolva estritamente um JSON...</span></li>
+                <li><strong class="lang" data-pt="2. Validação Semântica Customizada:" data-en="2. Custom Semantic Validation:">2. Validação Semântica Customizada:</strong> <span class="lang" data-pt="Bloqueia questões que mencionem serviços avançados (ex: Transit Gateway) num simulado de nível fundacional." data-en="Blocks questions mentioning advanced services (e.g., Transit Gateway) in a foundational level mock exam.">Bloqueia questões que mencionem serviços avançados...</span></li>
+                <li><strong class="lang" data-pt="3. Motor de Deduplicação:" data-en="3. Deduplication Engine:">3. Motor de Deduplicação:</strong> <span class="lang" data-pt="Utilização do algoritmo SequenceMatcher para medir a similaridade semântica, evitando que a IA popule o banco de dados com perguntas repetidas." data-en="Use of the SequenceMatcher algorithm to measure semantic similarity, preventing the AI from populating the database with repeated questions.">Utilização do algoritmo SequenceMatcher...</span></li>
+                <li><strong class="lang" data-pt="4. Sanity Check:" data-en="4. Sanity Check:">4. Sanity Check:</strong> <span class="lang" data-pt="Verificação final de integridade antes do merge no repositório." data-en="Final integrity verification before merging into the repository.">Verificação final de integridade...</span></li>
             </ul>
 
-            <h4 style="color: var(--cor-destaque); margin: 30px 0 10px 0; font-size: 1.1rem;">Visão do Motor de Validação (Python):</h4>
+            <h4 class="lang" data-pt="Visão do Motor de Validação (Python):" data-en="Validation Engine Overview (Python):" style="color: var(--cor-destaque); margin: 30px 0 10px 0; font-size: 1.1rem;">Visão do Motor de Validação (Python):</h4>
             <div style="background-color: #1e1e1e; padding: 20px; border-radius: 8px; border-left: 4px solid var(--cor-destaque); font-family: 'Courier New', monospace; color: #d4d4d4; overflow-x: auto; line-height: 1.5; font-size: 0.9rem;">
                 <span style="color: #6a9955;"># Exemplo simplificado do fluxo no pipeline_runner.py</span><br>
                 <span style="color: #569cd6;">def</span> <span style="color: #dcdcaa;">process_new_questions</span>(raw_ai_data):<br>
@@ -79,19 +97,24 @@
         </section>
 
         <section class="project-content-box">
-            <h3><span class="material-symbols-outlined">devices</span> Frontend PWA & Automação CI/CD</h3>
-            <p>O consumo destes dados é feito por uma aplicação frontend desenvolvida em <strong>Vanilla JavaScript</strong>. A aplicação é um <strong>PWA (Progressive Web App)</strong> graças ao <code>sw.js</code> (Service Worker), permitindo que os utilizadores façam simulados mesmo offline.</p>
-            <p>Todo o fluxo de geração e validação de dados roda de forma 100% <em>serverless</em> através do <strong>GitHub Actions</strong> (verificado nos ficheiros <code>.yml</code> da pasta <code>.github/workflows</code>), mantendo a base de dados de questões sempre atualizada sem intervenção manual.</p>
+            <h3><span class="material-symbols-outlined">devices</span> <span class="lang" data-pt="Frontend PWA & Automação CI/CD" data-en="Frontend PWA & CI/CD Automation">Frontend PWA & Automação CI/CD</span></h3>
+            <p class="lang" 
+               data-pt="O consumo destes dados é feito por uma aplicação frontend desenvolvida em Vanilla JavaScript. A aplicação é um PWA (Progressive Web App) graças ao sw.js (Service Worker), permitindo que os utilizadores façam simulados mesmo offline." 
+               data-en="The consumption of this data is done by a frontend application developed in Vanilla JavaScript. The app is a PWA (Progressive Web App) thanks to the sw.js (Service Worker), allowing users to take mock exams even offline.">
+               O consumo destes dados é feito por uma aplicação...
+            </p>
+            <p class="lang" 
+               data-pt="Todo o fluxo de geração e validação de dados roda de forma 100% serverless através do GitHub Actions, mantendo a base de dados de questões sempre atualizada sem intervenção manual." 
+               data-en="The entire data generation and validation flow runs 100% serverless via GitHub Actions, keeping the question database constantly updated without manual intervention.">
+               Todo o fluxo de geração e validação de dados roda de forma 100% serverless...
+            </p>
         </section>
 
         <div style="text-align: center; margin-top: 40px; display: flex; flex-direction: column; gap: 20px; align-items: center;">
-            
             <a href="https://github.com/karlarenatadev/projeto-simulados-certificacao-aws" target="_blank" class="btn-download" style="width: auto; padding: 0 30px; display: inline-flex; margin: 0 auto; gap: 10px; align-items: center; text-decoration: none;">
                 <img src="../imagens/icone-github.png" alt="GitHub" style="width: 24px; filter: brightness(0) invert(1);"> 
-                <span class="btn-text">Ver Código do Pipeline no GitHub</span>
+                <span class="btn-text lang" data-pt="Ver Código no GitHub" data-en="View Code on GitHub">Ver Código no GitHub</span>
             </a>
-
-            <a href="../index.html#projetos-dados" class="btn-voltar">← Voltar para o Portfólio</a>
         </div>
 
     </main>
