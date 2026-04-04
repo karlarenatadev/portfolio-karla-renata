@@ -1,0 +1,289 @@
+@charset "UTF-8";
+
+/* =========================================================================
+   ESTILOS PARA DISPOSITIVOS MÓVEIS (Telas até 768px)
+   Focado em UX para toque, leitura confortável e empilhamento de blocos.
+   ========================================================================= */
+
+@media screen and (max-width: 768px) {
+    
+    /* --- CABEÇALHO E NAVEGAÇÃO (MENU HAMBÚRGUER) --- */
+    nav {
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+    }
+
+    #burguer {
+        display: block;
+        color: var(--cor-destaque);
+        font-size: 32px;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    /* Esconde os itens por padrão e os prepara para o menu dropdown */
+    ul#items {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-fundo-secundario);
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        border-top: 1px solid var(--cor-destaque);
+    }
+
+    /* Classe ativada via JavaScript quando clica no hambúrguer */
+    ul#items.ativo {
+        display: flex;
+        animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    li.menu-list {
+        margin: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        width: 100%;
+    }
+
+    a.menu-link {
+        display: block;
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    /* Seletor de Idiomas no topo (ajuste para não brigar com o menu) */
+    .lang-controls {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-left: auto;
+    }
+
+    /* --- SEÇÃO HOME --- */
+    .home-container {
+        flex-direction: column;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .home-content {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    /* Força o alinhamento central no mobile */
+    .section-home .home-content h1,
+    .section-home .home-content p {
+        text-align: center;
+    }
+
+    .hero-badges, 
+    .cta-group {
+        justify-content: center; /* Centraliza badges e botões */
+    }
+
+    #foto-sobre {
+        max-width: 200px; /* Foto menor no celular */
+        margin-top: 20px;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-cta, a.btn-download {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    /* --- SEÇÃO SOBRE (TIMELINE) --- */
+    .timeline-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* --- SEÇÃO JORNADA (VERTICALIZANDO A TRILHA) --- */
+    .trilha-container {
+        flex-direction: column;
+        gap: 40px;
+        margin: 40px auto;
+    }
+
+    .trilha-linha {
+        display: none; /* Esconde a linha horizontal */
+    }
+
+    .trilha-passo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Reset do posicionamento zig-zag (Cima/Baixo) */
+    .trilha-passo.cima .passo-card, 
+    .trilha-passo.baixo .passo-card {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        width: 90%;
+        margin-top: 15px;
+    }
+
+    /* Esconde os tracinhos verticais do zig-zag */
+    .trilha-passo.cima::after, 
+    .trilha-passo.baixo::before {
+        display: none; 
+    }
+
+    /* --- CARROSSEL DE PROJETOS DE DADOS --- */
+    #dados-slider {
+        grid-template-rows: 1fr; /* Força 1 única linha no celular para facilitar o swipe */
+        grid-auto-columns: 85%; /* Deixa o próximo card aparecendo um pouquinho (dica visual) */
+        padding: 10px;
+    }
+
+    .btn-slider {
+        display: none; /* Esconde as setas, o usuário vai arrastar com o dedo */
+    }
+
+    /* --- MODAIS --- */
+    .modal-content {
+        padding: 25px 20px;
+        width: 95%;
+        max-height: 85vh; /* Evita que o modal ultrapasse a tela */
+        overflow-y: auto; /* Permite rolar dentro do modal se o texto for longo */
+    }
+
+    .modal-content h3 {
+        font-size: 1.3rem;
+        padding-right: 20px; /* Dá espaço para o X de fechar */
+    }
+
+    .fechar-modal {
+        top: 5px;
+        right: 15px;
+    }
+
+    .projeto-links-modal {
+        flex-direction: column;
+    }
+
+    .projeto-links-modal a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* --- SEÇÃO CONTATO E FORMS --- */
+    .contato-info {
+        padding: 25px;
+    }
+
+    .contato-direto ul {
+        align-items: flex-start;
+    }
+
+    .contato-lista a {
+        font-size: 0.85rem;
+    }
+
+    .contato-form {
+        min-height: 550px;
+    }
+
+    .foto {
+        max-width: 130px;
+        margin: 20px auto 0 auto; /* Centraliza a foto no bloco de contato */
+    }
+
+    /* =========================================================================
+       NOVAS PÁGINAS DE PROJETOS (CASE STUDIES)
+       Ajustes finos para leitura confortável no mobile.
+       ========================================================================= */
+       
+    .project-main {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .project-header-box h2 {
+        font-size: 2.2rem;
+    }
+
+    .project-subtitle {
+        font-size: 1rem;
+    }
+
+    .project-hero-image {
+        margin-bottom: 30px;
+        border-radius: 12px;
+    }
+
+    .project-content-box {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+
+    .project-content-box h3 {
+        font-size: 1.25rem;
+    }
+
+    .project-content-box p, 
+    .project-content-box ul {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Botão do GitHub dentro dos Case Studies */
+    .project-content-box .btn-download {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-back {
+        padding: 10px 0; /* Menos espaço lateral no mobile */
+        font-size: 0.9rem;
+    }
+    
+    .nav-back span:last-child {
+        display: none; /* Esconde a palavra 'Voltar' e deixa só a seta no mobile se o espaço for curto */
+    }
+}
+
+/* =========================================================================
+   TELAS MUITO PEQUENAS (Até 400px - Ex: iPhone SE, Galaxy Fold antigos)
+   ========================================================================= */
+@media screen and (max-width: 400px) {
+    .section-home .home-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .badge {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    section h2 {
+        font-size: 1.7rem;
+    }
+}

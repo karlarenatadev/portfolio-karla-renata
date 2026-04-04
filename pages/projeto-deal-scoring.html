@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deal Scoring Preditivo | Karla Renata</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../imagens/favicon_io/favicon-32x32.png">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/mobile.css">
+</head>
+<body>
+
+    <nav role="navigation" aria-label="Menu de navegação">
+        <ul class="menu" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+            <li class="menu-list" style="margin: 0;">
+                <a class="nav-back lang" href="../index.html#projetos-dados" data-pt="Voltar ao Portfólio" data-en="Back to Portfolio">
+                    <span class="material-symbols-outlined" style="vertical-align: middle; margin-right: 5px;">arrow_back</span>
+                    <span class="lang" data-pt="Voltar" data-en="Back">Voltar</span>
+                </a>
+            </li>
+            <li style="list-style: none;">
+                <div style="display: flex; gap: 10px;">
+                    <button id="ptBtn" class="btn-cta active" style="padding: 6px 12px; font-size: 0.85rem; margin: 0;">PT</button>
+                    <button id="enBtn" class="btn-cta" style="padding: 6px 12px; font-size: 0.85rem; margin: 0; background-color: transparent; border: 2px solid var(--cor-destaque); color: var(--cor-destaque);">EN</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="project-main">
+        
+        <header class="project-header-box">
+            <h2 class="lang" data-pt="Deal Scoring Preditivo" data-en="Predictive Deal Scoring">Deal Scoring Preditivo</h2>
+            <p class="project-subtitle lang" data-pt="Inteligência Artificial e Business Intelligence no Funil de Vendas" data-en="Artificial Intelligence and Business Intelligence in the Sales Funnel">Inteligência Artificial e Business Intelligence no Funil de Vendas</p>
+            
+            <div class="hero-badges" style="justify-content: flex-start;">
+                <span class="badge">Python</span>
+                <span class="badge">Machine Learning</span>
+                <span class="badge">Power BI</span>
+                <span class="badge">SMOTE</span>
+            </div>
+        </header>
+
+        <img src="../imagens/visual-dashboard.png" alt="Dashboard de Risco de Vendas em Power BI" class="project-hero-image">
+
+        <section class="project-content-box">
+            <h3><span class="material-symbols-outlined">target</span> <span class="lang" data-pt="O Problema de Negócio" data-en="The Business Problem">O Problema de Negócio</span></h3>
+            <p class="lang" data-pt="No cenário comercial competitivo, as equipas de vendas perdem muito tempo e energia com negociações ('deals') que têm baixa probabilidade de fechar. O desafio deste projeto foi criar um modelo preditivo capaz de analisar o comportamento histórico e responder a uma pergunta de milhões: Qual é a probabilidade real deste negócio ser ganho ou perdido?" data-en="In a competitive commercial landscape, sales teams waste significant time and energy on deals that have a low probability of closing. The challenge of this project was to create a predictive model capable of analyzing historical behavior to answer a million-dollar question: What is the actual probability of winning or losing this deal?">No cenário comercial competitivo...</p>
+        </section>
+
+        <section class="project-content-box">
+            <h3><span class="material-symbols-outlined">psychology</span> <span class="lang" data-pt="A Abordagem Técnica (Machine Learning)" data-en="Technical Approach (Machine Learning)">A Abordagem Técnica (Machine Learning)</span></h3>
+            <p class="lang" data-pt="A inovação do projeto reside em converter dados descritivos de um CRM em estatística acionável. Para lidar com o desafio clássico do desbalanceamento de dados em vendas (onde a maioria falha e poucas têm sucesso), implementei:" data-en="The project's innovation lies in converting descriptive CRM data into actionable statistics. To tackle the classic challenge of imbalanced sales data (where most fail and few succeed), I implemented:">A inovação do projeto reside em converter dados...</p>
+            <ul>
+                <li><strong class="lang" data-pt="Feature Engineering:" data-en="Feature Engineering:">Feature Engineering:</strong> <span class="lang" data-pt="Utilização de Target Encoding para capturar a performance histórica de variáveis categóricas." data-en="Use of Target Encoding to capture the historical performance of categorical variables.">Utilização de Target Encoding...</span></li>
+                <li><strong class="lang" data-pt="Balanceamento (SMOTE):" data-en="Balancing (SMOTE):">Balanceamento (SMOTE):</strong> <span class="lang" data-pt="Aplicação do método Synthetic Minority Over-sampling Technique para equilibrar as classes minoritárias, evitando que o modelo ficasse enviesado." data-en="Application of the Synthetic Minority Over-sampling Technique to balance minority classes, preventing model bias.">Aplicação do método SMOTE...</span></li>
+                <li><strong class="lang" data-pt="Modelagem:" data-en="Modeling:">Modelagem:</strong> <span class="lang" data-pt="Treino e otimização de um algoritmo Gradient Boosting, que aumentou o ROC-AUC em quase 20% em relação ao modelo base de regressão." data-en="Training and optimization of a Gradient Boosting algorithm, which increased the ROC-AUC by almost 20% compared to the baseline regression model.">Treino e otimização...</span></li>
+            </ul>
+
+            <h4 class="lang" data-pt="Snippet do Pipeline de Treinamento:" data-en="Training Pipeline Snippet:" style="color: var(--cor-destaque); margin: 30px 0 10px 0; font-size: 1.1rem;">Snippet do Pipeline de Treinamento:</h4>
+            
+            <div style="background-color: #1e1e1e; padding: 20px; border-radius: 8px; border-left: 4px solid var(--cor-destaque); font-family: 'Courier New', monospace; color: #d4d4d4; overflow-x: auto; line-height: 1.5; font-size: 0.95rem;">
+                <span style="color: #6a9955;"># SMOTE & Gradient Boosting</span><br>
+                <span style="color: #569cd6;">from</span> imblearn.over_sampling <span style="color: #569cd6;">import</span> SMOTE<br>
+                <span style="color: #569cd6;">from</span> sklearn.ensemble <span style="color: #569cd6;">import</span> GradientBoostingClassifier<br><br>
+                
+                smote = SMOTE(random_state=<span style="color: #b5cea8;">42</span>)<br>
+                X_train_resampled, y_train_resampled = smote.fit_resample(X_train, y_train)<br><br>
+                
+                gb_model = GradientBoostingClassifier(n_estimators=<span style="color: #b5cea8;">100</span>, learning_rate=<span style="color: #b5cea8;">0.1</span>, max_depth=<span style="color: #b5cea8;">5</span>)<br>
+                gb_model.fit(X_train_resampled, y_train_resampled)<br><br>
+                
+                <span style="color: #6a9955;"># Predicting Risk Score (%)</span><br>
+                y_proba = gb_model.predict_proba(X_test)[:, <span style="color: #b5cea8;">0</span>] * <span style="color: #b5cea8;">100</span>
+            </div>
+        </section>
+
+        <section class="project-content-box">
+            <h3><span class="material-symbols-outlined">dashboard</span> <span class="lang" data-pt="A Entrega de Valor (Power BI)" data-en="Value Delivery (Power BI)">A Entrega de Valor (Power BI)</span></h3>
+            <p class="lang" data-pt="Um modelo de Machine Learning a correr num terminal escuro não gera impacto comercial. A verdadeira mágica acontece na entrega. Os resultados gerados (Scores de Risco) foram injetados num Dashboard Interativo no Power BI." data-en="A Machine Learning model running in a dark terminal doesn't generate business impact. The real magic happens in delivery. The generated results (Risk Scores) were injected into an Interactive Power BI Dashboard.">Um modelo de Machine Learning a correr...</p>
+            <p class="lang" data-pt="Com esta solução, o gestor de vendas pode agora aplicar filtros dinâmicos, visualizar um gráfico de dispersão com os riscos inerentes de cada negociação e focar os esforços imediatos da equipa exatamente nos negócios sinalizados como 'Risco Crítico'." data-en="With this solution, the sales manager can now apply dynamic filters, visualize a scatter plot with the inherent risks of each deal, and focus the team's immediate efforts exactly on deals flagged as 'Critical Risk'.">Com esta solução, o gestor de vendas pode agora...</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px; display: flex; flex-direction: column; gap: 20px; align-items: center;">
+            <a href="https://github.com/karlarenatadev/projeto-ml-deal-scoring" target="_blank" class="btn-download" style="width: auto; padding: 0 30px; display: inline-flex; margin: 0 auto; gap: 10px; align-items: center; text-decoration: none;">
+                <img src="../imagens/icone-github.png" alt="GitHub" style="width: 24px; filter: brightness(0) invert(1);"> 
+                <span class="btn-text lang" data-pt="Ver Código Completo" data-en="View Full Code">Ver Código Completo</span>
+            </a>
+        </div>
+
+    </main>
+
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
