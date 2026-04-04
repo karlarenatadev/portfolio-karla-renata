@@ -1,0 +1,52 @@
+name: Portfolio Quality Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # JOB 1: Validação HTML/CSS
+  validate-markup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Validate HTML
+        run: |
+          # Instala validador HTML
+          npm install -g html-validate
+          html-validate index.html pages/*.html || true
+      
+      - name: Check CSS Syntax
+        run: |
+          npm install -g csslint
+          csslint style/*.css --quiet || true
+
+  # JOB 2: Performance & Accessibility
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+
+  # JOB 3: Deploy automático ao GitHub Pages
+  deploy:
+    needs: [validate-markup, lighthouse]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          cname: karlarenatadev.github.io
