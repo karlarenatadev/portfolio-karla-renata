@@ -1,44 +1,13 @@
-name: Deploy to GitHub Pages
+name: GitHub Pages Disabled
 
 on:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  notice:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Inject Gemini API Key
+      - name: Explain deployment change
         run: |
-          echo "window.__GEMINI_API_KEY__ = '${{ secrets.GEMINI_API_KEY }}';" > js/env.js
-          echo "✅ env.js criado com sucesso"
-          cat js/env.js
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          echo "GitHub Pages foi desativado para este projeto."
+          echo "O chatbot agora depende de uma funcao serverless e deve ser publicado em uma plataforma como a Vercel."

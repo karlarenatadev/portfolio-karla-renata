@@ -21,6 +21,7 @@ dist/
 build/
 *.min.css
 *.min.js
+.vercel/
 
 # Logs
 logs/
@@ -30,14 +31,9 @@ logs/
 .env
 .env.local
 .env.*.local
+js/env.js
 
 # Temporary files
 *.tmp
 *.temp
 .cache/
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-js/env.js
