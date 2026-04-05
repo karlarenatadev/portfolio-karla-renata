@@ -37,7 +37,11 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Karla Renata",
-      "jobTitle": "Desenvolvedora Web e Analista de Dados",
+        "jobTitle": "Data Analyst Intern",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "A3Data"
+        },
       "url": "https://karlarenatadev.github.io/portfolio-karla-renata/",
       "sameAs": [
         "https://www.linkedin.com/in/karlarenata-rosario/",
@@ -81,19 +85,26 @@
         <section id="home" class="section-home">
             <div class="home-container">
                 <div class="home-photo">
-                    <img id="foto-sobre" src="imagens/foto-sobre.jpg" alt="Karla Renata Foto de Perfil">
+                    <img id="foto-sobre" src="imagens/foto-sobre.jpg" alt="Karla Renata - Estagiária em Análise de Dados" loading="lazy">
                 </div>
                 <div class="home-content sobre">
                     <h1>Karla Renata</h1>
-                    <p class="lang" data-pt="Desenvolvedora Web | Análise e Visualização de Dados" data-en="Web Developer | Data Analysis & Visualization">Desenvolvedora Web | Análise e Visualização de Dados</p>
+                    <p class="lang"
+                    data-pt="Data Analyst Intern | Análise e Visualização de Dados"
+                    data-en="Data Analyst Intern | Data Analysis & Visualization">
+                    Data Analyst Intern | Data Analysis & Visualization
+                    </p>
                     <div class="hero-badges">
                         <span class="badge">Python</span>
                         <span class="badge">SQL</span>
                         <span class="badge">Power BI</span>
+                        <span class="badge">Pandas</span>
                         <span class="badge">AWS</span>
                     </div>
                     <div class="cta-group">
-                        <button onclick="scrollToSection('sobre')" id="saiba-mais" class="lang" data-pt="Saiba mais" data-en="Learn more">Saiba mais</button>
+                        <button onclick="scrollToSection('projetos-dados')" id="ver-projetos" class="btn-cta">
+                            <span class="btn-text lang" data-pt="Ver Projetos" data-en="View Projects">Ver Projetos</span>
+                        </button>
                         <a href="arquivo/curriculo-karla-renata.pdf" download="curriculo-karla-renata.pdf" class="btn-download" aria-label="Download CV">
                             <span class="btn-text lang" data-pt="Download CV" data-en="Download CV">Download CV</span>
                             <span class="material-symbols-outlined">download</span>
