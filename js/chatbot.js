@@ -8,7 +8,7 @@ class PortfolioAssistant {
     constructor() {
         // LÊ A CHAVE DO .env OU GITHUB SECRETS (GEMINI_API_KEY)
         this.apiKey = this.getApiKey();
-        this.apiEndpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+        this.apiEndpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
         this.isLoading = false;
         this.portfolioData = this.getPortfolioData();
         
@@ -19,12 +19,12 @@ class PortfolioAssistant {
 
     getApiKey() {
         return (
-            (typeof process !== 'undefined' && process.env.GEMINI_API_KEY) || 
             window.__GEMINI_API_KEY__ ||
             localStorage.getItem('gemini_api_key') ||
             ''
         );
     }
+ 
 
     getPortfolioData() {
         return {
@@ -72,7 +72,7 @@ class PortfolioAssistant {
                 <div class="chatbot-footer"><p>Powered by Gemini AI</p></div>
             </div>
             <button id="chatbot-toggle" class="chatbot-toggle">
-                <span class="material-symbols-outlined">chat</span>
+                <span class="material-symbols-outlined">smart_toy</span>
             </button>
         `;
         
