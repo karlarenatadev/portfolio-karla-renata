@@ -753,3 +753,10 @@ main > section:last-child { border-bottom: none; }
     transform: translateX(-5px);
 }
 .nav-back .material-symbols-outlined { font-size: 20px; }
+
+.hero-description{
+font-size:1.1rem;
+max-width:520px;
+margin-top:10px;
+opacity:0.85;
+}
