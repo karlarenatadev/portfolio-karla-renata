@@ -30,8 +30,8 @@ jobs:
 
       - name: Inject Gemini API Key
         run: |
-          echo "window.__GEMINI_API_KEY__ = '${{ secrets.GEMINI_API_KEY }}';" > js/chatbot.js
-          echo "✅ chatbot.js criado com sucesso"
+          echo "window.__GEMINI_API_KEY__ = '${{ secrets.GEMINI_API_KEY }}';" > js/env.js
+          echo "✅ env.js criado com sucesso"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
