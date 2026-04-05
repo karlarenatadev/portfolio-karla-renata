@@ -18,13 +18,8 @@ class PortfolioAssistant {
     }
 
     getApiKey() {
-        return (
-            window.__GEMINI_API_KEY__ ||
-            localStorage.getItem('gemini_api_key') ||
-            ''
-        );
+        return window.__GEMINI_API_KEY__ || '';
     }
- 
 
     getPortfolioData() {
         return {
