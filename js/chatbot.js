@@ -8,7 +8,7 @@ class PortfolioAssistant {
     constructor() {
         // LÊ A CHAVE DO .env OU GITHUB SECRETS (GEMINI_API_KEY)
         this.apiKey = this.getApiKey();
-        this.apiEndpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
+        this.apiEndpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent';
         this.isLoading = false;
         this.portfolioData = this.getPortfolioData();
         
