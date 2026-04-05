@@ -5,43 +5,40 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Validate HTML
-        run: |
-          npm install -g html-validate
-          html-validate index.html || echo "✅ HTML check done"
-        continue-on-error: true
+        uses: actions/checkout@v4
 
       - name: Inject Gemini API Key
         run: |
           echo "window.__GEMINI_API_KEY__ = '${{ secrets.GEMINI_API_KEY }}';" > js/env.js
           echo "✅ env.js criado com sucesso"
+          cat js/env.js
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          force_orphan: true
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-
-      - name: Comment on Success
-        if: success()
-        run: echo "✅ Deploy bem-sucedido! 🚀"
+        id: deployment
+        uses: actions/deploy-pages@v4
