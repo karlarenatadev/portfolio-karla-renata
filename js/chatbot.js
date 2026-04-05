@@ -6,96 +6,44 @@
 
 class PortfolioAssistant {
     constructor() {
-        // ✅ LÊ A CHAVE DO .env OU GITHUB SECRETS (GEMINI_API_KEY)
+        // LÊ A CHAVE DO .env OU GITHUB SECRETS (GEMINI_API_KEY)
         this.apiKey = this.getApiKey();
         this.apiEndpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
         this.isLoading = false;
         this.portfolioData = this.getPortfolioData();
         
-        // Valida se a chave foi carregada
         if (!this.apiKey) {
-            console.warn('⚠️ Chave API não configurada. Chatbot desabilitado.');
+            console.warn('⚠️ Chave API não configurada. O Chat vai abrir para teste visual.');
         }
     }
 
-    /**
-     * Obtém a chave API de forma segura
-     */
     getApiKey() {
-        // Tenta: 1. GitHub Secrets (build time) → 2. .env local → 3. Fallback
         return (
-            import.meta.env.GEMINI_API_KEY || 
+            (typeof process !== 'undefined' && process.env.GEMINI_API_KEY) || 
             window.__GEMINI_API_KEY__ ||
             localStorage.getItem('gemini_api_key') ||
             ''
         );
     }
 
-    /**
-     * Base de conhecimento do portfólio
-     */
     getPortfolioData() {
         return {
             projetos_dados: [
-                { 
-                    titulo: "AWS Certification Simulator", 
-                    tags: ["Python", "AWS", "Gemini AI"], 
-                    desc: "Pipeline ETL com IA para validação de simulados" 
-                },
-                { 
-                    titulo: "SaaS Sales Analytics", 
-                    tags: ["QuickSight", "AWS", "Análise"], 
-                    desc: "Detecção de anomalias em faturamento" 
-                },
-                { 
-                    titulo: "Previsão de Estoque", 
-                    tags: ["SageMaker", "ML", "AWS"], 
-                    desc: "Modelagem preditiva para otimização" 
-                },
-                { 
-                    titulo: "Deal Scoring Preditivo", 
-                    tags: ["Python", "Scikit-Learn", "Power BI"], 
-                    desc: "ML para previsão de riscos B2B" 
-                },
-                { 
-                    titulo: "Gestão de Frotas", 
-                    tags: ["Power BI", "DAX"], 
-                    desc: "Dashboard executivo com KPIs" 
-                },
-                { 
-                    titulo: "Automação RPA", 
-                    tags: ["Python", "PyAutoGUI"], 
-                    desc: "Robô inteligente para ERP" 
-                },
-                { 
-                    titulo: "Análise de Vendas", 
-                    tags: ["Python", "Seaborn"], 
-                    desc: "EDA com visualizações avançadas" 
-                },
-                { 
-                    titulo: "Dashboard Logística", 
-                    tags: ["Power BI"], 
-                    desc: "Visualização de operações logísticas" 
-                },
-                { 
-                    titulo: "Fluxo de Caixa", 
-                    tags: ["Power BI"], 
-                    desc: "Gestão financeira" 
-                }
+                { titulo: "AWS Certification Simulator", tags: ["Python", "AWS", "Gemini AI"], desc: "Pipeline ETL com IA para validação de simulados" },
+                { titulo: "SaaS Sales Analytics", tags: ["QuickSight", "AWS", "Análise"], desc: "Detecção de anomalias em faturamento" },
+                { titulo: "Previsão de Estoque", tags: ["SageMaker", "ML", "AWS"], desc: "Modelagem preditiva para otimização" },
+                { titulo: "Deal Scoring Preditivo", tags: ["Python", "Scikit-Learn", "Power BI"], desc: "ML para previsão de riscos B2B" },
+                { titulo: "Gestão de Frotas", tags: ["Power BI", "DAX"], desc: "Dashboard executivo com KPIs" },
+                { titulo: "Automação RPA", tags: ["Python", "PyAutoGUI"], desc: "Robô inteligente para ERP" },
+                { titulo: "Análise de Vendas", tags: ["Python", "Seaborn"], desc: "EDA com visualizações avançadas" },
+                { titulo: "Dashboard Logística", tags: ["Power BI"], desc: "Visualização de operações logísticas" },
+                { titulo: "Fluxo de Caixa", tags: ["Power BI"], desc: "Gestão financeira" }
             ]
         };
     }
 
-    /**
-     * Renderiza a interface do chatbot
-     */
     renderChatbot() {
-        // Se não há API key, não renderiza
-        if (!this.apiKey) {
-            console.warn('Chatbot não pode ser inicializado sem API key');
-            return;
-        }
-
+        // HTML Limpo, sem "onclick" misturados. A responsabilidade do clique fica no JS!
         const html = `
             <div id="chatbot-container" class="chatbot-bubble">
                 <div class="chatbot-header">
@@ -103,7 +51,7 @@ class PortfolioAssistant {
                         <h3>💬 Assistente Karla</h3>
                         <p class="status">Online</p>
                     </div>
-                    <button class="chatbot-minimize" onclick="portfolioAssistant.toggleChat()">
+                    <button id="chatbot-minimize" class="chatbot-minimize">
                         <span class="material-symbols-outlined">close</span>
                     </button>
                 </div>
@@ -116,31 +64,42 @@ class PortfolioAssistant {
                     </div>
                 </div>
                 <div class="chatbot-input-area">
-                    <textarea 
-                        id="chatbot-input" 
-                        class="chatbot-input" 
-                        placeholder="Digite sua pergunta..." 
-                        rows="2"
-                    ></textarea>
-                    <button class="chatbot-send" onclick="portfolioAssistant.sendMessage()">
+                    <textarea id="chatbot-input" class="chatbot-input" placeholder="Digite sua pergunta..." rows="2"></textarea>
+                    <button id="chatbot-send" class="chatbot-send">
                         <span class="material-symbols-outlined">send</span>
                     </button>
                 </div>
                 <div class="chatbot-footer"><p>Powered by Gemini AI</p></div>
             </div>
-            <button id="chatbot-toggle" class="chatbot-toggle" onclick="portfolioAssistant.toggleChat()">
+            <button id="chatbot-toggle" class="chatbot-toggle">
                 <span class="material-symbols-outlined">chat</span>
             </button>
         `;
         
         document.body.insertAdjacentHTML('beforeend', html);
-        this.setupListeners();
+        this.setupListeners(); // Liga os botões logo após criar o HTML
     }
 
-    /**
-     * Configura listeners de eventos
-     */
     setupListeners() {
+        // 1. Listener para abrir o chat no botão flutuante
+        const toggleBtn = document.getElementById('chatbot-toggle');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => this.toggleChat());
+        }
+
+        // 2. Listener para fechar o chat no "X"
+        const minimizeBtn = document.getElementById('chatbot-minimize');
+        if (minimizeBtn) {
+            minimizeBtn.addEventListener('click', () => this.toggleChat());
+        }
+
+        // 3. Listener para o botão de Enviar (Aviãozinho)
+        const sendBtn = document.getElementById('chatbot-send');
+        if (sendBtn) {
+            sendBtn.addEventListener('click', () => this.sendMessage());
+        }
+
+        // 4. Listener para a tecla Enter no teclado
         const input = document.getElementById('chatbot-input');
         if (input) {
             input.addEventListener('keypress', (e) => {
@@ -152,34 +111,37 @@ class PortfolioAssistant {
         }
     }
 
-    /**
-     * Alterna entre aberto/fechado
-     */
     toggleChat() {
         const container = document.getElementById('chatbot-container');
         const toggle = document.getElementById('chatbot-toggle');
+        const input = document.getElementById('chatbot-input');
         
         if (!container || !toggle) return;
         
         container.classList.toggle('open');
-        toggle.style.display = container.classList.contains('open') ? 'none' : 'flex';
+        
+        if (container.classList.contains('open')) {
+            toggle.style.display = 'none';
+            if(input) input.focus(); // Coloca o cursor a piscar pronto a escrever
+        } else {
+            toggle.style.display = 'flex';
+        }
     }
 
-    /**
-     * Envia mensagem para a IA
-     */
     async sendMessage() {
         const input = document.getElementById('chatbot-input');
         const message = input.value.trim();
         
         if (!message || this.isLoading) return;
+        
+        this.addMessageToUI(message, 'user');
+        input.value = '';
+        
         if (!this.apiKey) {
-            this.addMessageToUI('❌ API key não configurada.', 'bot');
+            this.addMessageToUI('⚠️ API key não configurada. Gere uma chave no Google AI Studio e adicione ao projeto.', 'bot');
             return;
         }
 
-        this.addMessageToUI(message, 'user');
-        input.value = '';
         this.isLoading = true;
         this.showTypingIndicator();
 
@@ -196,22 +158,11 @@ class PortfolioAssistant {
         this.isLoading = false;
     }
 
-    /**
-     * Chama a API Gemini
-     */
     async getAIResponse(userMessage) {
         const systemPrompt = this.buildSystemPrompt();
         const requestBody = {
-            contents: [{
-                parts: [{ 
-                    text: systemPrompt + "\n\nUsuário: " + userMessage 
-                }]
-            }],
-            generationConfig: {
-                maxOutputTokens: 300,
-                temperature: 0.7,
-                topP: 0.9
-            }
+            contents: [{ parts: [{ text: systemPrompt + "\n\nUsuário: " + userMessage }] }],
+            generationConfig: { maxOutputTokens: 300, temperature: 0.7, topP: 0.9 }
         };
 
         const response = await fetch(`${this.apiEndpoint}?key=${this.apiKey}`, {
@@ -222,9 +173,7 @@ class PortfolioAssistant {
 
         if (!response.ok) {
             const errorData = await response.json();
-            throw new Error(
-                `API Error ${response.status}: ${errorData.error?.message || 'Erro desconhecido'}`
-            );
+            throw new Error(`API Error ${response.status}: ${errorData.error?.message || 'Erro desconhecido'}`);
         }
         
         const data = await response.json();
@@ -236,19 +185,11 @@ class PortfolioAssistant {
         return data.candidates[0].content.parts[0].text;
     }
 
-    /**
-     * Constrói o prompt do sistema
-     */
     buildSystemPrompt() {
-        const projects = this.portfolioData.projetos_dados
-            .map(p => `- ${p.titulo}: ${p.desc}`)
-            .join('\n');
-
+        const projects = this.portfolioData.projetos_dados.map(p => `- ${p.titulo}: ${p.desc}`).join('\n');
         return `Você é assistente profissional do portfólio de Karla Renata, uma Desenvolvedora Web e Analista de Dados especializada em Python, SQL, Power BI e AWS.
-
 PROJETOS PRINCIPAIS:
 ${projects}
-
 INSTRUÇÕES:
 1. Responda sempre em português
 2. Seja conciso (máximo 3 parágrafos)
@@ -259,11 +200,8 @@ INSTRUÇÕES:
 7. Seja amigável e profissional`;
     }
 
-    /**
-     * Adiciona mensagem na interface
-     */
     addMessageToUI(message, sender) {
-        const container = document.getElementById('chatbot-messages');
+        const container = document.querySelector('.chatbot-messages');
         if (!container) return;
 
         const messageClass = sender === 'user' ? 'user-message' : 'bot-message';
@@ -279,11 +217,8 @@ INSTRUÇÕES:
         container.scrollTop = container.scrollHeight;
     }
 
-    /**
-     * Mostra indicador de digitação
-     */
     showTypingIndicator() {
-        const container = document.getElementById('chatbot-messages');
+        const container = document.querySelector('.chatbot-messages');
         if (!container) return;
 
         container.insertAdjacentHTML('beforeend', 
@@ -294,19 +229,14 @@ INSTRUÇÕES:
                     <span class="dot"></span>
                 </div>
             </div>`);
+        container.scrollTop = container.scrollHeight;
     }
 
-    /**
-     * Remove indicador de digitação
-     */
     removeTypingIndicator() {
         const typing = document.querySelector('.typing-indicator');
         if (typing) typing.remove();
     }
 
-    /**
-     * Escapa caracteres HTML para segurança
-     */
     escapeHtml(text) {
         const div = document.createElement('div');
         div.textContent = text;
@@ -314,8 +244,8 @@ INSTRUÇÕES:
     }
 }
 
-// ✅ INICIALIZA O CHATBOT QUANDO A PÁGINA CARREGA
+// INICIALIZA O CHATBOT QUANDO A PÁGINA CARREGA
 document.addEventListener('DOMContentLoaded', () => {
     window.portfolioAssistant = new PortfolioAssistant();
-    portfolioAssistant.renderChatbot();
+    window.portfolioAssistant.renderChatbot();
 });

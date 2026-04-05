@@ -31,6 +31,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/mobile.css">
+    <link rel="stylesheet" href="style/chatbot.css">
     
     <script type="application/ld+json">
     {
@@ -516,7 +517,7 @@
                 </div>
             </div>
         </section>
-
+            
         <section id="contato" class="section-contact">
             <h2 class="lang" data-pt="Contato" data-en="Contact">Contato</h2>
             
@@ -715,7 +716,26 @@
                 </div>
             </div>
     </div>
+        <div id="chat-wrapper">
+            <button id="chat-button" title="Conversar com IA">
+                <span class="material-symbols-outlined">smart_toy</span>
+            </button>
+            <div id="chat-container" class="hidden">
+                    <div id="chat-header">
+                        <h3>Assistente Virtual - Karla Renata</h3>
+                        <button id="close-chat">&times;</button>
+                    </div>
+                    <div id="chat-messages"></div>
+                    <div id="chat-input-area">
+                        <input type="text" id="user-input" placeholder="Pergunte sobre meus projetos...">
+                        <button id="send-chat">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+        </div>
 
     <script src="js/scripts.js"></script>
+    <script src="js/chatbot.js" defer></script>
 </body>
 </html>
