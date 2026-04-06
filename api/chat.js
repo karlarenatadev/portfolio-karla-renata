@@ -1,4 +1,4 @@
-const GEMINI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+const GEMINI_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
 
 function getReplyText(data) {
     return data?.candidates?.[0]?.content?.parts?.[0]?.text || '';
